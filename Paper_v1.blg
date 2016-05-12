@@ -1,0 +1,235 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_v1.aux
+The style file: bmc-mathphys.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: References_v1.bib
+Warning--entry type for "Octave" isn't style-file defined
+--line 40 of file References_v1.bib
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
+while executing---line 2585 of file bmc-mathphys.bst
+Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
+while executing---line 2585 of file bmc-mathphys.bst
+Warning--to sort, need author or key in Octave
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
+while executing---line 2686 of file bmc-mathphys.bst
+Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
+while executing---line 2686 of file bmc-mathphys.bst
+Warning--empty title in Octave
+Warning--"{Proceedings" isn't a brace-balanced string for entry RANKING
+while executing--line 2686 of file bmc-mathphys.bst
+Warning--"{Proceedings" isn't a brace-balanced string for entry RANKING
+while executing--line 2686 of file bmc-mathphys.bst
+Warning--"{Proceedings" isn't a brace-balanced string for entry RANKING
+while executing--line 2686 of file bmc-mathphys.bst
+Warning--"Algorithms}" isn't a brace-balanced string for entry RANKING
+while executing--line 2686 of file bmc-mathphys.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
+while executing---line 3019 of file bmc-mathphys.bst
+Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
+while executing---line 3019 of file bmc-mathphys.bst
+You've used 19 entries,
+            7128 wiz_defined-function locations,
+            1262 strings with 12967 characters,
+and the built_in function-call counts, 143300 in all, are:
+= -- 20718
+> -- 648
+< -- 441
++ -- 8427
+- -- 142
+* -- 8137
+:= -- 27197
+add.period$ -- 25
+call.type$ -- 19
+change.case$ -- 157
+chr.to.int$ -- 1039
+cite$ -- 22
+duplicate$ -- 1785
+empty$ -- 5944
+format.name$ -- 484
+if$ -- 33872
+int.to.chr$ -- 1
+int.to.str$ -- 47
+missing$ -- 625
+newline$ -- 564
+num.names$ -- 90
+pop$ -- 717
+preamble$ -- 1
+purify$ -- 83
+quote$ -- 38
+skip$ -- 11250
+stack$ -- 0
+substring$ -- 17693
+swap$ -- 680
+text.length$ -- 293
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 817
+warning$ -- 2
+while$ -- 627
+width$ -- 0
+write$ -- 715
+(There were 77 error messages)
