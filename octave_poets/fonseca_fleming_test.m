@@ -1,16 +1,17 @@
-function [rank_archive,error_cache,parameter_cache,elapsed_time] = binh_korn_test()
+function [rank_archive,error_cache,parameter_cache,elapsed_time] = fonseca_fleming_test()
 
   % start -
   id = tic();
 
   % Ok, we need to split the domain into a number of subdivisions -
   number_of_subdivisions = 10;
-  x_initial_array = linspace(0.01,5,number_of_subdivisions);
-  y_initial_array = linspace(0.01,3,number_of_subdivisions);
+  x_initial_array = linspace(-4.0,4.0,number_of_subdivisions);
+  y_initial_array = linspace(-4.0,4.0,number_of_subdivisions);
+  z_initial_array = linspace(-4.0,4.0,number_of_subdivisions);
 
   % Setup the function pointers -
-  pObjectiveFunction = @binh_korn_objective;
-  pNeighborFunction = @neighbor;
+  pObjectiveFunction = @fonseca_fleming_objective;
+  pNeighborFunction = @fonseca_fleming_neighbor;
   pCoolingFunction = @cooling;
   pAcceptanceFunction = @acceptance;
 
@@ -29,9 +30,13 @@ function [rank_archive,error_cache,parameter_cache,elapsed_time] = binh_korn_tes
     %domain_index
 
     % setup inital guess -
-    initial_state = zeros(2,1);
+    initial_state = zeros(3,1);
     initial_state(1,1) = x_initial_array(domain_index);
     initial_state(2,1) = y_initial_array(domain_index);
+    initial_state(3,1) = y_initial_array(domain_index);
+
+    iz = find(initial_state==0.0);
+    initial_state(iz,1) = randn(length(iz),1);
 
     % call POETs
     [RA,EC,PC] = POETs(pObjectiveFunction,pNeighborFunction,pAcceptanceFunction,initial_state,maximum_number_of_iterations,rank_cutoff,show_trace);

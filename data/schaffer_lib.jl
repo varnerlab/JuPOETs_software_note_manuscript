@@ -5,27 +5,23 @@ BIG = 1e10
 function objective_function(parameter_array)
 
   # Alias the species -
-  number_of_parameters = length(parameter_array)
+  x = parameter_array[1]
 
   # Calculate the objective function array -
   obj_array = BIG*ones(2,1)
 
-  # calculate the objectibe array -
-  # calculate the sums
-  sum_1 = 0.0
-  sum_2 = 0.0
-  for index in collect(1:number_of_parameters)
+  # f1 and f2 -
+  obj_array[1] = (x^2)
+  obj_array[2] = (x - 2)^2
 
-    sum_1 = sum_1 + (parameter_array[index] - 1/sqrt(number_of_parameters))^2
-    sum_2 = sum_2 + (parameter_array[index] + 1/sqrt(number_of_parameters))^2
-  end
+  # Constraints are implemented as a penaltly on obj value
+  lambda_value = 100.0
 
-  # objectives -
-  obj_array[1] = 1 - exp(-1*sum_1)
-  obj_array[2] = 1 - exp(-1*sum_2)
+  # How much do we violate the constraints?
+  penaltly_array = zeros(2)
 
-  # return -
-  return obj_array
+  # return the obj_array -
+  return obj_array+penaltly_array
 end
 
 # Generates new parameter array, given current array -
@@ -34,23 +30,21 @@ function neighbor_function(parameter_array)
   SIGMA = 0.05
   number_of_parameters = length(parameter_array)
 
-  # correct for zero -
-  idx_zero = find(parameter_array.==0.0)
-  parameter_array[idx_zero] = randn(length(idx_zero))
-
   # calculate new parameters -
   new_parameter_array = parameter_array.*(1+SIGMA*randn(number_of_parameters))
 
   # Check the bound constraints -
-  LOWER_BOUND = -4.0
-  UPPER_BOUND = 4.0
+  LOWER_BOUND = -10
+  UPPER_BOUND = 10
 
   # return the corrected parameter arrays -
-  return parameter_bounds_function(new_parameter_array,LOWER_BOUND*ones(number_of_parameters),UPPER_BOUND*ones(number_of_parameters))
+  return parameter_bounds_function(new_parameter_array,LOWER_BOUND,UPPER_BOUND)
 end
 
 function acceptance_probability_function(rank_array,temperature)
+
   return (exp(-rank_array[end]/temperature))
+
 end
 
 # Helper functions -
@@ -74,4 +68,5 @@ function parameter_bounds_function(parameter_array,lower_bound_array,upper_bound
   end
 
   return new_parameter_array
+
 end

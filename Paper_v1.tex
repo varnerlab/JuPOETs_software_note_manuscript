@@ -263,10 +263,11 @@ Battogtokh et al., Brown et al., and later Tasseff et al. generated experimental
 Metropolis-type random walk through parameter space \cite{Battogtokh:2002,Brown:2003,Tasseff:2010aa,Tasseff:2011aa}.
 Other strategies could also be adapted to generate parameter ensembles \cite{Moles:2003}.
 However, the unifying component of all of these previous strategies was the minimization of a single objective function.
-Identification of large-scale models with hundreds, thousands or tens of thousands states and parameters may not be tractable with single objective formulations.
+
+Identification of large models with hundreds or even thousands of states and parameters may not be tractable as a single objective formulation.
 Models at these scales require significant training data perhaps taken from diverse sources, for example different laboratories or cell-lines.
-These diverse training data would likely be heterogenous and could contain intrinsic conflicts.
-Another strategy to formulate large-scale models is to integrate many small pathway modules into a single large model.
+These diverse training data are likely heterogenous, and contain intrinsic conflicts.
+On the other hand, large models can also be constructed from many smaller modules.
 For example, Diamond and coworkers developed a model of phosphoinositide and calcium signaling in human platelets composed of many
 separate submodels identified using different types of training data \cite{Purvis:2008}.
 Taken together, the problem of identifying parameter ensembles for large-scale models with many parameters posses a unique challenge.
@@ -282,7 +283,7 @@ source code management (SCM) system.
 
 \section*{Implementation}
 
-In this study, we present JuPOETs, an updated version of the Pareto Optimal Ensemble Technique (POETs) ported to Julia.
+In this study, we present JuPOETs, an open-source implementation of the Pareto Optimal Ensemble Technique (POETs) in the Julia programming language.
 JuPOETs offers many advantages and improvements compared to the previous implementation of POETs.
 First, JuPOETs takes advantage of the unique performance features of the Julia programming language.
 Julia, which has performance comparable to C but with syntax similar to MATLAB/Octave and Python, is a cross-platform, high-performance programming language for technical computing \cite{Julia}. Julia offers a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive mathematical function library.
@@ -339,11 +340,10 @@ where $T$ is the computational annealing temperature. As $rank\left(\mathbf{k}_{
 ensuring that we explored parameter sets along the Pareto surface.
 Occasionally (depending upon $T$) a parameter set with a high Pareto rank was accepted by the SA allowing a more diverse search of the parameter space.
 However, as $T$ was reduced, the probability of this occurring decreased.
-Parameter sets could be accepted by the SA and $\emph{not}$ archived in $\mathbf{K}_{i}$. Only
-parameter sets with $rank\leq{2}$ were included in $\mathbf{K}_{i}$ to ensure that we characterized the neighborhood near the trade-off surface.
-The general scheme of JuPOETs followed conventional simulated annealing except that the current archive of Pareto-optimal ensemble was updated whenever a new proposal solution is accepted JuPOETs expands upon the original POETs implementation by using the function type in Julia to allow user defined functions for all major components of the approach (Algorithm \ref{algo:JuPOETs-pcode}).
+Parameter sets could be accepted by the SA and $\emph{not}$ archived in $\mathbf{K}_{i}$.
+Only parameter sets with rank less than or equal to a user defined threshold (rank$\leq$4 by default) were included in $\mathbf{K}_{i}$ to ensure that we characterized the neighborhood near the trade-off surface (Algorithm \ref{algo:JuPOETs-pcode}).
 
-\begin{algorithm}
+\begin{algorithm}[h!]
 
   \SetKwFunction{objective}{objective}
   \SetKwFunction{neighbor}{neighbor}
@@ -407,14 +407,23 @@ The general scheme of JuPOETs followed conventional simulated annealing except t
     \tcp{Update $T$ using the user cooling function}
     $T$ $\leftarrow$ user-function::cooling($T$)\;
  }
-\vspace{0.1in}
-\caption{Pseudo-code for the run-loop of the JuPOETs algorithm. }\label{algo:JuPOETs-pcode}
+\vspace{0.05in}
+\caption{Pseudo-code for the run-loop of the JuPOETs algorithm. The user specifies the neighbor, acceptance, cooling and objective function pointers along with a initial parameter guess.
+The rank archive $\mathcal{R}$, solution archive $\mathcal{S}$ and objective archive $\mathcal{O}$ are initialized from the initial guess.
+The initial guess is then perturbed in the neighbor function, which generates a new solution whose performance is evaluated using the user supplied objective function.
+The new solution and objective values are then added to the respective archives and ranked using the builtin rank function.
+If the new solution accepted (based upon a probability calculated with the user supplied acceptance function) it is added to the solution and objective archive. This solution is then perturbed during the next iteration of the algorithm.
+However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied cooling function after each $\mathcal{I}$ iterations. }\label{algo:JuPOETs-pcode}
 \end{algorithm}
 
+\clearpage
 
 \section*{Results and Discussion}
 We compared the performance of JuPOETs versus POETs implemented in Octave for a suite of multiobjective test functions (Table ZZ).
-In all cases, the same cooling, neighbor, acceptance, search and objective functions were employed, all other parameters were the same between the runs.
+In all cases, the same cooling, neighbor, acceptance, search and objective logic was employed, with all other parameters held constant.
+For each test function, the search domain was partitioned into a fixed number of segments, where an initial parameter guess was drawn from each the partitions.
+
+
 
 
 \section*{Conclusions}
