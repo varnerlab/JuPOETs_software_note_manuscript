@@ -12,20 +12,16 @@ function test_fonseca_fleming()
 
   ec_array = zeros(2)
   pc_array = zeros(number_of_states)
-  ra_array = zeros(1)
   for index in collect(1:number_of_subdivisions)
 
     initial_state_array[1] = float(x_initial_array[index])
     initial_state_array[2] = float(x_initial_array[index])
     initial_state_array[3] = float(x_initial_array[index])
-    (EC,PC,RA) = estimate_ensemble(objective_function,neighbor_function,acceptance_probability_function,initial_state_array;rank_cutoff=4,maximum_number_of_iterations=10,show_trace=false)
+    (EC,PC,RA) = estimate_ensemble(objective_function,neighbor_function,acceptance_probability_function,cooling_function,initial_state_array;rank_cutoff=4,maximum_number_of_iterations=20,show_trace=false)
 
     ec_array = [ec_array EC]
     pc_array = [pc_array PC]
 
   end
-  return (ec_array,pc_array,ra_array)
+  return (ec_array,pc_array)
 end
-
-# rerank -
-#final_rank_array = rank_function(ec_array)

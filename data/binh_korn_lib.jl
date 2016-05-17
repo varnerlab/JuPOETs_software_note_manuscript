@@ -20,7 +20,7 @@ function objective_function(parameter_array)
 
   # How much do we violate the constraints?
   violation_constraint_1 = 25 - (x-5.0)^2 - y^2
-  violation_constraint_2 = (x-8.0)^2 + (y-3.0)^2 - 7.7
+  violation_constraint_2 = (x-8.0)^2 + (y+3.0)^2 - 7.7
   penaltly_array = zeros(2)
   penaltly_array[1] = lambda_value*(min(0,violation_constraint_1))^2
   penaltly_array[2] = lambda_value*(min(0,violation_constraint_2))^2
@@ -49,7 +49,13 @@ end
 function acceptance_probability_function(rank_array,temperature)
 
   return (exp(-rank_array[end]/temperature))
+end
 
+function cooling_function(temperature)
+
+  # define my new temperature -
+  alpha = 0.9
+  return 0.9*temperature
 end
 
 # Helper functions -
