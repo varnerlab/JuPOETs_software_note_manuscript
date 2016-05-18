@@ -28,7 +28,7 @@
 \citation{Julia}
 \citation{RANKING}
 \newlabel{eqn_rank}{{2}{3}}
-\newlabel{eqn_costMOSA}{{3}{4}}
+\newlabel{eqn_costMOSA}{{3}{3}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Pseudo-code for the run-loop of the JuPOETs algorithm. The user specifies the neighbor, acceptance, cooling and objective function pointers along with a initial parameter guess. The rank archive $\mathcal  {R}$, solution archive $\mathcal  {S}$ and objective archive $\mathcal  {O}$ are initialized from the initial guess. The initial guess is then perturbed in the neighbor function, which generates a new solution whose performance is evaluated using the user supplied objective function. The new solution and objective values are then added to the respective archives and ranked using the builtin rank function. If the new solution accepted (based upon a probability calculated with the user supplied acceptance function) it is added to the solution and objective archive. This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied cooling function after each $\mathcal  {I}$ iterations. \relax }}{5}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{algo:JuPOETs-pcode}{{1}{5}}
@@ -45,6 +45,8 @@
 \bibcite{Song:2009b}{9}
 \bibcite{Tasseff:2010aa}{10}
 \bibcite{Tasseff:2011aa}{11}
+\thanksnewlabel{aff1thanks}{{1}{6}}
+\thanksnewlabel{aff2thanks}{{2}{6}}
 \bibcite{Moles:2003}{12}
 \bibcite{Purvis:2008}{13}
 \bibcite{Song:2010aa}{14}
@@ -53,9 +55,14 @@
 \bibcite{Octave}{17}
 \bibcite{Julia}{18}
 \bibcite{RANKING}{19}
-\thanksnewlabel{aff1thanks}{{1}{6}}
-\thanksnewlabel{aff2thanks}{{2}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic of multiobjective parameter mapping. \relax }}{7}}
-\newlabel{LastPage}{{}{8}}
-\xdef\lastpage@lastpage{8}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.\relax }}{8}}
+\newlabel{fig:fig-MOSAalgorithm}{{1}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The performance of JuPOETs on the multi-objective test suite. The execution time (wall-clock) for JuPOETs and POETs implemented in Octave was measured for 10 independent trials for the suite of test problems. The number of steps per temperature $\mathcal  {I}$ = 10, and the cooling parameter $\alpha $ = 0.9 for all cases. The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment. For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints. \relax }}{8}}
+\newlabel{fig:fig-timing}{{2}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Representative JuPOETs solutions for problems in the multi-objective test suite. The number of steps per temperature $\mathcal  {I}$ = 10, and the cooling parameter $\alpha $ = 0.9 for all cases. The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment. For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints. \relax }}{9}}
+\newlabel{fig:fig-surfaces}{{3}{9}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Multi-objective optimization test problems. We tested the JuPOETs implementation on three two-dimensional test problems, with one-, two- and three-dimensional parameter vectors. Each problem had parameter bounds constraints, however, on the Binh and Korn function had additional non-linear problem constraints. For the Fonesca and Fleming problem, N = 3.\relax }}{10}}
+\newlabel{table:objective-table}{{1}{10}}
+\newlabel{LastPage}{{}{10}}
+\xdef\lastpage@lastpage{10}
 \gdef\lastpage@lastpageHy{}

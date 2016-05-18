@@ -297,16 +297,14 @@ JuPOETs solves the $\mathcal{K}-$dimensional constrained multiobjective optimiza
 \min_{\mathbf{p}}
 \begin{cases}
   O_{1}\left(\mathbf{x}(t,\mathbf{p}),\mathbf{p}\right) \\
-  O_{2}\left(\mathbf{x}(t,\mathbf{p}),\mathbf{p}\right) \\
   \vdots & \\
   O_{\mathcal{K}}\left(\mathbf{x}(t,\mathbf{p}),\mathbf{p}\right) \\
 \end{cases}
 \end{equation}
 subject to:
 \begin{eqnarray}\nonumber
-  \frac{d\mathbf{x}}{dt} & = & \mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}) \\\nonumber
+  \mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\dot{\mathbf{x}}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}) &=&\mathbf{0} \\\nonumber
   g_{1}\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right) &\geq& 0 \\\nonumber
-  g_{2}\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right) &\geq& 0 \\\nonumber
   &\vdots& \\\nonumber
   g_{\mathcal{C}}\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right) &\geq& 0
 \end{eqnarray}and parameter bound constraints:
@@ -319,7 +317,8 @@ The terms $\mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p})$ deno
 differential algebraic equations or algebraic constraints) and $\mathbf{p}$ denotes the unknown parameter vector ($\mathcal{P}\times~1$).
 The parameter search can be subject to parameter bound constraints where $\mathcal{L}$ and $\mathcal{U}$ denote the lower and upper parameter bounds, respectively.
 
-POETs integrate Simulated Annealing (SA) with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives (Fig. \ref{fig-MOSAalgorithm}).
+POETs integrate Simulated Annealing (SA) with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives
+(Fig. \ref{fig:fig-MOSAalgorithm}).
 The central idea underlying POETs is a mapping between the value of the objective functions evaluated at $\mathbf{p}_{i+1}$ (parameter guess at iteration $i+1$) and the Pareto rank.
 We computed the Pareto rank of $\mathbf{p}_{i+1}$ by comparing the simulation error at iteration $i+1$ against an archive of simulation errors compiled up to iteration $i$ $\mathbf{E}_{i}$.
 We used the Fonseca and Fleming scheme to compute the Pareto rank, $r$ \cite{RANKING}:
@@ -419,12 +418,19 @@ However, if the solution is not accepted, it is removed from the archive and dis
 \clearpage
 
 \section*{Results and Discussion}
-We compared the performance of JuPOETs versus POETs implemented in Octave for a suite of multiobjective test functions (Table ZZ).
-In all cases, the same cooling, neighbor, acceptance, search and objective logic was employed, with all other parameters held constant.
-For each test function, the search domain was partitioned into a fixed number of segments, where an initial parameter guess was drawn from each the partitions.
 
+JuPOETs identified solutions on or near the optimal tradeoff surface significantly faster than Octave-POETs for the suite of test problems
+(Fig. \ref{fig:fig-timing} and Fig. \ref{fig:fig-surfaces}).
+We compared the performance of JuPOETs versus POETs implemented in Octave for a suite of multiobjective test functions (Table \ref{table:objective-table}).
+The execution time (wall-clock) for JuPOETs and Octave-POETs was measured for 10 independent trials for the suite of test problems.
+The same cooling, neighbor, acceptance, search and objective logic was employed between the implementations, with all other parameters held constant.
+For each test function, the search domain was partitioned into 10 segments, where initial parameter guesses were drawn from each partition.
+The number of search steps for each temperate $\mathcal{I}$ = 10 for all cases, and the cooling parameter was $\alpha$ = 0.9.
+On average, JuPOETs identified optimal or near optimal solutions for the suite of test problems six-fold faster (60s versus 400s)
+than Octave-POETs (Fig. \ref{fig:fig-timing}). In addition, JuPOETs produced the characteristic tradeoff curves for each test problem, given both parameter bound and
+problem constraints (Fig. \ref{fig:fig-surfaces}). Taken together, these results suggested that JuPOETs was able to estimate an ensemble of solutions to constrained multiobjective optimization problems significantly faster than the current Octave implementation. However, we have not demonstrated JuPOETs on a biochemically relevant test problem.
 
-
+[JuPOETs and a proof-of-principle HCM-EM model goes here]
 
 \section*{Conclusions}
 
@@ -492,10 +498,26 @@ a National Science Foundation Graduate Research Fellowship (NSGRF) to D.B.
 %% Do not use \listoffigures as most will included as separate files
 
 \clearpage
+
 \section*{Figures}
 
-\begin{figure}[h]
-  \caption{Schematic of multiobjective parameter mapping. }
+\begin{figure}
+  \caption{Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.}\label{fig:fig-MOSAalgorithm}
+\end{figure}
+
+\begin{figure}
+  \caption{The performance of JuPOETs on the multi-objective test suite.
+  The execution time (wall-clock) for JuPOETs and POETs implemented in Octave was measured for 10 independent trials for the suite of test problems.
+  The number of steps per temperature $\mathcal{I}$ = 10, and the cooling parameter $\alpha$ = 0.9 for all cases.
+  The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment.
+  For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints.  }\label{fig:fig-timing}
+\end{figure}
+
+\begin{figure}
+  \caption{Representative JuPOETs solutions for problems in the multi-objective test suite.
+  The number of steps per temperature $\mathcal{I}$ = 10, and the cooling parameter $\alpha$ = 0.9 for all cases.
+  The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment.
+  For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints.  }\label{fig:fig-surfaces}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -508,6 +530,12 @@ a National Science Foundation Graduate Research Fellowship (NSGRF) to D.B.
 %%
 \clearpage
 \section*{Tables}
+
+\begin{table}
+  \caption{Multi-objective optimization test problems. We tested the JuPOETs implementation on three two-dimensional test problems, with one-, two- and three-dimensional parameter vectors.
+  Each problem had parameter bounds constraints, however, on the Binh and Korn function had additional non-linear problem constraints. For the Fonesca and Fleming problem, N = 3.}
+  \label{table:objective-table}
+\end{table}
 
 % \begin{table}[h!]
 % \caption{Sample table title. This is where the description of the table should go.}
