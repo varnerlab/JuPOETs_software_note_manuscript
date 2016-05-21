@@ -21,9 +21,9 @@ Biox = x[:,10]
 using PyPlot
 figure(1)
 plot(t,Ax,color="k",label="HCM EM",linewidth=2)
-plot(t,Bx, color="k",linewidth=2)
-plot(t,Cx, color="k",linewidth=2)
-plot(t,Biox, color="k",linewidth=2)
+plot(t,Bx, color="r",linewidth=2)
+plot(t,Cx, color="b",linewidth=2)
+plot(t,Biox, color="g",linewidth=2)
 legend(fontsize=18)
 xlabel("Time (hr)",fontsize=20)
 ylabel("Abundance (mM)",fontsize=20)

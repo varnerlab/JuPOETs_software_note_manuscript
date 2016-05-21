@@ -1,10 +1,10 @@
 include("Kinetics.jl")
 include("Control.jl")
 
-function Balances(t,x,DF)
+function Balances(t,x,dxdt_vector,DF)
 
-  idx = find(x.<0)
-  x[idx] = 0.0
+  idx = find(x.<1e-9)
+  x[idx] = 1e-9
 
   # Alias the species vector -
   e1 = x[1];
@@ -41,11 +41,11 @@ function Balances(t,x,DF)
   mu = sum(Growth_rate)
 
   # Enzyme Balances
-  dxdt_vector = zeros(10)
+  #dxdt_vector = zeros(10)
   dxdt_vector[1:num_modes] = alpha + Enzyme_rate - (beta+mu)*x[1:num_modes]
 
   # Metabolite Balances
   dxdt_vector[7:10] = S[1:4,:]*Z*Reaction_rate*Biox
 
-  return dxdt_vector
+  #return dxdt_vector
 end

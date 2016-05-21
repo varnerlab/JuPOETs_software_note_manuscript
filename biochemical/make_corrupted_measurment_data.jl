@@ -20,8 +20,8 @@ Biox = x[:,10]
 # write data files -
 Ax = Ax.*(1.0)
 Bx = Bx.*(1.0)
-Cx = Cx.*(1+2.0)
-Biox = Biox.*(1+0.5)
+Cx = Cx.*(1.0)
+Biox = Biox.*(1.0)
 
 data = [t Ax Bx Cx Biox]
-writedlm("./data/CORRUPTED_MEASUREMENT_SET.dat",data)
+writedlm("./data/MEASUREMENT_SET_4.dat",data)

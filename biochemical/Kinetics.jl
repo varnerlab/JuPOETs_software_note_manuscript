@@ -18,11 +18,11 @@ function Kinetics(t,x,DF)
   Biox = x[10];
 
   #Parametrs from DF
-  kmax = DF["ReactionRateVector"]
-  K = DF["SaturationConstantVector"]
-  ke = DF["EnzymeRate"]
-  alpha = DF["EnzymeSynthesis"]
-  beta = DF["Degradation"]
+  kmax = abs(DF["ReactionRateVector"])
+  K = abs(DF["SaturationConstantVector"])
+  ke = abs(DF["EnzymeRate"])
+  alpha = abs(DF["EnzymeSynthesis"])
+  beta = abs(DF["Degradation"])
   Z = DF["ModeMatrix"]
   S = DF["MetaboliteMatrix"]
 

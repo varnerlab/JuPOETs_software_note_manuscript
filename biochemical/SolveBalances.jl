@@ -1,6 +1,6 @@
 include("Data_Cybernetic.jl")
 include("Balances.jl")
-using ODE
+using Sundials
 
 function SolveBalances(tStart,tStop,tStep,Param)
 
@@ -28,22 +28,22 @@ function SolveBalances(tStart,tStop,tStep,Param)
   end
 
   #RunSolver
-  f(t,x) = Balances(t,x,DF)
-  #x = Sundials.cvode(f,IC,t,reltol=1e-3,abstol=1e-6)
-  t,y = ode23(f,IC,t)
+  f(t,x,dxdt) = Balances(t,x,dxdt,DF)
+  x = Sundials.cvode(f,IC,t,reltol=1e-3,abstol=1e-6)
+  #t,y = ode23(f,IC,t;reltol=1e-3,abstol=1e-6)
 
-  # compute x array -
-  e1 = map(y -> y[1], y);
-  e2 = map(y -> y[2], y);
-  e3 = map(y -> y[3], y);
-  e4 = map(y -> y[4], y);
-  e5 = map(y -> y[5], y);
-  e6 = map(y -> y[6], y);
-  Ax = map(y -> y[7], y);
-  Bx = map(y -> y[8], y);
-  Cx = map(y -> y[9], y);
-  Biox = map(y -> y[10], y);
-
-  x = [e1 e2 e3 e4 e5 e6 Ax Bx Cx Biox]
+  # # compute x array -
+  # e1 = map(y -> y[1], y);
+  # e2 = map(y -> y[2], y);
+  # e3 = map(y -> y[3], y);
+  # e4 = map(y -> y[4], y);
+  # e5 = map(y -> y[5], y);
+  # e6 = map(y -> y[6], y);
+  # Ax = map(y -> y[7], y);
+  # Bx = map(y -> y[8], y);
+  # Cx = map(y -> y[9], y);
+  # Biox = map(y -> y[10], y);
+  #
+  # x = [e1 e2 e3 e4 e5 e6 Ax Bx Cx Biox]
   return t,x
 end
