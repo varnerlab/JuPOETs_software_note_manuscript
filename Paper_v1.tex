@@ -124,6 +124,12 @@
    email={dmb457@cornell.edu}
 ]{\inits{DB}\fnm{David} \snm{Bassen}}
 \author[
+  addressref={aff1}
+]{\inits{MV}\fnm{Michael} \snm{Vilkhovoy}}
+\author[
+  addressref={aff1}
+]{\inits{MM}\fnm{Mason} \snm{Minot}}
+\author[
    addressref={aff2},
    email={jtb47@cornell.edu}
 ]{\inits{JB}\fnm{Jonathan T} \snm{Butcher}}
@@ -320,16 +326,14 @@ The parameter search can be subject to parameter bound constraints where $\mathc
 POETs integrate Simulated Annealing (SA) with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives
 (Fig. \ref{fig:fig-MOSAalgorithm}).
 The central idea underlying POETs is a mapping between the value of the objective functions evaluated at $\mathbf{p}_{i+1}$ (parameter guess at iteration $i+1$) and the Pareto rank.
-We computed the Pareto rank of $\mathbf{p}_{i+1}$ by comparing the simulation error at iteration $i+1$ against an archive of simulation errors compiled up to iteration $i$ $\mathbf{E}_{i}$.
-We used the Fonseca and Fleming scheme to compute the Pareto rank, $r$ \cite{RANKING}:
+Pareto rank is a measure of distance from the trade-off surface;
+Parameter sets on or near the optimal trade-off surface between the objectives have a rank equal to $0$ (no other current parameter sets are better).
+Sets with increasing non-zero rank are progressively further away from the optimal trade-off surface.
+Thus, a parameter set with a $rank = 0$ is \emph{better} in a trade-off sense than $rank>0$.
+We computed the Pareto rank of $\mathbf{p}_{i+1}$ by comparing the simulation error at iteration $i+1$ against an archive of simulation errors compiled up to iteration $i$ $\mathcal{O}_{i}$. We used the Fonseca and Fleming scheme to compute the Pareto rank, $r$ \cite{RANKING}:
 \begin{equation}\label{eqn_rank}
 rank\left(\mathbf{p}_{i+1}\mid \mathbf{E}_{i}\right)=r
 \end{equation} where $r$ denotes the rank, or the number of parameter sets that dominate parameter set $\mathbf{p}_{i+1}$.
-Parameter sets on the optimal trade-off surface between the objectives have a rank equal to $0$ (no other current parameter sets are better).
-Sets with increasing non-zero rank are progressively further away from the optimal trade-off surface.
-Parameter sets on the optimal trade-off surface have a rank equal to $0$ (no other current parameter sets are better).
-Sets with increasing non-zero rank are progressively farther away from the optimal trade-off surface.
-Thus, a parameter set with a $rank = 0$ is \emph{better} in a trade-off sense than $rank>0$.
 We used the Pareto rank to inform the SA calculation.
 The parameter set $\mathbf{k}_{i+1}$ was accepted or rejected by the SA using the acceptance probability $\mathcal{P}\left(\mathbf{k}_{i+1}\right)$:
 \begin{equation}\label{eqn_costMOSA}
@@ -422,15 +426,28 @@ However, if the solution is not accepted, it is removed from the archive and dis
 JuPOETs identified solutions on or near the optimal tradeoff surface significantly faster than Octave-POETs for the suite of test problems
 (Fig. \ref{fig:fig-timing} and Fig. \ref{fig:fig-surfaces}).
 We compared the performance of JuPOETs versus POETs implemented in Octave for a suite of multiobjective test functions (Table \ref{table:objective-table}).
-The execution time (wall-clock) for JuPOETs and Octave-POETs was measured for 10 independent trials for the suite of test problems.
-The same cooling, neighbor, acceptance, search and objective logic was employed between the implementations, with all other parameters held constant.
-For each test function, the search domain was partitioned into 10 segments, where initial parameter guesses were drawn from each partition.
+The wall-clock time for JuPOETs and Octave-POETs was measured for 10 independent trials for the test problems.
+The same cooling, neighbor, acceptance, search and objective logic was employed between the implementations, and all other parameters were held constant.
+For each test function, the search domain was partitioned into 10 segments, where an initial parameter guess was drawn from each partition.
 The number of search steps for each temperate $\mathcal{I}$ = 10 for all cases, and the cooling parameter was $\alpha$ = 0.9.
 On average, JuPOETs identified optimal or near optimal solutions for the suite of test problems six-fold faster (60s versus 400s)
 than Octave-POETs (Fig. \ref{fig:fig-timing}). In addition, JuPOETs produced the characteristic tradeoff curves for each test problem, given both parameter bound and
-problem constraints (Fig. \ref{fig:fig-surfaces}). Taken together, these results suggested that JuPOETs was able to estimate an ensemble of solutions to constrained multiobjective optimization problems significantly faster than the current Octave implementation. However, we have not demonstrated JuPOETs on a biochemically relevant test problem.
+problem constraints (Fig. \ref{fig:fig-surfaces}). Taken together, these results suggested that JuPOETs was able to estimate an ensemble of solutions to constrained multiobjective optimization problems significantly faster than the current Octave implementation.
+Next, we tested JuPOETs on a proof-of-concept biochemical model identification problem.
 
-[JuPOETs and a proof-of-principle HCM-EM model goes here]
+JuPOETs estimated an ensemble of biochemical models that was consistent with the mean of synthetic training data (Fig. \ref{fig:fig-biochemical}).
+Four synthetic data sets were generated from a prototypical biochemical network consisting of 6 metabolites and 7 reactions (Fig. \ref{fig:fig-biochemical}, inset right).
+We considered a typical case in which the same measurements were made on four different hypothetical cell types, each having the same biological connectivity but different performance.
+Network dynamics were modeled using the hybrid cybernetic model with elementary modes (HCM-EM) approach of Ramkrishna and coworkers \cite{2008_kim_varner_ramkrishna_BiotechProg}.
+In the HCM-EM approach, metabolic networks are first decomposed into a set of elementary modes (EMs) (chemically balanced steady-state pathways, see \cite{Schuster:2000aa}).
+Combinations of elementary modes are then used to characterize network behavior.
+Each elementary mode is catalyzed by a pseudo enzyme; thus, each mode has both kinetic and enzyme synthesis parameters.
+The proof of concept network generated 6 EMs, resulting in 13 model parameters.
+The synthetic data was generated by randomly varying these parameters.
+JuPOETs produced an ensemble of models that captured the mean of the measured data sets for extracellular metabolites and cellmass
+(Fig. \ref{fig:fig-biochemical}A and B). The 95\% confidence estimate produced by the ensemble was consistent with mean of the measured data, despite having significant uncertainty in the data. 
+
+
 
 \section*{Conclusions}
 
@@ -450,7 +467,8 @@ This study was supported by an award from the National Science Foundation (NSF C
 a National Science Foundation Graduate Research Fellowship (NSGRF) to D.B.
 
 \section*{Author's contributions}
-    J.V developed the software presented in this study. The manuscript was prepared and edited for publication by D.B, J.B. and J.V.
+    J.V developed the software presented in this study. M.M and M.V developed the proof-of-concept biochemical model.
+    The manuscript was prepared and edited for publication by D.B, J.B. and J.V.
 
 %\section*{Acknowledgements}
 %  Text for this section \ldots
@@ -501,11 +519,11 @@ a National Science Foundation Graduate Research Fellowship (NSGRF) to D.B.
 
 \section*{Figures}
 
-\begin{figure}
+\begin{figure}[h]
   \caption{Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.}\label{fig:fig-MOSAalgorithm}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
   \caption{The performance of JuPOETs on the multi-objective test suite.
   The execution time (wall-clock) for JuPOETs and POETs implemented in Octave was measured for 10 independent trials for the suite of test problems.
   The number of steps per temperature $\mathcal{I}$ = 10, and the cooling parameter $\alpha$ = 0.9 for all cases.
@@ -513,11 +531,27 @@ a National Science Foundation Graduate Research Fellowship (NSGRF) to D.B.
   For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints.  }\label{fig:fig-timing}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[h]
   \caption{Representative JuPOETs solutions for problems in the multi-objective test suite.
   The number of steps per temperature $\mathcal{I}$ = 10, and the cooling parameter $\alpha$ = 0.9 for all cases.
   The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment.
   For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints.  }\label{fig:fig-surfaces}
+\end{figure}
+
+\begin{figure}[h]
+  \caption{Proof of concept biochemical network study.
+  Inset: Prototypical biochemical network with six metabolites and seven reactions modeled using the hybrid cybernetic approach (HCM).
+  Intracellular cellmass precursors $A,B$, and $C$ are balanced (no accumulation) while the extracellular metabolites $A_{e},B_{e}$, and $C_{e}$ are dynamic.
+  The oval denotes the cell boundary, $q_{j}$ is the $j$th flux across the boundary, and $v_{k}$ denotes the $k$th intracellular flux.
+  Four data sets (each with $A_{e},B_{e}$,$C_{e}$ and cellmass measurements) were generated by varying the kinetic constant for each biochemical modes.
+  Each data set was a single objective.
+  A: Ensemble simulation of extracellular substrate $A_{e}$ and cellmass versus time.
+  B: Ensemble simulation of extracellular substrate $B_{e}$ and $C_{e}$ versus time.
+  The gray region denotes the 95\% confidence estimate of the mean ensemble simulation.
+  The data points denote mean synthetic measurements, while the error bars denote the 95\% confidence estimate of the measurement computed over the four training data sets.
+  C: Trade-off plots between the four training objectives. The quantity $O_{j}$ denotes the jth training objective.
+  Each point represents a member of the parameter ensemble, where gray denotes rank 0 sets, while black denotes rank 1 sets.
+   }\label{fig:fig-biochemical}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

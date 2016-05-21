@@ -1,6 +1,6 @@
 \relax 
 \global\@namedef{num@address}{2}
-\global\@namedef{num@author}{3}
+\global\@namedef{num@author}{5}
 \citation{Brown:2004}
 \citation{Gadkar:2005ad}
 \citation{Gennemark:2009on}
@@ -21,17 +21,19 @@
 \citation{Lequieu:2011aa}
 \citation{Octave}
 \thanksnewlabel{au1@email}{{dmb457@cornell.edu}{1}}
-\thanksnewlabel{au2@email}{{jtb47@cornell.edu}{1}}
-\thanksnewlabel{au3@email}{{jdv27@cornell.edu}{1}}
-\thanksnewlabel{au3thanks}{{*}{1}}
+\thanksnewlabel{au4@email}{{jtb47@cornell.edu}{1}}
+\thanksnewlabel{au5@email}{{jdv27@cornell.edu}{1}}
+\thanksnewlabel{au5thanks}{{*}{1}}
 \@writefile{toc}{\contentsline {section}{Abstract}{1}}
 \citation{Julia}
 \citation{RANKING}
 \newlabel{eqn_rank}{{2}{3}}
 \newlabel{eqn_costMOSA}{{3}{3}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Pseudo-code for the run-loop of the JuPOETs algorithm. The user specifies the neighbor, acceptance, cooling and objective function pointers along with a initial parameter guess. The rank archive $\mathcal  {R}$, solution archive $\mathcal  {S}$ and objective archive $\mathcal  {O}$ are initialized from the initial guess. The initial guess is then perturbed in the neighbor function, which generates a new solution whose performance is evaluated using the user supplied objective function. The new solution and objective values are then added to the respective archives and ranked using the builtin rank function. If the new solution accepted (based upon a probability calculated with the user supplied acceptance function) it is added to the solution and objective archive. This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied cooling function after each $\mathcal  {I}$ iterations. \relax }}{5}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Pseudo-code for the run-loop of the JuPOETs algorithm. The user specifies the neighbor, acceptance, cooling and objective function pointers along with a initial parameter guess. The rank archive $\mathcal  {R}$, solution archive $\mathcal  {S}$ and objective archive $\mathcal  {O}$ are initialized from the initial guess. The initial guess is then perturbed in the neighbor function, which generates a new solution whose performance is evaluated using the user supplied objective function. The new solution and objective values are then added to the respective archives and ranked using the builtin rank function. If the new solution accepted (based upon a probability calculated with the user supplied acceptance function) it is added to the solution and objective archive. This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied cooling function after each $\mathcal  {I}$ iterations. \relax }}{4}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{algo:JuPOETs-pcode}{{1}{5}}
+\newlabel{algo:JuPOETs-pcode}{{1}{4}}
+\citation{2008_kim_varner_ramkrishna_BiotechProg}
+\citation{Schuster:2000aa}
 \bibstyle{bmc-mathphys}
 \bibdata{References_v1}
 \bibcite{Brown:2004}{1}
@@ -45,8 +47,6 @@
 \bibcite{Song:2009b}{9}
 \bibcite{Tasseff:2010aa}{10}
 \bibcite{Tasseff:2011aa}{11}
-\thanksnewlabel{aff1thanks}{{1}{6}}
-\thanksnewlabel{aff2thanks}{{2}{6}}
 \bibcite{Moles:2003}{12}
 \bibcite{Purvis:2008}{13}
 \bibcite{Song:2010aa}{14}
@@ -55,14 +55,20 @@
 \bibcite{Octave}{17}
 \bibcite{Julia}{18}
 \bibcite{RANKING}{19}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.\relax }}{8}}
-\newlabel{fig:fig-MOSAalgorithm}{{1}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The performance of JuPOETs on the multi-objective test suite. The execution time (wall-clock) for JuPOETs and POETs implemented in Octave was measured for 10 independent trials for the suite of test problems. The number of steps per temperature $\mathcal  {I}$ = 10, and the cooling parameter $\alpha $ = 0.9 for all cases. The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment. For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints. \relax }}{8}}
-\newlabel{fig:fig-timing}{{2}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Representative JuPOETs solutions for problems in the multi-objective test suite. The number of steps per temperature $\mathcal  {I}$ = 10, and the cooling parameter $\alpha $ = 0.9 for all cases. The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment. For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints. \relax }}{9}}
-\newlabel{fig:fig-surfaces}{{3}{9}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Multi-objective optimization test problems. We tested the JuPOETs implementation on three two-dimensional test problems, with one-, two- and three-dimensional parameter vectors. Each problem had parameter bounds constraints, however, on the Binh and Korn function had additional non-linear problem constraints. For the Fonesca and Fleming problem, N = 3.\relax }}{10}}
-\newlabel{table:objective-table}{{1}{10}}
-\newlabel{LastPage}{{}{10}}
-\xdef\lastpage@lastpage{10}
+\bibcite{2008_kim_varner_ramkrishna_BiotechProg}{20}
+\bibcite{Schuster:2000aa}{21}
+\thanksnewlabel{aff1thanks}{{1}{6}}
+\thanksnewlabel{aff2thanks}{{2}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.\relax }}{7}}
+\newlabel{fig:fig-MOSAalgorithm}{{1}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The performance of JuPOETs on the multi-objective test suite. The execution time (wall-clock) for JuPOETs and POETs implemented in Octave was measured for 10 independent trials for the suite of test problems. The number of steps per temperature $\mathcal  {I}$ = 10, and the cooling parameter $\alpha $ = 0.9 for all cases. The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment. For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints. \relax }}{7}}
+\newlabel{fig:fig-timing}{{2}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Representative JuPOETs solutions for problems in the multi-objective test suite. The number of steps per temperature $\mathcal  {I}$ = 10, and the cooling parameter $\alpha $ = 0.9 for all cases. The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment. For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints. \relax }}{7}}
+\newlabel{fig:fig-surfaces}{{3}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Proof of concept biochemical network study. Inset: Prototypical biochemical network with six metabolites and seven reactions modeled using the hybrid cybernetic approach (HCM). Intracellular cellmass precursors $A,B$, and $C$ are balanced (no accumulation) while the extracellular metabolites $A_{e},B_{e}$, and $C_{e}$ are dynamic. The oval denotes the cell boundary, $q_{j}$ is the $j$th flux across the boundary, and $v_{k}$ denotes the $k$th intracellular flux. Four data sets (each with $A_{e},B_{e}$,$C_{e}$ and cellmass measurements) were generated by varying the kinetic constant for each biochemical modes. Each data set was a single objective. A: Ensemble simulation of extracellular substrate $A_{e}$ and cellmass versus time. B: Ensemble simulation of extracellular substrate $B_{e}$ and $C_{e}$ versus time. The gray region denotes the 95\% confidence estimate of the mean ensemble simulation. The data points denote mean synthetic measurements, while the error bars denote the 95\% confidence estimate of the measurement computed over the four training data sets. C: Trade-off plots between the four training objectives. The quantity $O_{j}$ denotes the jth training objective. Each point represents a member of the parameter ensemble, where gray denotes rank 0 sets, while black denotes rank 1 sets. \relax }}{8}}
+\newlabel{fig:fig-biochemical}{{4}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Multi-objective optimization test problems. We tested the JuPOETs implementation on three two-dimensional test problems, with one-, two- and three-dimensional parameter vectors. Each problem had parameter bounds constraints, however, on the Binh and Korn function had additional non-linear problem constraints. For the Fonesca and Fleming problem, N = 3.\relax }}{9}}
+\newlabel{table:objective-table}{{1}{9}}
+\newlabel{LastPage}{{}{9}}
+\xdef\lastpage@lastpage{9}
 \gdef\lastpage@lastpageHy{}

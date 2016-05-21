@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{19}
+\begin{thebibliography}{21}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -316,6 +316,38 @@ pp. \bfpage{416}--\blpage{423}
 \end{bchapter}
 \endbibitem
 
+%%% 20
+\bibitem{2008_kim_varner_ramkrishna_BiotechProg}
+\begin{barticle}
+\bauthor{\bsnm{Kim}, \binits{J.}},
+\bauthor{\bsnm{Varner}, \binits{J.}},
+\bauthor{\bsnm{Ramkrishna}, \binits{D.}}:
+\batitle{A hybrid model of anaerobic e. coli gjt001: Combination of elementary
+  flux modes and cybernetic variables}.
+\bjtitle{Biotechnol. Prog.}
+\bvolume{24}(\bissue{5}),
+\bfpage{993}--\blpage{1006}
+(\byear{2008}).
+doi:\doiurl{10.1002/btpr.73}
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem{Schuster:2000aa}
+\begin{barticle}
+\bauthor{\bsnm{Schuster}, \binits{S.}},
+\bauthor{\bsnm{Fell}, \binits{D.A.}},
+\bauthor{\bsnm{Dandekar}, \binits{T.}}:
+\batitle{A general definition of metabolic pathways useful for systematic
+  organization and analysis of complex metabolic networks}.
+\bjtitle{Nat Biotechnol}
+\bvolume{18}(\bissue{3}),
+\bfpage{326}--\blpage{32}
+(\byear{2000}).
+doi:\doiurl{10.1038/73786}
+\end{barticle}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -596,6 +628,40 @@ pp. \bfpage{416}--\blpage{423}
   <pubdate>1993</pubdate>
   <fpage>416</fpage>
   <lpage>423</lpage>
+</bibl>
+
+<bibl id="B20">
+  <title><p>A hybrid model of anaerobic E. coli GJT001: Combination of
+  elementary flux modes and cybernetic variables</p></title>
+  <aug>
+    <au><snm>Kim</snm><fnm>JI</fnm></au>
+    <au><snm>Varner</snm><fnm>JD</fnm></au>
+    <au><snm>Ramkrishna</snm><fnm>D</fnm></au>
+  </aug>
+  <source>Biotechnol. Prog.</source>
+  <publisher>Wiley Subscription Services, Inc., A Wiley Company</publisher>
+  <pubdate>2008</pubdate>
+  <volume>24</volume>
+  <issue>5</issue>
+  <fpage>993</fpage>
+  <lpage>-1006</lpage>
+  <url>http://dx.doi.org/10.1002/btpr.73</url>
+</bibl>
+
+<bibl id="B21">
+  <title><p>A general definition of metabolic pathways useful for systematic
+  organization and analysis of complex metabolic networks</p></title>
+  <aug>
+    <au><snm>Schuster</snm><fnm>S</fnm></au>
+    <au><snm>Fell</snm><fnm>D A</fnm></au>
+    <au><snm>Dandekar</snm><fnm>T</fnm></au>
+  </aug>
+  <source>Nat Biotechnol</source>
+  <pubdate>2000</pubdate>
+  <volume>18</volume>
+  <issue>3</issue>
+  <fpage>326</fpage>
+  <lpage>32</lpage>
 </bibl>
 
 </refgrp>
