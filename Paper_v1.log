@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  21 MAY 2016 11:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  22 MAY 2016 08:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -577,36 +577,40 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-[2] [3] [4] (./Paper_v1.bbl [5
+[2] [3]
 
-]) [6]
-Overfull \hbox (12.4pt too wide) in paragraph at lines 523--523
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4] [5] [6
+
+] (./Paper_v1.bbl [7]) [8]
+Overfull \hbox (12.4pt too wide) in paragraph at lines 541--541
 [] [] 
  []
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 531--531
+Overfull \hbox (12.4pt too wide) in paragraph at lines 549--549
 [] [] 
  []
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 538--538
+Overfull \hbox (12.4pt too wide) in paragraph at lines 556--556
 [] [] 
  []
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 554--554
+Overfull \hbox (12.4pt too wide) in paragraph at lines 572--572
 [] [] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[7
-
-] [8] 
-AED: lastpage setting LastPage
 [9
+
+] [10] 
+AED: lastpage setting LastPage
+[11
 
 ] (./Paper_v1.aux)
 
@@ -617,11 +621,11 @@ LaTeX Font Warning: Size substitutions with differences
 Here is how much of TeX's memory you used:
  5979 strings out of 493089
  84290 string characters out of 6134842
- 188308 words of memory out of 5000000
+ 184318 words of memory out of 5000000
  9391 multiletter control sequences out of 15000+600000
  14429 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,18n,38p,1435b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,18n,38p,1436b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb><
 /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></u
@@ -647,10 +651,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on Paper_v1.pdf (9 pages, 280320 bytes).
+Output written on Paper_v1.pdf (11 pages, 284187 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 141 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

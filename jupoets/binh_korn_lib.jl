@@ -24,9 +24,10 @@ function objective_function(parameter_array)
   penaltly_array = zeros(2)
   penaltly_array[1] = lambda_value*(min(0,violation_constraint_1))^2
   penaltly_array[2] = lambda_value*(min(0,violation_constraint_2))^2
+  penaltly_total = sum(penaltly_array)
 
   # return the obj_array -
-  return obj_array+penaltly_array
+  return obj_array+penaltly_total*ones(2)
 end
 
 # Generates new parameter array, given current array -
