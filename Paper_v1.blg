@@ -24,22 +24,6 @@ Warning--entry type for "Octave" isn't style-file defined
 --line 94 of file References_v1.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2585 of file bmc-mathphys.bst
 Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
 while executing---line 2585 of file bmc-mathphys.bst
 Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
@@ -70,22 +54,6 @@ Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L.
 while executing---line 2585 of file bmc-mathphys.bst
 Warning--to sort, need author or key in Octave
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 2686 of file bmc-mathphys.bst
 Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
 while executing---line 2686 of file bmc-mathphys.bst
 Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
@@ -125,30 +93,6 @@ Warning--"Algorithms}" isn't a brace-balanced string for entry RANKING
 while executing--line 2686 of file bmc-mathphys.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "K. S. Brown, C. C. Hill, G. A. Calero, C. R. Myers, K. H. Lee, J. P. Sethna, R. A. Cerione" for entry Brown:2004
-while executing---line 3019 of file bmc-mathphys.bst
 Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
 while executing---line 3019 of file bmc-mathphys.bst
 Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
@@ -191,45 +135,45 @@ Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L.
 while executing---line 3019 of file bmc-mathphys.bst
 Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
 while executing---line 3019 of file bmc-mathphys.bst
-You've used 21 entries,
+You've used 20 entries,
             7128 wiz_defined-function locations,
-            1281 strings with 13544 characters,
-and the built_in function-call counts, 154702 in all, are:
-= -- 22098
-> -- 732
-< -- 495
-+ -- 8751
-- -- 166
-* -- 9011
-:= -- 29516
-add.period$ -- 29
-call.type$ -- 21
-change.case$ -- 177
-chr.to.int$ -- 1161
-cite$ -- 24
-duplicate$ -- 1989
-empty$ -- 6579
-format.name$ -- 548
-if$ -- 36451
+            1274 strings with 13329 characters,
+and the built_in function-call counts, 148845 in all, are:
+= -- 21401
+> -- 704
+< -- 473
++ -- 8651
+- -- 163
+* -- 8573
+:= -- 28350
+add.period$ -- 28
+call.type$ -- 20
+change.case$ -- 171
+chr.to.int$ -- 1106
+cite$ -- 23
+duplicate$ -- 1906
+empty$ -- 6199
+format.name$ -- 536
+if$ -- 35153
 int.to.chr$ -- 1
-int.to.str$ -- 55
-missing$ -- 693
-newline$ -- 626
-num.names$ -- 100
-pop$ -- 791
+int.to.str$ -- 53
+missing$ -- 663
+newline$ -- 602
+num.names$ -- 95
+pop$ -- 761
 preamble$ -- 1
-purify$ -- 95
-quote$ -- 42
-skip$ -- 11886
+purify$ -- 91
+quote$ -- 40
+skip$ -- 11536
 stack$ -- 0
-substring$ -- 19151
-swap$ -- 764
-text.length$ -- 333
+substring$ -- 18182
+swap$ -- 730
+text.length$ -- 319
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 908
+type$ -- 863
 warning$ -- 2
-while$ -- 709
+while$ -- 680
 width$ -- 0
-write$ -- 797
-(There were 77 error messages)
+write$ -- 769
+(There were 49 error messages)

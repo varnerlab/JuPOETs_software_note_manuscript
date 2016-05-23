@@ -53,10 +53,11 @@
 
 % Imports required for p-code of JuPOETs
 \usepackage[linesnumbered]{algorithm2e}
+\usepackage{courier}
 %\usepackage{algorithm}
-%\RequirePackage{natbib}
+\RequirePackage{natbib}
 %\RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
-%\RequirePackage{hyperref}
+\RequirePackage{hyperref}
 \usepackage[utf8]{inputenc} %unicode support
 %\usepackage[applemac]{inputenc} %applemac support if unicode package fails
 %\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
@@ -194,8 +195,11 @@
 \begin{abstractbox}
 
 \begin{abstract} % abstract
-\parttitle{First part title} %if any
-Text for this section.
+Ensemble modeling is a well established approach for dealing with parameter uncertainty in large-scale deterministic models.
+In this study, we present an open-source implementation of the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
+JuPOETs integrates simulated annealing with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives.
+JuPOETs can be installed using the Julia package manager from the JuPOETs GitHub repository at https://github.com/varnerlab/POETs.jl.
+
 
 \parttitle{Second part title} %if any
 Text for this section.
@@ -210,9 +214,9 @@ Text for this section.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{keyword}
-\kwd{sample}
-\kwd{article}
-\kwd{author}
+\kwd{Ensemble~modeling}
+\kwd{Multiobjective~optimization}
+\kwd{Julia}
 \end{keyword}
 
 % MSC classifications codes, if any
@@ -255,13 +259,13 @@ Text for this section.
 %% Background %%
 %%
 \section*{Background}
-Models of signal transduction networks may exhibit complex relationships between model performance and parameter values \cite{Brown:2004}.
-It is often not possible to uniquely identify parameters from noisy experimental measurements, even when given extensive training data \cite{Gadkar:2005ad}.
-Thus, despite significant advances in standardizing model identification \cite{Gennemark:2009on},
-the core problem of estimating model parameters from noisy data remains.
+Ensemble modeling is a well established approach for dealing with parameter uncertainty in large-scale deterministic models.
+It is often not possible to uniquely identify biochemical model parameters from noisy experimental measurements, even when given extensive training data \cite{Gadkar:2005ad}.
+Thus, despite significant advances in standardizing biochemical model identification \cite{Gennemark:2009on},
+the problem of estimating model parameters from experimental data remains challenging.
 Ensemble approaches have been used to address parameter uncertainty in systems biology and other fields like weather prediction \cite{Battogtokh:2002,Kuepfer:2007, Brown:2003,Palmer:2005}.
-In an ensemble approach, a \emph{family} of approximate parameter sets is identified instead of a single best-fit parameter set.
-Parameter families can be selected based on simulation error, along with other criterion such as diversity.
+In an ensemble approach, a family of parameter sets is identified instead of a single best-fit parameter set.
+Parameter families can be selected based upon simulation error, along with other criterion such as diversity.
 Simulations using parameter ensembles can estimate confidence intervals on model variables, and robustly constrain model predictions,
 despite having many poorly constrained parameters \cite{Gutenkunst2007,Song:2009b}.
 There are several techniques to generate parameter ensembles.
@@ -270,27 +274,25 @@ Metropolis-type random walk through parameter space \cite{Battogtokh:2002,Brown:
 Other strategies could also be adapted to generate parameter ensembles \cite{Moles:2003}.
 However, the unifying component of all of these previous strategies was the minimization of a single objective function.
 
-Identification of large models with hundreds or even thousands of states and parameters may not be tractable as a single objective formulation.
-Models at these scales require significant training data perhaps taken from diverse sources, for example different laboratories or cell-lines.
-These diverse training data are likely heterogenous, and contain intrinsic conflicts.
-On the other hand, large models can also be constructed from many smaller modules.
-For example, Diamond and coworkers developed a model of phosphoinositide and calcium signaling in human platelets composed of many
+Identification of large biochemical models with hundreds or even thousands of states and parameters may not be tractable as a single objective formulation.
+Large models require significant training data perhaps taken from diverse sources, for example different laboratories or cell-lines.
+These diverse training data are likely heterogenous, and contain intrinsic conflicts which complicate parameter estimation.
+On the other hand, large models can also be constructed from many smaller modules, each of which is independently identified.
+For example, Diamond and coworkers developed a model of calcium signaling in human platelets composed of many
 separate submodels identified using different types of training data \cite{Purvis:2008}.
-Taken together, the problem of identifying parameter ensembles for large-scale models with many parameters posses a unique challenge.
 Parameter ensemble estimation techniques which optimally balance tradeoffs between submodels or conflicts in training data
-might lead to more robust model performance. One class of such techniques is multiobjective optimization.
+lead to robust model performance. One class of such techniques is multiobjective optimization.
 Previously, we developed the Pareto Optimal Ensemble Technique (POETs) algorithm to address the challenge of competing or conflicting objectives.
-POETs, which integrates simulated annealing and multiobjective optimization through the notion of Pareto rank, finds a family of parameter estimates which optimally trade-off between
+POETs, which integrates simulated annealing (SA) and multiobjective optimization through the notion of Pareto rank, finds a family of parameter estimates which optimally trade-off between
 competing (and potentially conflicting) experimental objectives \cite{Song:2010aa}.
 POETs has been used in several biochemical and signal transduction studies to estimate parameter ensembles \cite{Song:2009aa,Lequieu:2011aa}.
 However, the previous implementation of POETs, in the Octave programming language \cite{Octave}, suffered from poor performance, and did not offer user definable
-functions such as custom cooling schedules, parameter constraints, or custom search logic. It was also not well integrated into a modern package or
-source code management (SCM) system.
+functions to accommodate custom cooling schedules, parameter constraints, or custom search logic. Octave-POETs was also not well integrated into a modern package or
+source code management (SCM) system, thus upgrades containing new features, or bug fixes were not centrally managed.
 
 \section*{Implementation}
-
-In this study, we present JuPOETs, an open-source implementation of the Pareto Optimal Ensemble Technique (POETs) in the Julia programming language.
-JuPOETs offers many advantages and improvements compared to the previous implementation of POETs.
+In this study, we present an open-source implementation of the Pareto optimal ensemble technique in the Julia programming language (JuPOETs).
+JuPOETs offers many advantages and improvements when compared to Octave-POETs.
 First, JuPOETs takes advantage of the unique performance features of the Julia programming language.
 Julia, which has performance comparable to C but with syntax similar to MATLAB/Octave and Python, is a cross-platform, high-performance programming language for technical computing \cite{Julia}. Julia offers a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive mathematical function library.
 Additionally, Julia offers a built-in package manager which is directly integrated with GitHub, a popular web-based Git repository hosting service which offers distributed revision control and source code management.
@@ -316,40 +318,44 @@ subject to:
 \end{eqnarray}and parameter bound constraints:
 \begin{equation}\nonumber
   \mathcal{L} \leq \mathbf{p} \leq \mathcal{U}
-\end{equation}
-The term t denotes time, $g_i\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right)$ denotes the ith constraint on the search, where
+\end{equation}using a modified simulated annealing algorithm.
+The quantity t denotes time, $g_i\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right)$ denotes the ith constraint on the search, where
 $\mathbf{x}\left(t,\mathbf{p}\right)$ denotes the model state variable vector with an initial state $\mathbf{x}_{0}$, and $\mathbf{u}(t)$ is an input vector.
 The terms $\mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p})$ denote the system of model equations (e.g., differential equations,
 differential algebraic equations or algebraic constraints) and $\mathbf{p}$ denotes the unknown parameter vector ($\mathcal{P}\times~1$).
 The parameter search can be subject to parameter bound constraints where $\mathcal{L}$ and $\mathcal{U}$ denote the lower and upper parameter bounds, respectively.
 
-POETs integrates simulated annealing (SA) with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives
-(Fig. \ref{fig:fig-MOSAalgorithm}).
-The central idea underlying POETs is a mapping between the value of the objective functions evaluated at $\mathbf{p}_{i+1}$ (parameter guess at iteration $i+1$) and the Pareto rank.
-Pareto rank is a measure of distance from the trade-off surface;
-Parameter sets on or near the optimal trade-off surface between the objectives have a rank equal to $0$ (no other current parameter sets are better).
+JuPOETs integrates simulated annealing with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives
+(Fig. \ref{fig:fig-MOSAalgorithm} and Algorithm \ref{algo:JuPOETs-pcode}).
+The central idea underlying POETs is a mapping between the value of the objective functions evaluated at $\mathbf{p}_{i+1}$ (parameter guess at iteration $i+1$) and Pareto rank.
+JuPOETs calculates the performance of a candidate parameter set $\mathbf{p}_{i+1}$ by calling the user defined objective function, \texttt{objective}. The function \texttt{objective} takes
+a parameter set as an input argument and returns a $\mathcal{K}\times{1}$ error vector. Candidate parameter sets are generated by the user supplied \texttt{neighbor} function.
+The error vector associated with $\mathbf{p}_{i+1}$ is ranked using the builtin Pareto \texttt{rank} function, by comparing the current error at iteration i+1 to the error archive $\mathcal{O}_{i}$. Pareto rank is a measure of distance from the trade-off surface;
+parameter sets on or near the optimal trade-off surface between the objectives have a rank equal to $0$ (no other current parameter sets are better).
 Sets with increasing non-zero rank are progressively further away from the optimal trade-off surface.
 Thus, a parameter set with a $rank = 0$ is \emph{better} in a trade-off sense than $rank>0$.
-We computed the Pareto rank of $\mathbf{p}_{i+1}$ by comparing the simulation error at iteration $i+1$ against an archive of simulation errors compiled up to iteration $i$ $\mathcal{O}_{i}$. We used the Fonseca and Fleming scheme to compute the Pareto rank, $r$ \cite{RANKING}:
+We implemented the Fonseca and Fleming ranking scheme in the \texttt{rank} function which computes the Pareto rank, $r$ \cite{RANKING}:
 \begin{equation}\label{eqn_rank}
-rank\left(\mathbf{p}_{i+1}\mid \mathbf{E}_{i}\right)=r
-\end{equation} where $r$ denotes the rank, or the number of parameter sets that dominate parameter set $\mathbf{p}_{i+1}$.
+\texttt{rank}\left(\mathbf{p}_{i+1}\mid \mathcal{O}_{i}\right)=r
+\end{equation} where rank is the number of parameter sets that dominate (are better than) parameter set $\mathbf{p}_{i+1}$.
 We used the Pareto rank to inform the SA calculation.
-The parameter set $\mathbf{k}_{i+1}$ was accepted or rejected by the SA using the acceptance probability $\mathcal{P}\left(\mathbf{k}_{i+1}\right)$:
+The parameter set $\mathbf{p}_{i+1}$ was accepted or rejected by the SA, by calculating an \texttt{acceptance} probability $\mathcal{P}\left(\mathbf{p}_{i+1}\right)$:
 \begin{equation}\label{eqn_costMOSA}
-\mathcal{P}(\mathbf{k}_{i+1}) \equiv \exp{\{-rank\left(\mathbf{k}_{i+1} \mid \mathbf{K}_{i} \right)/T\}}
+\mathcal{P}(\mathbf{p}_{i+1}) \equiv \exp{\{-\texttt{rank}\left(\mathbf{p}_{i+1} \mid \mathcal{S}_{i} \right)/T\}}
 \end{equation}
-where $T$ is the computational annealing temperature. As $rank\left(\mathbf{k}_{i+1}\mid \mathbf{K}_{i}\right)\rightarrow{0}$, the acceptance probability moved toward one,
+where $T$ is the computational annealing temperature. As $\texttt{rank}\left(\mathbf{p}_{i+1}\mid \mathcal{O}_{i}\right)\rightarrow{0}$, the acceptance probability moved toward one,
 ensuring that we explored parameter sets along the Pareto surface.
 Occasionally (depending upon $T$) a parameter set with a high Pareto rank was accepted by the SA allowing a more diverse search of the parameter space.
 However, as $T$ was reduced, the probability of this occurring decreased.
-Parameter sets could be accepted by the SA and $\emph{not}$ archived in $\mathbf{K}_{i}$.
-Only parameter sets with rank less than or equal to a user defined threshold (rank$\leq$4 by default) were included in $\mathbf{K}_{i}$ to ensure that we characterized the neighborhood near the trade-off surface (Algorithm \ref{algo:JuPOETs-pcode}).
-Parameter bounds constraints were implemented in the neighbor function while problem specific constraints were treated using the penalty method where each objective function was
-augmented by the total of the constraint violation:
+Parameter sets could be accepted by the SA and $\emph{not}$ archived in $\mathcal{S}_{i}$.
+Only parameter sets with rank less than or equal to threshold (rank$\leq$4 by default) were included in $\mathcal{S}_{i}$
+to ensure that we characterized the neighborhood near the trade-off surface.
+Parameter bounds were implemented in the \texttt{neighbor} function as box constraints, while problem specific constraints were implemented in \texttt{objective} using a penalty method:
 \begin{equation}
-  O_{i}+\sum_{j=1}^{\mathcal{C}}\lambda_{j}\min\left(0,g_j\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right)\right)\qquad~i=1,\hdots,\mathcal{K}
-\end{equation}
+  O_{i}+\lambda\sum_{j=1}^{\mathcal{C}}\min\left(0,g_j\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right)\right)\qquad~i=1,\hdots,\mathcal{K}
+\end{equation}where $\lambda$ denotes the penalty parameter ($\lambda$ = 100 by default).
+However, because both the neighbor and objective functions are user defined, different constraint implementations are easily defined.
+JuPOETs can be installed using the Julia package manager, see instructions at the JuPOETs GitHub repository (https://github.com/varnerlab/POETs.jl).
 
 \begin{algorithm}[h!]
 

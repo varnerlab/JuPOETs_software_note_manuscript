@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{21}
+\begin{thebibliography}{20}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -43,20 +43,6 @@
 \csname PreBibitemsHook\endcsname
 
 %%% 1
-\bibitem{Brown:2004}
-\begin{barticle}
-\bauthor{\bsnm{K.~S.~Brown}, \binits{G.A.C.C.R.M.K.H.L.J.P.S.R.A.C.}
-  \bsuffix{C.~C.~Hill}}:
-\batitle{The statistical mechanics of complex signaling networks: nerve groth
-  factor signaling}.
-\bjtitle{Phys Biol}
-\bvolume{1},
-\bfpage{184}--\blpage{195}
-(\byear{2004})
-\end{barticle}
-\endbibitem
-
-%%% 2
 \bibitem{Gadkar:2005ad}
 \begin{barticle}
 \bauthor{\bsnm{Gadkar}, \binits{K.G.}},
@@ -71,7 +57,7 @@
 \end{barticle}
 \endbibitem
 
-%%% 3
+%%% 2
 \bibitem{Gennemark:2009on}
 \begin{barticle}
 \bauthor{\bsnm{Gennemark}, \binits{P.}},
@@ -86,7 +72,7 @@ doi:\doiurl{10.1093/bioinformatics/btp050}
 \end{barticle}
 \endbibitem
 
-%%% 4
+%%% 3
 \bibitem{Battogtokh:2002}
 \begin{barticle}
 \bauthor{\bsnm{D~Battogtokh}, \binits{M.E.C.J.A.H.-B.s.} \bsuffix{D~K~Asch}}:
@@ -99,7 +85,7 @@ doi:\doiurl{10.1093/bioinformatics/btp050}
 \end{barticle}
 \endbibitem
 
-%%% 5
+%%% 4
 \bibitem{Kuepfer:2007}
 \begin{barticle}
 \bauthor{\bsnm{L.~Kuepfer}, \binits{U.S.J.S.} \bsuffix{M.~Peter}}:
@@ -111,7 +97,7 @@ doi:\doiurl{10.1093/bioinformatics/btp050}
 \end{barticle}
 \endbibitem
 
-%%% 6
+%%% 5
 \bibitem{Brown:2003}
 \begin{barticle}
 \bauthor{\bsnm{K~S~Brown}, \binits{J.P.S.}}:
@@ -124,7 +110,7 @@ doi:\doiurl{10.1093/bioinformatics/btp050}
 \end{barticle}
 \endbibitem
 
-%%% 7
+%%% 6
 \bibitem{Palmer:2005}
 \begin{barticle}
 \bauthor{\bsnm{T.~N.~Palmer}, \binits{R.H.F.J.D.-R.T.J.M.L.}
@@ -137,7 +123,7 @@ doi:\doiurl{10.1093/bioinformatics/btp050}
 \end{barticle}
 \endbibitem
 
-%%% 8
+%%% 7
 \bibitem{Gutenkunst2007}
 \begin{barticle}
 \bauthor{\bsnm{Gutenkunst}, \binits{R.N.}},
@@ -155,7 +141,7 @@ doi:\doiurl{10.1371/journal.pcbi.0030189}
 \end{barticle}
 \endbibitem
 
-%%% 9
+%%% 8
 \bibitem{Song:2009b}
 \begin{barticle}
 \bauthor{\bsnm{Song}, \binits{S.}},
@@ -169,7 +155,7 @@ doi:\doiurl{10.1371/journal.pcbi.0030189}
 \end{barticle}
 \endbibitem
 
-%%% 10
+%%% 9
 \bibitem{Tasseff:2010aa}
 \begin{barticle}
 \bauthor{\bsnm{Tasseff}, \binits{R.}},
@@ -188,7 +174,7 @@ doi:\doiurl{10.1371/journal.pone.0008864}
 \end{barticle}
 \endbibitem
 
-%%% 11
+%%% 10
 \bibitem{Tasseff:2011aa}
 \begin{barticle}
 \bauthor{\bsnm{Tasseff}, \binits{R.}},
@@ -206,7 +192,7 @@ doi:\doiurl{10.1039/c0ib00141d}
 \end{barticle}
 \endbibitem
 
-%%% 12
+%%% 11
 \bibitem{Moles:2003}
 \begin{barticle}
 \bauthor{\bsnm{C.~G.~Moles}, \binits{J.R.B.} \bsuffix{P.~Mendes}}:
@@ -219,7 +205,7 @@ doi:\doiurl{10.1039/c0ib00141d}
 \end{barticle}
 \endbibitem
 
-%%% 13
+%%% 12
 \bibitem{Purvis:2008}
 \begin{barticle}
 \bauthor{\bsnm{J.~E.~Purvis}, \binits{L.F.B.S.L.D.}
@@ -233,7 +219,7 @@ doi:\doiurl{10.1039/c0ib00141d}
 \end{barticle}
 \endbibitem
 
-%%% 14
+%%% 13
 \bibitem{Song:2010aa}
 \begin{barticle}
 \bauthor{\bsnm{Song}, \binits{S.O.}},
@@ -249,7 +235,7 @@ doi:\doiurl{10.1002/biot.201000059}
 \end{barticle}
 \endbibitem
 
-%%% 15
+%%% 14
 \bibitem{Song:2009aa}
 \begin{barticle}
 \bauthor{\bsnm{Song}, \binits{S.O.}},
@@ -264,7 +250,7 @@ doi:\doiurl{10.1371/journal.pone.0006758}
 \end{barticle}
 \endbibitem
 
-%%% 16
+%%% 15
 \bibitem{Lequieu:2011aa}
 \begin{barticle}
 \bauthor{\bsnm{Lequieu}, \binits{J.}},
@@ -281,7 +267,7 @@ doi:\doiurl{10.1371/journal.pcbi.1002263}
 \end{barticle}
 \endbibitem
 
-%%% 17
+%%% 16
 \bibitem{Octave}
 \begin{botherref}
 \url{https://www.gnu.org/software/octave/}
@@ -289,7 +275,7 @@ Accessed May 11, 2016
 \end{botherref}
 \endbibitem
 
-%%% 18
+%%% 17
 \bibitem{Julia}
 \begin{botherref}
 \oauthor{\bsnm{Bezanson}, \binits{J.}},
@@ -302,7 +288,7 @@ Accessed May 11, 2016
 \end{botherref}
 \endbibitem
 
-%%% 19
+%%% 18
 \bibitem{RANKING}
 \begin{bchapter}
 \bauthor{\bsnm{Fonseca}, \binits{C.M.}},
@@ -316,7 +302,7 @@ pp. \bfpage{416}--\blpage{423}
 \end{bchapter}
 \endbibitem
 
-%%% 20
+%%% 19
 \bibitem{2008_kim_varner_ramkrishna_BiotechProg}
 \begin{barticle}
 \bauthor{\bsnm{Kim}, \binits{J.}},
@@ -332,7 +318,7 @@ doi:\doiurl{10.1002/btpr.73}
 \end{barticle}
 \endbibitem
 
-%%% 21
+%%% 20
 \bibitem{Schuster:2000aa}
 \begin{barticle}
 \bauthor{\bsnm{Schuster}, \binits{S.}},
@@ -357,19 +343,6 @@ doi:\doiurl{10.1038/73786}
 <refgrp>
 
 <bibl id="B1">
-  <title><p>The statistical mechanics of complex signaling networks: nerve
-  groth factor signaling</p></title>
-  <aug>
-    <au><snm>K. S. Brown</snm><fnm>GACCRMKHLJPSRAC</fnm></au>
-  </aug>
-  <source>Phys Biol</source>
-  <pubdate>2004</pubdate>
-  <volume>1</volume>
-  <fpage>184</fpage>
-  <lpage>195</lpage>
-</bibl>
-
-<bibl id="B2">
   <title><p>{Model identification of signal transduction networks from data
   using a state regulator problem.}</p></title>
   <aug>
@@ -387,7 +360,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>-30</lpage>
 </bibl>
 
-<bibl id="B3">
+<bibl id="B2">
   <title><p>Benchmarks for identification of ordinary differential equations
   from time series data</p></title>
   <aug>
@@ -402,7 +375,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>6</lpage>
 </bibl>
 
-<bibl id="B4">
+<bibl id="B3">
   <title><p>An ensemble method for identifying regulatory circuits with special
   reference to the qa gene cluster of Neurospora crassa</p></title>
   <aug>
@@ -416,7 +389,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>16909</lpage>
 </bibl>
 
-<bibl id="B5">
+<bibl id="B4">
   <title><p>Ensemble modeling for analysis of cell signaling
   dynamics</p></title>
   <aug>
@@ -430,7 +403,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>1006</lpage>
 </bibl>
 
-<bibl id="B6">
+<bibl id="B5">
   <title><p>Statistical mechanial approaches to models with many poorly known
   parameters</p></title>
   <aug>
@@ -443,7 +416,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>9</lpage>
 </bibl>
 
-<bibl id="B7">
+<bibl id="B6">
   <title><p>Representing model uncertainty in weather and climate
   prediction</p></title>
   <aug>
@@ -456,7 +429,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>193</lpage>
 </bibl>
 
-<bibl id="B8">
+<bibl id="B7">
   <title><p>Universally sloppy parameter sensitivities in systems biology
   models.</p></title>
   <aug>
@@ -476,7 +449,7 @@ doi:\doiurl{10.1038/73786}
   <url>http://dx.doi.org/10.1371/journal.pcbi.0030189</url>
 </bibl>
 
-<bibl id="B9">
+<bibl id="B8">
   <title><p>{Modeling and Analysis of the Molecular Basis of Pain in Sensory
   Neurons}</p></title>
   <aug>
@@ -490,7 +463,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>e6772</lpage>
 </bibl>
 
-<bibl id="B10">
+<bibl id="B9">
   <title><p>Analysis of the molecular networks in androgen dependent and
   independent prostate cancer revealed fragile and robust
   subsystems</p></title>
@@ -509,7 +482,7 @@ doi:\doiurl{10.1038/73786}
   <fpage>e8864</fpage>
 </bibl>
 
-<bibl id="B11">
+<bibl id="B10">
   <title><p>Modeling and analysis of retinoic acid induced differentiation of
   uncommitted precursor cells</p></title>
   <aug>
@@ -527,7 +500,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>91</lpage>
 </bibl>
 
-<bibl id="B12">
+<bibl id="B11">
   <title><p>Parameter estimation in biochemical pathways: a comparison of
   global optimization methods</p></title>
   <aug>
@@ -540,7 +513,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>2474</lpage>
 </bibl>
 
-<bibl id="B13">
+<bibl id="B12">
   <title><p>A molecular signaling model of platelet phosphoinositide and
   calcium regulation during homeostasis and P2Y 1 activation</p></title>
   <aug>
@@ -554,7 +527,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>4079</lpage>
 </bibl>
 
-<bibl id="B14">
+<bibl id="B13">
   <title><p>Ensembles of signal transduction models using Pareto Optimal
   Ensemble Techniques (POETs)</p></title>
   <aug>
@@ -570,7 +543,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>80</lpage>
 </bibl>
 
-<bibl id="B15">
+<bibl id="B14">
   <title><p>Modeling and analysis of the molecular basis of pain in sensory
   neurons</p></title>
   <aug>
@@ -584,7 +557,7 @@ doi:\doiurl{10.1038/73786}
   <fpage>e6758</fpage>
 </bibl>
 
-<bibl id="B16">
+<bibl id="B15">
   <title><p>Computational modeling and analysis of insulin induced eukaryotic
   translation initiation</p></title>
   <aug>
@@ -600,12 +573,12 @@ doi:\doiurl{10.1038/73786}
   <fpage>e1002263</fpage>
 </bibl>
 
-<bibl id="B17">
+<bibl id="B16">
   <pubdate>2016</pubdate>
   <url>https://www.gnu.org/software/octave/</url>
 </bibl>
 
-<bibl id="B18">
+<bibl id="B17">
   <title><p>{J}ulia: A Fresh Approach to Numerical Computing</p></title>
   <aug>
     <au><snm>Bezanson</snm><fnm>J</fnm></au>
@@ -616,7 +589,7 @@ doi:\doiurl{10.1038/73786}
   <pubdate>2015</pubdate>
 </bibl>
 
-<bibl id="B19">
+<bibl id="B18">
   <title><p>{Genetic Algorithms for Multiobjective Optimization: Formulation,
   Discussion and Generalization}</p></title>
   <aug>
@@ -630,7 +603,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>423</lpage>
 </bibl>
 
-<bibl id="B20">
+<bibl id="B19">
   <title><p>A hybrid model of anaerobic E. coli GJT001: Combination of
   elementary flux modes and cybernetic variables</p></title>
   <aug>
@@ -648,7 +621,7 @@ doi:\doiurl{10.1038/73786}
   <url>http://dx.doi.org/10.1002/btpr.73</url>
 </bibl>
 
-<bibl id="B21">
+<bibl id="B20">
   <title><p>A general definition of metabolic pathways useful for systematic
   organization and analysis of complex metabolic networks</p></title>
   <aug>
