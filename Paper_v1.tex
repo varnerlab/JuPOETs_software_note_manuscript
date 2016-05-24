@@ -195,14 +195,12 @@
 \begin{abstractbox}
 
 \begin{abstract} % abstract
-Ensemble modeling is a well established approach for dealing with parameter uncertainty in large-scale deterministic models.
-In this study, we present an open-source implementation of the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
-JuPOETs integrates simulated annealing with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives.
+Ensemble modeling is a well established approach for obtaining robust predictions and course graining population behavior in large deterministic mathematical models.
+In this study, we present the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
+JuPOETs integrates simulated annealing with Pareto optimality to estimate an ensemble of parameter sets on or near the optimal tradeoff surface between competing training objectives.
+We demonstrated JuPOETs on a suite of multiobjective test problems, with both bounds and problem constraints as well as a proof-of-concept biochemical model identification problem.
+JuPOETs identified optimal or near optimal solutions approximately six-fold faster than a corresponding implementation in Octave. 
 JuPOETs can be installed using the Julia package manager from the JuPOETs GitHub repository at https://github.com/varnerlab/POETs.jl.
-
-
-\parttitle{Second part title} %if any
-Text for this section.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -258,46 +256,55 @@ Text for this section.
 %%%%%%%%%%%%%%%%
 %% Background %%
 %%
+
+%Sethna and coworkers later showed that model performance is often controlled by only a few parameter combinations,
+%a characteristic seemingly universal to multi-parameter models referred to as \textit{sloppiness} \citep{Machta:2013aa}.
+%n the other hand, large models can also be constructed from many smaller modules, each of which is independently identified.
+%For example, Diamond and coworkers developed a model of calcium signaling in human platelets composed of many
+%separate submodels identified using different types of training data \cite{Purvis:2008}.
+
 \section*{Background}
-Ensemble modeling is a well established approach for dealing with parameter uncertainty in large-scale deterministic models.
-It is often not possible to uniquely identify biochemical model parameters from noisy experimental measurements, even when given extensive training data \cite{Gadkar:2005ad}.
+Ensemble modeling is a well established approach for obtaining robust predictions and course graining population behavior in large deterministic mathematical models.
+It is often not possible to uniquely identify all the parameters in biochemical models, even when given extensive training data \cite{Gadkar:2005ad}.
 Thus, despite significant advances in standardizing biochemical model identification \cite{Gennemark:2009on},
 the problem of estimating model parameters from experimental data remains challenging.
-Ensemble approaches have been used to address parameter uncertainty in systems biology and other fields like weather prediction \cite{Battogtokh:2002,Kuepfer:2007, Brown:2003,Palmer:2005}.
-In an ensemble approach, a family of parameter sets is identified instead of a single best-fit parameter set.
-Parameter families can be selected based upon simulation error, along with other criterion such as diversity.
+Ensemble approaches address parameter uncertainty in systems biology and other fields like weather prediction \cite{Battogtokh:2002,Kuepfer:2007, Brown:2003,Palmer:2005}
+by using parameter families instead of single best-fit parameter sets.
+Parameter families can be selected based upon simulation error, along with other criterion such as diversity or steady-state peformance.
 Simulations using parameter ensembles can estimate confidence intervals on model variables, and robustly constrain model predictions,
 despite having many poorly constrained parameters \cite{Gutenkunst2007,Song:2009b}.
-There are several techniques to generate parameter ensembles.
+There are many techniques to generate parameter ensembles.
 Battogtokh et al., Brown et al., and later Tasseff et al. generated experimentally constrained parameter ensembles using a
-Metropolis-type random walk through parameter space \cite{Battogtokh:2002,Brown:2003,Tasseff:2010aa,Tasseff:2011aa}.
-Other strategies could also be adapted to generate parameter ensembles \cite{Moles:2003}.
-However, the unifying component of all of these previous strategies was the minimization of a single objective function.
+Metropolis-type random walk \cite{Battogtokh:2002,Brown:2003,Tasseff:2010aa,Tasseff:2011aa}.
+Liao and coworkers developed methods that generate ensembles that all approach the same steady-state, for example one determined by fluxomics measurements \cite{Tran:2008aa}.
+They have used this approach for model reduction \cite{Tan:2011aa}, strain engineering \cite{Contador2009221,Tan:2012aa} and to study the robustness of non-native pathways and network failure \cite{Lee:2014aa}. Maranas and coworkers have also applied this method to develop a comprehensive kinetic model of bacterial central carbon metabolism,
+including mutant data \cite{Khodayari:2014aa}.
+We and others have used ensemble approaches, generated using optimization and sampling approaches, to robustly simulate a wide variety of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa}, neutrophil trafficking in sepsis \cite{Song:2012aa},
+patient specific coagulation behavior \cite{Luan:2010aa} and to capture cell to cell variation \cite{Lequieu:2011aa}.
+Thus, ensemble approaches are widely used to robustly simulate a variety of biochemical systems.
 
-Identification of large biochemical models with hundreds or even thousands of states and parameters may not be tractable as a single objective formulation.
+Identification of biochemical models with hundreds or even thousands of states and parameters may not be tractable as a single objective optimization problem.
 Large models require significant training data perhaps taken from diverse sources, for example different laboratories or cell-lines.
-These diverse training data are likely heterogenous, and contain intrinsic conflicts which complicate parameter estimation.
-On the other hand, large models can also be constructed from many smaller modules, each of which is independently identified.
-For example, Diamond and coworkers developed a model of calcium signaling in human platelets composed of many
-separate submodels identified using different types of training data \cite{Purvis:2008}.
-Parameter ensemble estimation techniques which optimally balance tradeoffs between submodels or conflicts in training data
-lead to robust model performance. One class of such techniques is multiobjective optimization.
+These data are often heterogenous, and contain intrinsic conflicts which complicate parameter estimation.
+Parameter ensembles which optimally balance tradeoffs between submodels or conflicts in training data can
+lead to robust model performance. One class of ensemble generation technique that naturally balances conflicting training data is multiobjective optimization.
 Previously, we developed the Pareto Optimal Ensemble Technique (POETs) algorithm to address the challenge of competing or conflicting objectives.
-POETs, which integrates simulated annealing (SA) and multiobjective optimization through the notion of Pareto rank, finds a family of parameter estimates which optimally trade-off between
+POETs, which integrates simulated annealing (SA) and multiobjective optimization through the notion of Pareto rank, estimates parameter ensembles which optimally trade-off between
 competing (and potentially conflicting) experimental objectives \cite{Song:2010aa}.
-POETs has been used in several biochemical and signal transduction studies to estimate parameter ensembles \cite{Song:2009aa,Lequieu:2011aa}.
-However, the previous implementation of POETs, in the Octave programming language \cite{Octave}, suffered from poor performance, and did not offer user definable
-functions to accommodate custom cooling schedules, parameter constraints, or custom search logic. Octave-POETs was also not well integrated into a modern package or
-source code management (SCM) system, thus upgrades containing new features, or bug fixes were not centrally managed.
+However, the previous implementation of POETs, in the Octave programming language \cite{CITE_Octave}, suffered from poor performance and was not configurable.
+For example, Octave-POETs does not accommodate user definable objective functions, bounds and problem constraints, cooling schedules, different variable types e.g., a mixture of binary and continuous design variables or custom diversity generation routines. Octave-POETs was also not well integrated into a package or
+source code management (SCM) system. Thus, upgrades to the approach containing new features, or bug fixes were not centrally managed.
 
 \section*{Implementation}
 In this study, we present an open-source implementation of the Pareto optimal ensemble technique in the Julia programming language (JuPOETs).
-JuPOETs offers many advantages and improvements when compared to Octave-POETs.
-First, JuPOETs takes advantage of the unique performance features of the Julia programming language.
-Julia, which has performance comparable to C but with syntax similar to MATLAB/Octave and Python, is a cross-platform, high-performance programming language for technical computing \cite{Julia}. Julia offers a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive mathematical function library.
-Additionally, Julia offers a built-in package manager which is directly integrated with GitHub, a popular web-based Git repository hosting service which offers distributed revision control and source code management.
+JuPOETs offers many advantages and improvements compared to Octave-POETs.
+JuPOETs takes advantage of the unique features of Julia.
+Julia is a cross-platform, high-performance programming language for technical computing that has performance comparable to C but with syntax similar to MATLAB/Octave and Python \cite{Julia}. Julia also offers a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive function library.
+Additionally, Julia offers a built-in package manager which is directly integrated with GitHub,
+a popular web-based Git repository hosting service offering distributed revision control and source code management.
 Next, because Julia can natively call other languages such as Python or C, JuPOETs can be used with models implemented in a variety of languages on many platforms.
-Lastly, the architecture of JuPOETs takes advantage of the first-class function type in Julia allowing user definable behavior for all key aspects of the algorithm, including objective functions, custom search logic, linear/non-linear parameter constraints (and parameter bounds constraints) as well as custom cooling schedule functions. Thus, JuPOETs can easily be adapted to solve many problem types, including mixed binary and continuous variable types, without the need to change the base algorithm (which was not true of the previous POETs implementation).
+Lastly, the architecture of JuPOETs takes advantage of the first-class function type in Julia allowing user definable behavior for all key aspects of the algorithm, including objective functions, custom diversity generation logic, linear/non-linear parameter constraints (and parameter bounds constraints) as well as custom cooling schedules.
+Thus, JuPOETs can be adapted to many problem types, including mixed binary and continuous variable types, bilevel problems and constrained problems without changing the base algorithm (which was not true of the previous POETs implementation).
 
 \subsection*{JuPOETs optimization problem formulation.}
 JuPOETs solves the $\mathcal{K}-$dimensional constrained multiobjective optimization problem:
@@ -439,7 +446,7 @@ This solution is then perturbed during the next iteration of the algorithm. Howe
 
 \section*{Results and Discussion}
 
-JuPOETs identified optimal or nearly optimal solutions significantly faster than Octave-POETs for a suite of test problems (Table \ref{table:objective-table}).
+JuPOETs identified optimal or nearly optimal solutions significantly faster than Octave-POETs for a suite of multiobjective test problems (Table \ref{table:objective-table}).
 The wall-clock time for JuPOETs and Octave-POETs was measured for 10 independent trials for each of the test problems.
 The same \texttt{cooling}, \texttt{neighbor}, \texttt{acceptance}, and \texttt{objective} logic was employed between the implementations, and all other parameters were held constant.
 For each test function, the search domain was partitioned into 10 segments, where an initial parameter guess was drawn from each partition.
@@ -459,25 +466,27 @@ Dynamic combinations of elementary modes are then used to characterize network b
 Each elementary mode is catalyzed by a pseudo enzyme; thus, each mode has both kinetic and enzyme synthesis parameters.
 The proof of concept network generated 6 EMs, resulting in 13 model parameters.
 The synthetic data was generated by randomly varying these parameters.
-JuPOETs produced an ensemble of models that captured the mean of the measured data sets for extracellular metabolites and cellmass
-(Fig. \ref{fig:fig-biochemical}A and B). The 95\% confidence estimate produced by the ensemble was consistent with mean of the measured data, despite having significant
-uncertainty in the training data. JuPOETs produced a consensus estimate of the synthetic data by calculating optimal trade-offs between the training data sets (Fig. \ref{fig:fig-biochemical}C). Thus, JuPOETs produced an ensemble of parameter sets that gave the mean of the training data for conflicting data sets.
-
-JuPOETs is a significant advancement over Octave-POETs, both in terms of performance and capability.
-However, there are several areas that could be explored further.
-First, JuPOETs should be compared with other multiobjective evolutionary algorithms (MOEAs) to determine its relative performance on test and real world problems.
-Many evolutionary approaches e.g., the nondominated sorting genetic algorithm (NSGA) family of algorithms, have been adapted to solve multiobjective optimization problems [REF].
-It is unclear if JuPOETs will perform as well as these other approaches;
-one potential advantage that JuPOETs may have is the local refinement step which temporarily reduces the problem to a single objective formulation.
-Previously, this hybrid approach led to better convergence on a proof-of-concept signal transduction model [REF].
-Next, JuPOETs should take advantage of the native parallel execution capabilities of Julia to accelerate the evaluation of the objective functions.
-For many real world parameter estimation problems, the bulk of the execution time is spent evaluating the objective functions.
-One strategy to improve performance could be to optimize surrogates [REF], while another would be parallel execution of the objective functions.
-Currently, JuPOETs serially evaluate the components of the objective function vector.
-However, because of the flexible function pointer architecture of JuPOETs, a shift to parallel evaluation of the objective functions requires changes to only the user defined objective function and not the main run loop. Thus, parallel evaluation of objective functions could be easily implemented using a variety of techniques without changing to JuPOETs.
+JuPOETs produced an ensemble of parameters that captured the mean of the measured data sets for extracellular metabolites and cellmass
+(Fig. \ref{fig:fig-biochemical}A and B). The 95\% confidence estimate produced by the ensemble was consistent with the mean of the measured data, despite having significant
+uncertainty in the training data. JuPOETs produced a consensus estimate of the synthetic data by calculating optimal trade-offs between the training data sets (Fig. \ref{fig:fig-biochemical}C). Thus, JuPOETs produced an ensemble of parameters that gave the mean of the training data for conflicting data sets.
 
 \section*{Conclusions}
 
+JuPOETs is a significant advance over the previous POETs implementation.
+It offers improved performance and is highly adaptable to different problem types.
+We demonstrated JuPOETs on a suite of test problems, and a proof-of-concept biochemical model.
+However, there are several areas that could be explored further to improve JuPOETs.
+First, JuPOETs should be compared with other multiobjective evolutionary algorithms (MOEAs) to determine its relative performance on test and real world problems.
+Many evolutionary approaches e.g., the nondominated sorting genetic algorithm (NSGA) family of algorithms, have been adapted to solve multiobjective optimization problems \cite{DEB2002,HUBAND2006}. It is unclear if JuPOETs will perform as well as these other approaches;
+one potential advantage that JuPOETs may have is the local refinement step which temporarily reduces the problem to a single objective formulation.
+Previously, this hybrid approach led to better convergence on a proof-of-concept signal transduction model \cite{Song:2010aa}.
+Next, JuPOETs should take advantage of the native parallel execution capabilities of Julia to accelerate the evaluation of the objective functions.
+For many real world parameter estimation problems, the bulk of the execution time is spent evaluating the objective functions.
+One strategy to improve performance could be to optimize surrogates \cite{SURROGATES}, while another would be parallel execution of the objective functions.
+Currently, JuPOETs serially evaluates the objective function vector.
+However, because of the flexible function pointer architecture of JuPOETs, a shift to parallel evaluation of the objectives requires changes to the user
+defined objective function and not the main run loop. Thus, parallel evaluation of objective functions could be easily implemented
+using a variety of techniques without changing to JuPOETs.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%

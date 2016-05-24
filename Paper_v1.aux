@@ -23,11 +23,15 @@
 \citation{Battogtokh:2002,Kuepfer:2007,Brown:2003,Palmer:2005}
 \citation{Gutenkunst2007,Song:2009b}
 \citation{Battogtokh:2002,Brown:2003,Tasseff:2010aa,Tasseff:2011aa}
-\citation{Moles:2003}
-\citation{Purvis:2008}
-\citation{Song:2010aa}
-\citation{Song:2009aa,Lequieu:2011aa}
-\citation{Octave}
+\citation{Tran:2008aa}
+\citation{Tan:2011aa}
+\citation{Contador2009221,Tan:2012aa}
+\citation{Lee:2014aa}
+\citation{Khodayari:2014aa}
+\citation{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa}
+\citation{Song:2012aa}
+\citation{Luan:2010aa}
+\citation{Lequieu:2011aa}
 \gdef\hy@title{JuPOETs: A Constrained Multiobjective Optimization Approach to Estimate Biochemical Model Ensembles in the Julia Programming Language}
 \thanksnewlabel{au1@email}{{dmb457@cornell.edu}{1}}
 \thanksnewlabel{au4@email}{{jtb47@cornell.edu}{1}}
@@ -38,15 +42,20 @@
 \gdef\hy@author{David Bassen, Michael Vilkhovoy, Mason Minot, Jonathan T Butcher, Jeffrey D Varner}
 \gdef\hy@subject{}
 \gdef\hy@keywords{Ensemble modeling, Multiobjective optimization, Julia}
+\citation{Song:2010aa}
+\citation{CITE_Octave}
 \citation{Julia}
 \citation{RANKING}
-\newlabel{eqn_rank}{{2}{3}{JuPOETs optimization problem formulation}{equation.0.2}{}}
+\newlabel{eqn_rank}{{2}{4}{JuPOETs optimization problem formulation}{equation.0.2}{}}
 \newlabel{eqn_costMOSA}{{3}{4}{JuPOETs optimization problem formulation}{equation.0.3}{}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Pseudo-code for the main run-loop of JuPOETs. The user specifies the \texttt  {neighbor}, \texttt  {acceptance}, \texttt  {cooling} and \texttt  {objective} functions along with an initial parameter guess. The rank archive $\mathcal  {R}$, solution archive $\mathcal  {S}$ and objective archive $\mathcal  {O}$ are initialized from the initial guess. The initial guess is perturbed in the \texttt  {neighbor} function, which generates a new solution whose performance is evaluated using the user supplied \texttt  {objective} function. The new solution and objective values are then added to the respective archives and ranked using the builtin \texttt  {rank} function. If the new solution is accepted (based upon a probability calculated with the user supplied \texttt  {acceptance} function) it is added to the solution and objective archive. This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied \texttt  {cooling} function after each $\mathcal  {I}$ iterations. \relax }}{5}{algocf.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{algo:JuPOETs-pcode}{{1}{5}{JuPOETs optimization problem formulation}{algocf.1}{}}
 \citation{2008_kim_varner_ramkrishna_BiotechProg}
 \citation{Schuster:2000aa}
+\citation{DEB2002,HUBAND2006}
+\citation{Song:2010aa}
+\citation{SURROGATES}
 \bibstyle{bmc-mathphys}
 \bibdata{References_v1}
 \bibcite{Gadkar:2005ad}{{1}{}{{}}{{}}}
@@ -59,18 +68,29 @@
 \bibcite{Song:2009b}{{8}{}{{}}{{}}}
 \bibcite{Tasseff:2010aa}{{9}{}{{}}{{}}}
 \bibcite{Tasseff:2011aa}{{10}{}{{}}{{}}}
-\bibcite{Moles:2003}{{11}{}{{}}{{}}}
-\bibcite{Purvis:2008}{{12}{}{{}}{{}}}
-\bibcite{Song:2010aa}{{13}{}{{}}{{}}}
-\bibcite{Song:2009aa}{{14}{}{{}}{{}}}
-\bibcite{Lequieu:2011aa}{{15}{}{{}}{{}}}
-\bibcite{Octave}{{16}{}{{}}{{}}}
+\bibcite{Tran:2008aa}{{11}{}{{}}{{}}}
+\bibcite{Tan:2011aa}{{12}{}{{}}{{}}}
+\bibcite{Contador2009221}{{13}{}{{}}{{}}}
 \thanksnewlabel{aff1thanks}{{1}{7}}
 \thanksnewlabel{aff2thanks}{{2}{7}}
-\bibcite{Julia}{{17}{}{{}}{{}}}
-\bibcite{RANKING}{{18}{}{{}}{{}}}
-\bibcite{2008_kim_varner_ramkrishna_BiotechProg}{{19}{}{{}}{{}}}
-\bibcite{Schuster:2000aa}{{20}{}{{}}{{}}}
+\bibcite{Tan:2012aa}{{14}{}{{}}{{}}}
+\bibcite{Lee:2014aa}{{15}{}{{}}{{}}}
+\bibcite{Khodayari:2014aa}{{16}{}{{}}{{}}}
+\bibcite{Luan:2007aa}{{17}{}{{}}{{}}}
+\bibcite{Song:2009aa}{{18}{}{{}}{{}}}
+\bibcite{Nayak:2011aa}{{19}{}{{}}{{}}}
+\bibcite{Song:2012aa}{{20}{}{{}}{{}}}
+\bibcite{Luan:2010aa}{{21}{}{{}}{{}}}
+\bibcite{Lequieu:2011aa}{{22}{}{{}}{{}}}
+\bibcite{Song:2010aa}{{23}{}{{}}{{}}}
+\bibcite{CITE_Octave}{{24}{}{{}}{{}}}
+\bibcite{Julia}{{25}{}{{}}{{}}}
+\bibcite{RANKING}{{26}{}{{}}{{}}}
+\bibcite{2008_kim_varner_ramkrishna_BiotechProg}{{27}{}{{}}{{}}}
+\bibcite{Schuster:2000aa}{{28}{}{{}}{{}}}
+\bibcite{DEB2002}{{29}{}{{}}{{}}}
+\bibcite{HUBAND2006}{{30}{}{{}}{{}}}
+\bibcite{SURROGATES}{{31}{}{{}}{{}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.\relax }}{9}{figure.1}}
 \newlabel{fig:fig-MOSAalgorithm}{{1}{9}{Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.\relax }{figure.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The performance of JuPOETs on the multi-objective test suite. The execution time (wall-clock) for JuPOETs and POETs implemented in Octave was measured for 10 independent trials for the suite of test problems. The number of steps per temperature $\mathcal  {I}$ = 10, and the cooling parameter $\alpha $ = 0.9 for all cases. The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment. For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints. \relax }}{9}{figure.2}}

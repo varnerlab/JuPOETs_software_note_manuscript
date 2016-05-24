@@ -20,69 +20,17 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References_v1.bib
-Warning--entry type for "Octave" isn't style-file defined
---line 94 of file References_v1.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 2585 of file bmc-mathphys.bst
 Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
 while executing---line 2585 of file bmc-mathphys.bst
 Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
 while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
-while executing---line 2585 of file bmc-mathphys.bst
-Warning--to sort, need author or key in Octave
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H{-}B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 2686 of file bmc-mathphys.bst
 Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
 while executing---line 2686 of file bmc-mathphys.bst
 Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
 while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas{-}Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
-while executing---line 2686 of file bmc-mathphys.bst
-Warning--empty title in Octave
 Warning--"{Proceedings" isn't a brace-balanced string for entry RANKING
 while executing--line 2686 of file bmc-mathphys.bst
 Warning--"{Proceedings" isn't a brace-balanced string for entry RANKING
@@ -93,87 +41,51 @@ Warning--"Algorithms}" isn't a brace-balanced string for entry RANKING
 while executing--line 2686 of file bmc-mathphys.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "D Battogtokh, D K Asch, M E Case, J Arnold, H-B sh{\"u}ttler" for entry Battogtokh:2002
-while executing---line 3019 of file bmc-mathphys.bst
 Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
 while executing---line 3019 of file bmc-mathphys.bst
 Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
 while executing---line 3019 of file bmc-mathphys.bst
 Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
 while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "T. N. Palmer, G. J. Shutts, R. Hagedorn, F. J. Doblas-Reyes, T. Jung, M. Leutbecher" for entry Palmer:2005
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "J. E. Purvis, M. S. Chatterjee, L. F. Brass, S. L. Diamond" for entry Purvis:2008
-while executing---line 3019 of file bmc-mathphys.bst
-You've used 20 entries,
+You've used 31 entries,
             7128 wiz_defined-function locations,
-            1274 strings with 13329 characters,
-and the built_in function-call counts, 148845 in all, are:
-= -- 21401
-> -- 704
-< -- 473
-+ -- 8651
-- -- 163
-* -- 8573
-:= -- 28350
-add.period$ -- 28
-call.type$ -- 20
-change.case$ -- 171
-chr.to.int$ -- 1106
-cite$ -- 23
-duplicate$ -- 1906
-empty$ -- 6199
-format.name$ -- 536
-if$ -- 35153
+            1354 strings with 15928 characters,
+and the built_in function-call counts, 298170 in all, are:
+= -- 45739
+> -- 1222
+< -- 740
++ -- 21301
+- -- 343
+* -- 15489
+:= -- 55707
+add.period$ -- 50
+call.type$ -- 31
+change.case$ -- 327
+chr.to.int$ -- 1633
+cite$ -- 31
+duplicate$ -- 3222
+empty$ -- 10491
+format.name$ -- 1152
+if$ -- 71536
 int.to.chr$ -- 1
-int.to.str$ -- 53
-missing$ -- 663
-newline$ -- 602
-num.names$ -- 95
-pop$ -- 761
+int.to.str$ -- 86
+missing$ -- 1095
+newline$ -- 990
+num.names$ -- 155
+pop$ -- 1317
 preamble$ -- 1
-purify$ -- 91
-quote$ -- 40
-skip$ -- 11536
+purify$ -- 147
+quote$ -- 62
+skip$ -- 25277
 stack$ -- 0
-substring$ -- 18182
-swap$ -- 730
-text.length$ -- 319
+substring$ -- 34374
+swap$ -- 1182
+text.length$ -- 529
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 863
-warning$ -- 2
-while$ -- 680
+type$ -- 1381
+warning$ -- 0
+while$ -- 1202
 width$ -- 0
-write$ -- 769
-(There were 49 error messages)
+write$ -- 1357
+(There were 7 error messages)
