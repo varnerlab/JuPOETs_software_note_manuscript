@@ -1,12 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  24 MAY 2016 17:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 MAY 2016 00:36
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**Paper_v1.tex
-(./Paper_v1.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(./bmcart.cls
+**\input ./Paper_v1.tex
+(./Paper_v1.tex (./bmcart.cls
 Document Class: bmcart 2014/01/24BioMed Central class (VS)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -787,12 +785,12 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 638.
  ) 
 Here is how much of TeX's memory you used:
  9950 strings out of 493089
- 144257 string characters out of 6134842
- 272327 words of memory out of 5000000
+ 144259 string characters out of 6134842
+ 272333 words of memory out of 5000000
  13223 multiletter control sequences out of 15000+600000
  15723 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,18n,39p,1446b,607s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,18n,39p,1455b,607s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/local/texl
@@ -819,7 +817,7 @@ public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/c
 ourier/ucrr8a.pfb>
-Output written on Paper_v1.pdf (11 pages, 298903 bytes).
+Output written on Paper_v1.pdf (11 pages, 299043 bytes).
 PDF statistics:
  353 PDF objects out of 1000 (max. 8388607)
  311 compressed objects within 4 object streams
