@@ -1,10 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  27 MAY 2016 00:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAY 2016 06:28
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**\input ./Paper_v1.tex
-(./Paper_v1.tex (./bmcart.cls
+**Paper_v1.tex
+(./Paper_v1.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./bmcart.cls
 Document Class: bmcart 2014/01/24BioMed Central class (VS)
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
@@ -721,41 +723,41 @@ l.445 \clearpage
 ] (./Paper_v1.bbl [7]) [8]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 560.
+(caption)                particular \caption on input line 566.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 560--560
+Overfull \hbox (12.4pt too wide) in paragraph at lines 566--566
 [] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 568.
+(caption)                particular \caption on input line 574.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 568--568
+Overfull \hbox (12.4pt too wide) in paragraph at lines 574--574
 [] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 575.
+(caption)                particular \caption on input line 581.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 575--575
+Overfull \hbox (12.4pt too wide) in paragraph at lines 581--581
 [] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 591.
+(caption)                particular \caption on input line 597.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 591--591
+Overfull \hbox (12.4pt too wide) in paragraph at lines 597--597
 [] [] 
  []
 
@@ -769,11 +771,11 @@ AED: lastpage setting LastPage
 [11
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 638.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 638.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 644.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 644.
  (./Paper_v1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 638.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 638.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 644.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 644.
 Package rerunfilecheck Info: File `Paper_v1.out' has not changed.
 (rerunfilecheck)             Checksum: ED3CDF9133C37D676C26CC0D4896F289;44.
 
@@ -781,16 +783,16 @@ Package rerunfilecheck Info: File `Paper_v1.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 638.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 644.
  ) 
 Here is how much of TeX's memory you used:
  9950 strings out of 493089
- 144259 string characters out of 6134842
- 272333 words of memory out of 5000000
+ 144257 string characters out of 6134842
+ 273333 words of memory out of 5000000
  13223 multiletter control sequences out of 15000+600000
  15723 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,18n,39p,1455b,607s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,18n,39p,1446b,607s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/te
 xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx5.pfb></usr/local/texl
@@ -817,7 +819,7 @@ public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/c
 ourier/ucrr8a.pfb>
-Output written on Paper_v1.pdf (11 pages, 299043 bytes).
+Output written on Paper_v1.pdf (11 pages, 300264 bytes).
 PDF statistics:
  353 PDF objects out of 1000 (max. 8388607)
  311 compressed objects within 4 object streams
