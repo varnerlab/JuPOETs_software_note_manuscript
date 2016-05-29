@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAY 2016 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAY 2016 17:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -686,7 +686,7 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
 \address@aff2=\toks33
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 285.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 289.
 
 
 
@@ -698,7 +698,7 @@ Overfull \hbox (1.0pt too wide) has occurred while \output is active
 
 ]
 [2]
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 338.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 342.
 
  (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -707,7 +707,7 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.345 \begin{equation}
+l.349 \begin{equation}
                       \label{eqn_rank}]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -717,47 +717,47 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.446 \clearpage
+l.451 \clearpage
                 ] [5] [6
 
 ] (./Paper_v1.bbl [7]) [8]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 573.
+(caption)                particular \caption on input line 578.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 573--573
+Overfull \hbox (12.4pt too wide) in paragraph at lines 578--578
 [] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 581.
+(caption)                particular \caption on input line 586.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 581--581
+Overfull \hbox (12.4pt too wide) in paragraph at lines 586--586
 [] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 588.
+(caption)                particular \caption on input line 593.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 588--588
+Overfull \hbox (12.4pt too wide) in paragraph at lines 593--593
 [] [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 604.
+(caption)                particular \caption on input line 609.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 604--604
+Overfull \hbox (12.4pt too wide) in paragraph at lines 609--609
 [] [] 
  []
 
@@ -766,11 +766,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 611.
+(caption)                particular \caption on input line 616.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.4pt too wide) in paragraph at lines 611--611
+Overfull \hbox (12.4pt too wide) in paragraph at lines 616--616
 [] [] 
  []
 
@@ -784,11 +784,11 @@ AED: lastpage setting LastPage
 [11
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 658.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 658.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 663.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 663.
  (./Paper_v1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 658.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 658.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 663.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 663.
 Package rerunfilecheck Info: File `Paper_v1.out' has not changed.
 (rerunfilecheck)             Checksum: ED3CDF9133C37D676C26CC0D4896F289;44.
 
@@ -796,12 +796,12 @@ Package rerunfilecheck Info: File `Paper_v1.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 658.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 663.
  ) 
 Here is how much of TeX's memory you used:
  9953 strings out of 493089
  144312 string characters out of 6134842
- 273889 words of memory out of 5000000
+ 274889 words of memory out of 5000000
  13224 multiletter control sequences out of 15000+600000
  15723 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -832,7 +832,7 @@ public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/c
 ourier/ucrr8a.pfb>
-Output written on Paper_v1.pdf (11 pages, 303361 bytes).
+Output written on Paper_v1.pdf (11 pages, 303943 bytes).
 PDF statistics:
  357 PDF objects out of 1000 (max. 8388607)
  315 compressed objects within 4 object streams
