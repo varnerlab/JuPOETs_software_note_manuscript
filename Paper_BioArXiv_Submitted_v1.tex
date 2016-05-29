@@ -119,11 +119,15 @@
 \pagebreak
 
 \section*{Abstract} % abstract
-Ensemble modeling is a well established approach for obtaining robust predictions and course grained population behavior in large deterministic mathematical models.
-In this study, we present the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
-JuPOETs integrates simulated annealing with Pareto optimality to estimate an ensemble of parameter sets on or near the optimal tradeoff surface between competing training objectives.
-We demonstrated JuPOETs on a suite of multiobjective problems, including test functions with parameter bounds and system constraints as well as identification of a proof-of-concept biochemical model.
-JuPOETs identified optimal or near optimal solutions approximately six-fold faster than a corresponding implementation in Octave.
+Ensemble modeling is a well established approach for obtaining robust predictions and for simulating course grained population behavior in deterministic mathematical models.
+In this study, we present a multiobjective based technique to estimate model ensembles, the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
+JuPOETs integrates simulated annealing with Pareto optimality to estimate parameter ensembles on or near the optimal tradeoff surface between competing training objectives.
+We demonstrated JuPOETs on a suite of multiobjective problems, including test functions with parameter bounds and system constraints as well as for the identification of a proof-of-concept biochemical model with four conflicting training objectives.
+JuPOETs identified optimal or near optimal solutions approximately six-fold faster than a corresponding implementation in Octave for the suite of test functions.
+For the proof-of-concept biochemical model, JuPOETs produced an ensemble of parameters that gave both the mean of the training data for conflicting data sets,
+while simultaneously estimating parameter sets that performed well on each of the individual objective functions.
+JuPOETs can be adapted to solve many problem types, including mixed binary and continuous variable types, bilevel optimization problems
+and constrained problems without altering the base algorithm.
 JuPOETs can be installed using the Julia package manager from the JuPOETs GitHub repository at https://github.com/varnerlab/POETs.jl.
 
 \clearpage
@@ -429,7 +433,7 @@ This solution is then perturbed during the next iteration of the algorithm. Howe
 
 \begin{figure}[h]
   \includegraphics[width=1.0\textwidth]{./figs/Figure-5-ExperimentToExperimentVariation.pdf}
-  \caption{Experiment to experiment variation captured by the ensemble.
+  \caption{Experiment to experiment variation is captured by a single ensemble.
   Cellmass measurements (points) versus time for experiment 2 and 3 were compared with ensemble simulations.
   The full ensemble was sorted by simultaneously selecting the top 25\% of solutions for each objective with rank $\leq$~1.
   The best fit solution for each objective (line) $\pm$ 1-standard deviation (gray region) for experiment 2 and 3 brackets the training data despite significant differences the training values between the two data sets.}\label{fig:fig-experiment-variation}

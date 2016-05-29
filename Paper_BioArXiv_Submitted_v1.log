@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAY 2016 12:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  29 MAY 2016 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,7 +886,7 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <14.4> not available
 [5] [6] [7]
 
 LaTeX Warning: Reference `table:objective-table' on page 8 undefined on input l
-ine 245.
+ine 249.
 
 [8
 
@@ -894,16 +894,16 @@ ine 245.
 
 ] [12] [13]) [14]
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 318.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 322.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <6> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 326.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 330.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <6.94446> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 326.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 330.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 374.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 378.
 
 
-LaTeX Warning: Float too large for page by 14.24706pt on input line 384.
+LaTeX Warning: Float too large for page by 14.24706pt on input line 388.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -914,7 +914,7 @@ File: ./figs/Figure-1-Parameter-ObjMapping.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-1-Parameter-ObjMapping.pdf>
 Package pdftex.def Info: ./figs/Figure-1-Parameter-ObjMapping.pdf used on input
- line 392.
+ line 396.
 (pdftex.def)             Requested size: 469.75502pt x 190.71349pt.
 
 <./figs/Figure-2-ObjectiveDomain-Space.png, id=74, 780.516pt x 456.2646pt>
@@ -922,7 +922,7 @@ File: ./figs/Figure-2-ObjectiveDomain-Space.png Graphic file (type png)
 
 <use ./figs/Figure-2-ObjectiveDomain-Space.png>
 Package pdftex.def Info: ./figs/Figure-2-ObjectiveDomain-Space.png used on inpu
-t line 397.
+t line 401.
 (pdftex.def)             Requested size: 469.75502pt x 274.60327pt.
 
 
@@ -933,7 +933,7 @@ File: ./figs/Figure-3-PerformanceComparison.pdf Graphic file (type pdf)
 
 <use ./figs/Figure-3-PerformanceComparison.pdf>
 Package pdftex.def Info: ./figs/Figure-3-PerformanceComparison.pdf used on inpu
-t line 406.
+t line 410.
 (pdftex.def)             Requested size: 469.75502pt x 350.99968pt.
 
 
@@ -944,7 +944,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ./figs/Figure-4-BiochemicalProofOfConcept.pdf Graphic file (type pdf)
 <use ./figs/Figure-4-BiochemicalProofOfConcept.pdf>
 Package pdftex.def Info: ./figs/Figure-4-BiochemicalProofOfConcept.pdf used on 
-input line 414.
+input line 418.
 (pdftex.def)             Requested size: 469.75502pt x 260.1559pt.
 
 
@@ -957,7 +957,7 @@ File: ./figs/Figure-5-ExperimentToExperimentVariation.pdf Graphic file (type pd
 f)
  <use ./figs/Figure-5-ExperimentToExperimentVariation.pdf>
 Package pdftex.def Info: ./figs/Figure-5-ExperimentToExperimentVariation.pdf us
-ed on input line 431.
+ed on input line 435.
 (pdftex.def)             Requested size: 469.75502pt x 367.77115pt.
 
 
@@ -1007,7 +1007,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts
 /type1/urw/helvetic/uhvro8a.pfb>
-Output written on Paper_BioArXiv_Submitted_v1.pdf (21 pages, 1553893 bytes).
+Output written on Paper_BioArXiv_Submitted_v1.pdf (21 pages, 1554321 bytes).
 PDF statistics:
  541 PDF objects out of 1000 (max. 8388607)
  375 compressed objects within 4 object streams
