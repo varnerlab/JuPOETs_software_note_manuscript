@@ -1,0 +1,407 @@
+\documentclass[12pt]{article}
+% Load packages
+\usepackage{url}  % Formatting web addresses
+\usepackage{ifthen}  % Conditional
+\usepackage{multicol}   %Columns
+\usepackage[utf8]{inputenc} %unicode support
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage{graphicx}
+\usepackage[margin=0.1pt,font=footnotesize,labelfont=bf]{caption}
+\usepackage{setspace}
+%\usepackage{longtable}
+\usepackage{colortbl}
+%\usepackage{palatino,lettrine}
+%\usepackage{times}
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage[wide]{sidecap}
+%\usepackage[authoryear,round,comma,sort&compress]{natbib}
+\usepackage[square,sort,comma,numbers,sort&compress]{natbib}
+%\usepackage[authoryear,round]{natbib}
+\usepackage{supertabular}
+\usepackage{simplemargins}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage{lineno}
+%\usepackage{chicago}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
+\DeclareMathOperator*{\argmin}{\arg\!\min}
+
+\usepackage{algorithm2e}
+\usepackage{algpseudocode}
+%\usepackage[space]{cite}
+\urlstyle{rm}
+
+%\textwidth = 6.50 in
+%\textheight = 9.5 in
+%\oddsidemargin =  0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = -0.50 in
+%\headheight = 0.0 in
+%\headsep = 0.25 in
+%\parskip = 0.15in
+%\linespread{1.75}
+\doublespace
+
+%\bibliographystyle{chicago}
+\bibliographystyle{plos2009}
+
+\makeatletter
+\renewcommand\subsection{\@startsection
+	{subsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\bfseries}}
+\renewcommand\subsubsection{\@startsection
+	{subsubsection}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\renewcommand\section{\@startsection
+	{subsection}{2}{0mm}
+	{-0.2in}
+	{0.05\baselineskip}
+	{\normalfont\large\bfseries}}
+\renewcommand\paragraph{\@startsection
+	{paragraph}{2}{0mm}
+	{-0.05in}
+	{-0.5\baselineskip}
+	{\normalfont\normalsize\itshape}}
+\makeatother
+
+%Review style settings
+%\newenvironment{bmcformat}{\begin{raggedright}\baselineskip20pt\sloppy\setboolean{publ}{false}}{\end{raggedright}\baselineskip20pt\sloppy}
+
+%Publication style settings
+
+% Single space'd bib -
+\setlength\bibsep{0pt}
+
+\renewcommand{\rmdefault}{phv}\renewcommand{\sfdefault}{phv}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% Change the number format in the ref list -
+\renewcommand{\bibnumfmt}[1]{#1.}
+
+% Change Figure to Fig.
+\renewcommand{\figurename}{Fig.}
+
+% Begin ...
+\begin{document}
+
+\section*{Background}
+Ensemble modeling is a well established approach for obtaining robust predictions and course grained population behavior in large deterministic mathematical models.
+It is often not possible to uniquely identify all the parameters in biochemical models, even when given extensive training data \cite{Gadkar:2005ad}.
+Thus, despite significant advances in standardizing biochemical model identification \cite{Gennemark:2009on},
+the problem of estimating model parameters from experimental data remains challenging.
+Ensemble approaches address parameter uncertainty in systems biology and other fields like weather prediction \cite{Battogtokh:2002,Kuepfer:2007, Brown:2003,Palmer:2005}
+by using parameter families instead of single best-fit parameter sets.
+Parameter families can be selected based upon simulation error, along with other criterion such as diversity or steady-state peformance.
+Simulations using parameter ensembles can estimate confidence intervals on model variables, and robustly constrain model predictions,
+despite having many poorly constrained parameters \cite{Gutenkunst2007,Song:2009b}.
+There are many techniques to generate parameter ensembles.
+Battogtokh et al., Brown et al., and later Tasseff et al. generated experimentally constrained parameter ensembles using a
+Metropolis-type random walk \cite{Battogtokh:2002,Brown:2003,Tasseff:2010aa,Tasseff:2011aa}.
+Liao and coworkers developed methods that generate ensembles that all approach the same steady-state, for example one determined by fluxomics measurements \cite{Tran:2008aa}.
+They have used this approach for model reduction \cite{Tan:2011aa}, strain engineering \cite{Contador2009221,Tan:2012aa} and to study the robustness of non-native pathways and network failure \cite{Lee:2014aa}. Maranas and coworkers have also applied this method to develop a comprehensive kinetic model of bacterial central carbon metabolism,
+including mutant data \cite{Khodayari:2014aa}.
+We and others have used ensemble approaches, generated using both sampling and optimization techniques, to robustly simulate a wide variety of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa}, neutrophil trafficking in sepsis \cite{Song:2012aa},
+patient specific coagulation behavior \cite{Luan:2010aa} and to capture cell to cell variation \cite{Lequieu:2011aa}.
+Thus, ensemble approaches are widely used to robustly simulate a variety of biochemical systems.
+
+Identification of biochemical models with hundreds or even thousands of states and parameters may not be tractable as a single objective optimization problem.
+Further, large models require significant training data perhaps taken from diverse sources, for example different laboratories or cell-lines.
+These data are often heterogenous, and contain intrinsic conflicts that complicate parameter estimation.
+Parameter ensembles which optimally balance tradeoffs between submodels and conflicts in training data can
+lead to robust model performance. Multiobjective optimization is an ensemble generation technique that naturally balances conflicting training data.
+Previously, we developed the Pareto Optimal Ensemble Technique (POETs) algorithm to address the challenge of competing or conflicting objectives.
+POETs, which integrates simulated annealing (SA) and multiobjective optimization through the notion of Pareto rank, estimates parameter ensembles which optimally trade-off between
+competing (and potentially conflicting) experimental objectives \cite{Song:2010aa}.
+However, the previous implementation of POETs, in the Octave programming language \cite{CITE_Octave}, suffered from poor performance and was not configurable.
+For example, Octave-POETs does not accommodate user definable objective functions, bounds and problem constraints, cooling schedules, different variable types e.g., a mixture of binary and continuous design variables or custom diversity generation routines. Octave-POETs was also not well integrated into a package or
+source code management (SCM) system. Thus, upgrades to the approach containing new features, or bug fixes were not centrally managed.
+
+\clearpage
+
+\section*{Implementation}
+In this study, we present an open-source implementation of the Pareto optimal ensemble technique in the Julia programming language (JuPOETs).
+JuPOETs offers many advantages and improvements compared to Octave-POETs.
+JuPOETs takes advantage of the unique features of Julia.
+Julia is a cross-platform, high-performance programming language for technical computing that has performance comparable to C but with syntax similar to MATLAB/Octave and Python \cite{Julia}. Julia also offers a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive function library.
+Further, the architecture of JuPOETs takes advantage of the first-class function type in Julia allowing user definable behavior for all key aspects of the algorithm, including objective functions, custom diversity generation logic, linear/non-linear parameter constraints (and parameter bounds constraints) as well as custom cooling schedules.
+Julia's ability to naturally call other languages such as Python or C also allows JuPOETS to be used with models implemented in a variety of languages across many platforms.
+Additionally, Julia offers a built-in package manager which is directly integrated with GitHub,
+a popular web-based Git repository hosting service offering distributed revision control and source code management.
+Thus, JuPOETs can be adapted to many problem types, including mixed binary and continuous variable types, bilevel problems and constrained problems without altering the base algorithm, as was required in the previous POETs implementation.
+
+\subsection*{JuPOETs optimization problem formulation.}
+JuPOETs solves the $\mathcal{K}-$dimensional constrained multiobjective optimization problem:
+\begin{equation}
+\min_{\mathbf{p}}
+\begin{cases}
+  O_{1}\left(\mathbf{x}(t,\mathbf{p}),\mathbf{p}\right) \\
+  \vdots & \\
+  O_{\mathcal{K}}\left(\mathbf{x}(t,\mathbf{p}),\mathbf{p}\right) \\
+\end{cases}
+\end{equation}
+subject to:
+\begin{eqnarray}\nonumber
+  \mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\dot{\mathbf{x}}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}) &=&\mathbf{0} \\\nonumber
+  g_{1}\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right) &\geq& 0 \\\nonumber
+  &\vdots& \\\nonumber
+  g_{\mathcal{C}}\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right) &\geq& 0
+\end{eqnarray}and parameter bound constraints:
+\begin{equation}\nonumber
+  \mathcal{L} \leq \mathbf{p} \leq \mathcal{U}
+\end{equation}using a modified simulated annealing approach.
+The quantity $t$ denotes time, $\mathbf{x}\left(t,\mathbf{p}\right)$ denotes the model state (with an initial state $\mathbf{x}_{0}$), and $\mathbf{u}(t)$ denotes an input vector.
+The terms $\mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\dot{\mathbf{x}}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p})$ denote the system of model equations (e.g., differential equations,
+differential algebraic equations or linear/non-linear algebraic equations) where $\mathbf{p}$ denotes the unknown parameter vector ($\mathcal{D}\times~1$).
+The parameter search can be subject to parameter bound constraints, where $\mathcal{L}$ and $\mathcal{U}$ denote the lower and upper parameter bounds, respectively
+as well as $\mathcal{C}$ problem specific constraints $g_i\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right),i=1,\hdots,\mathcal{C}$.
+
+JuPOETs integrates simulated annealing with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives
+(Fig. \ref{fig:fig-MOSAalgorithm} and Algorithm \ref{algo:JuPOETs-pcode}).
+The central idea of POETs is a mapping between the value of the objective vector evaluated at $\mathbf{p}_{i+1}$ (parameter guess at iteration $i+1$) and Pareto rank.
+JuPOETs calculates the performance of a candidate parameter set $\mathbf{p}_{i+1}$ by calling the user defined \texttt{objective} function; \texttt{objective} takes
+a parameter set as an input and returns a $\mathcal{K}\times{1}$ objective vector. Candidate parameter sets are generated by the user supplied \texttt{neighbor} function.
+The error vector associated with $\mathbf{p}_{i+1}$ is ranked using the builtin Pareto \texttt{rank} function, by comparing the current error at iteration $i$+1 to the error archive $\mathcal{O}_{i}$ (all error vectors up to iteration $i$-1 that meeting a ranking criteria). Pareto rank is a measure of distance from the trade-off surface;
+parameter sets on or near the optimal trade-off surface between the objectives have a rank equal to $0$ (no other current parameter sets are better).
+Sets with increasing non-zero rank are progressively further away from the optimal trade-off surface.
+Thus, a parameter set with a rank $=0$ is \emph{better} in a trade-off sense than rank $>0$.
+We implemented the Fonseca and Fleming ranking scheme \cite{RANKING} in the builtin \texttt{rank} function:
+\begin{equation}\label{eqn_rank}
+\texttt{rank}\left(\mathbf{p}_{i+1}\mid \mathcal{O}_{i}\right)=r
+\end{equation} where rank $r$ is the number of parameter sets that dominate (are better than) parameter set $\mathbf{p}_{i+1}$.
+We used the Pareto rank to inform the SA calculation.
+The parameter set $\mathbf{p}_{i+1}$ was accepted or rejected by the SA, by calculating an \texttt{acceptance} probability $\mathcal{P}\left(\mathbf{p}_{i+1}\right)$:
+\begin{equation}\label{eqn_costMOSA}
+\mathcal{P}(\mathbf{p}_{i+1}) \equiv \exp{\{-\texttt{rank}\left(\mathbf{p}_{i+1} \mid \mathcal{S}_{i} \right)/T\}}
+\end{equation}
+where $T$ is the computational annealing temperature.
+As $\texttt{rank}\left(\mathbf{p}_{i+1}\mid \mathcal{O}_{i}\right)\rightarrow{0}$, the acceptance probability moves toward one,
+ensuring that we explore parameter sets along the Pareto surface.
+Occasionally, (depending upon $T$) a parameter set with a high Pareto rank was accepted by the SA allowing a more diverse search of the parameter space.
+However, as $T$ is reduced, the probability of accepting a high-rank set occurring decreases.
+Parameter sets could also be accepted by the SA but $\emph{not}$ permanently archived in $\mathcal{S}_{i}$.
+Only parameter sets with rank less than or equal to threshold (rank $\leq$4 by default) were included in $\mathcal{S}_{i}$, where the archive was re-ranked and filtered after
+every new parameter set was accepted.
+Parameter bounds were implemented in the \texttt{neighbor} function as box constraints, while problem specific constraints were implemented in \texttt{objective} using a penalty method:
+\begin{equation}
+  O_{i}+\lambda\sum_{j=1}^{\mathcal{C}}\min\Bigl\{0,g_j\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right)\Bigr\}\qquad~i=1,\hdots,\mathcal{K}
+\end{equation}where $\lambda$ denotes the penalty parameter ($\lambda$ = 100 by default).
+However, because both the neighbor and objective functions are user defined, different constraint implementations are easily defined.
+JuPOETs can be installed using the Julia package manager from the JuPOETs repository at https://github.com/varnerlab/POETs.jl.
+Sample code is included in the \texttt{sample/biochemical} subdirectory of the JuPOETs repository to help users get started using JuPOETs in their projects.
+
+\begin{algorithm}[h!]
+
+  \SetKwFunction{objective}{objective}
+  \SetKwFunction{neighbor}{neighbor}
+  \SetKwFunction{acceptance}{acceptance}
+  \SetKwFunction{rank}{rank}
+
+  \SetKwInOut{Input}{input}
+  \SetKwInOut{Output}{Output}
+
+  \Input{User specified neighbor, objective, acceptance and cooling functions. Initial parameter guess ($\mathcal{D}\times~1$)}
+  \Output{Rank archive $\mathcal{R}$, parameter solution archive $\mathcal{S}$ and objective archive $\mathcal{O}$}
+
+  \BlankLine
+  \BlankLine
+  initialize: $\mathcal{R}$, $\mathcal{S}$ and $\mathcal{O}$ using initial guess\;
+  initialize: T $\leftarrow$1.0\;
+  initialize: $T_{min}\leftarrow$1/10000\;
+  initialize: Maximum number of steps per temperature $\mathcal{I}$\;
+
+  \BlankLine
+  \BlankLine
+ \While{$T>T_{min}$}{
+    i $\leftarrow$  1\;
+    \While{i$<\mathcal{I}$}{
+      \BlankLine
+      \BlankLine
+      \tcp{Generate a new parameter solution using user neighbor function}
+      $\mathbf{p}_{i+1}$ $\leftarrow$ user-function::\neighbor{$\mathbf{p}^{*}$}\;
+      \BlankLine
+      \BlankLine
+      \tcp{Evaluate $\mathbf{p}_{i+1}$ using user objective function}
+      $\mathbf{o}_{i+1}$ $\leftarrow$ user-function::\objective{$\mathbf{p}_{i+1}$}\;
+      \BlankLine
+      \BlankLine
+      Add $\mathbf{p}_{i+1}$ to solution archive $\mathcal{S}$\;
+      Add $\mathbf{o}_{i+1}$ to objective archive $\mathcal{O}$\;
+      \BlankLine
+      \BlankLine
+      \tcp{Calculate Pareto rank of solutions in $\mathcal{O}$ using builtin rank function}
+      $\mathcal{R}\leftarrow$ builtin-function::\rank{$\mathcal{O}$}\;
+
+      \BlankLine
+      \tcp{Accept $\mathbf{p}_{i+1}$ into the archive with user defined probability}
+      $\mathcal{P}$ $\leftarrow$ user-function::\acceptance{$\mathcal{R}$,$T$}\;
+      \eIf {$\mathcal{P}>$rand}{
+
+          \BlankLine
+          \tcp{Update the best solution with $\mathbf{p}_{i+1}$}
+          $\mathbf{p}^{*}$ $\leftarrow$ $\mathbf{p}_{i+1}$\;
+          prune $\mathcal{S}$, $\mathcal{R}$ and $\mathcal{O}$ of all solutions above a rank threshold\;
+      }{
+        Remove $\mathbf{p}_{i+1}$ from solution archive $\mathcal{S}$\;
+        Remove $\mathbf{o}_{i+1}$ from error archive $\mathcal{O}$\;
+      }
+
+      \BlankLine
+      i $\leftarrow$  i + 1\;
+    }
+
+    \BlankLine
+    \tcp{Update $T$ using the user cooling function}
+    $T$ $\leftarrow$ user-function::cooling($T$)\;
+ }
+\vspace{0.05in}
+\caption{Pseudo-code for the main run-loop of JuPOETs.
+The user specifies the \texttt{neighbor}, \texttt{acceptance}, \texttt{cooling} and \texttt{objective} functions along with an initial parameter guess.
+The rank archive $\mathcal{R}$, solution archive $\mathcal{S}$ and objective archive $\mathcal{O}$ are initialized from the initial guess.
+The initial guess is perturbed in the \texttt{neighbor} function, which generates a new solution whose performance is evaluated using the user supplied \texttt{objective} function.
+The new solution and objective values are then added to the respective archives and ranked using the builtin \texttt{rank} function.
+If the new solution is accepted (based upon a probability calculated with the user supplied \texttt{acceptance} function) it is added to the solution and objective archive.
+This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied \texttt{cooling} function after each $\mathcal{I}$ iterations. }\label{algo:JuPOETs-pcode}
+\end{algorithm}
+
+
+%(Fig. \ref{fig:fig-timing} and Fig. \ref{fig:fig-surfaces}).
+
+\clearpage
+
+\section*{Results and Discussion}
+JuPOETs identified optimal or nearly optimal solutions significantly faster than Octave-POETs for a suite of multiobjective test problems (Table \ref{table:objective-table}).
+The wall-clock time for JuPOETs and Octave-POETs was measured for 10 independent trials for each of the test problems.
+The same \texttt{cooling}, \texttt{neighbor}, \texttt{acceptance}, and \texttt{objective} logic was employed between the implementations, and all other parameters were held constant.
+For each test function, the search domain was partitioned into 10 segments, where an initial parameter guess was drawn from each partition.
+The number of search steps for each temperate was $\mathcal{I}$ = 10 for all cases, and the cooling parameter was $\alpha$ = 0.9.
+On average, JuPOETs identified optimal or near optimal solutions for the suite of test problems six-fold faster (60s versus 400s)
+than Octave-POETs (Fig. \ref{fig:fig-timing}). JuPOETs produced the characteristic tradeoff curves for each test problem, given both parameter bound and
+problem constraints (Fig. \ref{fig:fig-surfaces}).
+Thus, JuPOETs estimated an ensemble of solutions to constrained multiobjective optimization test problems significantly faster than the current Octave implementation.
+Next, we tested JuPOETs on a proof-of-concept biochemical model identification problem.
+
+JuPOETs estimated an ensemble of biochemical models that was consistent with the mean of synthetic training data (Fig. \ref{fig:fig-biochemical}).
+Four synthetic training data sets were generated from a prototypical biochemical network consisting of 6 metabolites and 7 reactions (Fig. \ref{fig:fig-biochemical}, inset right).
+We considered a common case in which the same measurements were made on four hypothetical cell types, each having the same biological connectivity but different performance.
+Network dynamics were modeled using the hybrid cybernetic model with elementary modes (HCM-EM) approach of Ramkrishna and coworkers \cite{2008_kim_varner_ramkrishna_BiotechProg}.
+In the HCM-EM approach, metabolic networks are first decomposed into a set of elementary modes (EMs) (chemically balanced steady-state pathways, see \cite{Schuster:2000aa}).
+Dynamic combinations of elementary modes are then used to characterize network behavior.
+Each elementary mode is catalyzed by a pseudo enzyme; thus, each mode has both kinetic and enzyme synthesis parameters.
+The proof of concept network generated 6 EMs, resulting in 13 model parameters.
+The synthetic data was generated by randomly varying these parameters.
+JuPOETs produced an ensemble of approximately $\dim{\mathcal{S}}\simeq$ 13,000 parameters that captured the mean of the measured data sets for extracellular metabolites and cellmass
+(Fig. \ref{fig:fig-biochemical}A and B). JuPOETs minimized the difference between the simulated and measured values for A$_{e}$, B$_{e}$, C$_{e}$ and cellmass,
+where the residual for each data set was treated as a single objective (leading to four objectives).
+The 95\% confidence estimate produced by the ensemble was consistent with the mean of the measured data, despite having significant
+uncertainty in the training data. JuPOETs produced a consensus estimate of the synthetic data by calculating optimal trade-offs between the training data sets (Fig. \ref{fig:fig-biochemical}C). Multiple trade-off fronts were visible in the objective plots, for example between data set 3 (O$_{3}$) and data set 2 (O$_{2}$).
+Thus, without a multiobjective approach, it would be challenging to capture these data sets as fitting one leads to decreased performance on the other.
+However, the ensemble contained parameter sets that described each data set independently (Fig. \ref{fig:fig-experiment-variation}).
+Thus, JuPOETs produced an ensemble of parameters that gave the mean of the training data for conflicting data sets,
+while simultaneously estimating parameter sets that performed well on each individual objective function.
+
+\section*{Conclusions}
+JuPOETs is a significant advance over the previous POETs implementation.
+It offers improved performance and is highly adaptable to different problem types.
+We demonstrated JuPOETs on a suite of test problems, and a proof-of-concept biochemical model.
+However, there are several areas that could be explored further to improve JuPOETs.
+First, JuPOETs should be compared with other multiobjective evolutionary algorithms (MOEAs) to determine its relative performance on test and real world problems.
+Many evolutionary approaches e.g., the nondominated sorting genetic algorithm (NSGA) family of algorithms, have been adapted to solve multiobjective optimization problems \cite{DEB2002,HUBAND2006}. It is unclear if JuPOETs will perform as well as these other approaches;
+one potential advantage that JuPOETs may have is the local refinement step which temporarily reduces the problem to a single objective formulation.
+Previously, this hybrid approach led to better convergence on a proof-of-concept signal transduction model \cite{Song:2010aa}.
+For many real world parameter estimation problems, the bulk of the execution time is spent evaluating the objective functions.
+One strategy to improve performance could be to optimize surrogates \cite{SURROGATES}, while another would be parallel execution of the objective functions.
+Currently, JuPOETs serially evaluates the objective function vector.
+However, parallel evaluation of the objective functions could be easily implemented using a variety of techniques without changing the main run loop of JuPOETs.
+Because of the flexible function pointer architecture of JuPOETs, the only changes required are in the user defined objective function.
+Taken together, JuPOETs has demonstrated improved flexibility, and performance over POETs in parameter identification and ensemble generation for multiple objectives.
+JuPOETs has the potential for widespread use due to the flexibility of the implementation, and the high level syntax and distribution tools native to Julia.
+
+\clearpage
+
+\section*{Competing interests}
+  The authors declare that they have no competing interests.
+
+\section*{Funding}
+This study was supported by an award from the National Science Foundation (NSF CBET-0955172) and the National Institutes of Health (NIH HL110328) to J.B, and by
+a National Science Foundation Graduate Research Fellowship (DGE-1144153) to D.B.
+
+\section*{Author's contributions}
+    J.V developed the software presented in this study. M.M and M.V developed the proof-of-concept biochemical model.
+    The manuscript was prepared and edited for publication by D.B, J.B. and J.V.
+
+
+\bibliography{References_v1}
+
+\clearpage
+
+\section*{Figures}
+
+\begin{figure}[h]
+  \caption{Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.}\label{fig:fig-MOSAalgorithm}
+\end{figure}
+
+\begin{figure}[h]
+  \caption{The performance of JuPOETs on the multi-objective test suite.
+  The execution time (wall-clock) for JuPOETs and POETs implemented in Octave was measured for 10 independent trials for the suite of test problems.
+  The number of steps per temperature $\mathcal{I}$ = 10, and the cooling parameter $\alpha$ = 0.9 for all cases.
+  The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment.
+  For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints.  }\label{fig:fig-timing}
+\end{figure}
+
+\begin{figure}[h]
+  \caption{Representative JuPOETs solutions for problems in the multi-objective test suite.
+  The number of steps per temperature $\mathcal{I}$ = 10, and the cooling parameter $\alpha$ = 0.9 for all cases.
+  The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment.
+  For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints.  }\label{fig:fig-surfaces}
+\end{figure}
+
+\begin{figure}[h]
+  \caption{Proof of concept biochemical network study.
+  Inset right: Prototypical biochemical network with six metabolites and seven reactions modeled using the hybrid cybernetic approach (HCM).
+  Intracellular cellmass precursors $A,B$, and $C$ are balanced (no accumulation) while the extracellular metabolites $A_{e},B_{e}$, and $C_{e}$ are dynamic.
+  The oval denotes the cell boundary, $q_{j}$ is the $j$th flux across the boundary, and $v_{k}$ denotes the $k$th intracellular flux.
+  Four data sets (each with $A_{e},B_{e}$,$C_{e}$ and cellmass measurements) were generated by varying the kinetic constants for each biochemical mode.
+  Each data set was a single objective in the JuPOETs procedure.
+  A: Ensemble simulation of extracellular substrate $A_{e}$ and cellmass versus time.
+  B: Ensemble simulation of extracellular substrate $B_{e}$ and $C_{e}$ versus time.
+  The gray region denotes the 95\% confidence estimate of the mean ensemble simulation.
+  The data points denote mean synthetic measurements, while the error bars denote the 95\% confidence estimate of the measurement computed over the four training data sets.
+  C: Trade-off plots between the four training objectives. The quantity $O_{j}$ denotes the jth training objective.
+  Each point represents a member of the parameter ensemble, where gray denotes rank 0 sets, while black denotes rank 1 sets.
+   }\label{fig:fig-biochemical}
+\end{figure}
+
+\begin{figure}[h]
+  \caption{Experiment to experiment variation captured by the ensemble.
+  Cellmass measurements (points) versus time for experiment 2 and 3 were compared with ensemble simulations.
+  The full ensemble was sorted by simultaneously selecting the top 25\% of solutions for each objective with rank $\leq$~1.
+  The best fit solution for each objective (line) $\pm$ 1-standard deviation (gray region) for experiment 2 and 3 brackets the training data despite significant differences the training values between the two data sets.}\label{fig:fig-experiment-variation}
+\end{figure}
+
+\clearpage
+
+% Supplemental figures -
+% Set the S-
+\renewcommand\thefigure{S\arabic{figure}}
+\renewcommand\thetable{T\arabic{table}}
+\renewcommand\thepage{S-\arabic{page}}
+\renewcommand\theequation{S\arabic{equation}}
+
+% Reset the counters -
+\setcounter{equation}{0}
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\setcounter{page}{1}
+
+\end{document}

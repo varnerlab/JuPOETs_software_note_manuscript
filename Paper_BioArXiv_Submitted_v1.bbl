@@ -1,0 +1,207 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+  \begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ #2\end{quotation}}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem{Gadkar:2005ad}
+Gadkar KG, Varner J, Doyle FJ (2005) {Model identification of signal
+  transduction networks from data using a state regulator problem.}
+\newblock Syst Biol (Stevenage) 2: 17--30.
+\bibAnnoteFile{Gadkar:2005ad}
+
+\bibitem{Gennemark:2009on}
+Gennemark P, Wedelin D (2009) Benchmarks for identification of ordinary
+  differential equations from time series data.
+\newblock Bioinformatics 25: 780-6.
+\bibAnnoteFile{Gennemark:2009on}
+
+\bibitem{Battogtokh:2002}
+Battogtokh D, Asch D, Case M, Arnold J, Sh{\"u}ttler H (2002) {An ensemble
+  method for identifying regulatory circuits with special reference to the qa
+  gene cluster of Neurospora crassa}.
+\newblock Proc Natl Acad Sci U S A 99: 16904-16909.
+\bibAnnoteFile{Battogtokh:2002}
+
+\bibitem{Kuepfer:2007}
+L~Kuepfer USJS M~Peter (2007) Ensemble modeling for analysis of cell signaling
+  dynamics.
+\newblock Nat Biotech 25: 1001-1006.
+\bibAnnoteFile{Kuepfer:2007}
+
+\bibitem{Brown:2003}
+K~S~Brown JPS (2003) Statistical mechanial approaches to models with many
+  poorly known parameters.
+\newblock Phys Rev E 68: 021904:1-9.
+\bibAnnoteFile{Brown:2003}
+
+\bibitem{Palmer:2005}
+Palmer T, Shutts G, Hagedorn R, Doblas-Reyes F, Jung T, et~al. (2005)
+  {Representing model uncertainty in weather and climate prediction}.
+\newblock Ann Rev Earth and Planetary Sci 33: 163-193.
+\bibAnnoteFile{Palmer:2005}
+
+\bibitem{Gutenkunst2007}
+Gutenkunst RN, Waterfall JJ, Casey FP, Brown KS, Myers CR, et~al. (2007)
+  Universally sloppy parameter sensitivities in systems biology models.
+\newblock PLoS Comput Biol 3: 1871--1878.
+\bibAnnoteFile{Gutenkunst2007}
+
+\bibitem{Song:2009b}
+Song S, Varner J (2009) {Modeling and Analysis of the Molecular Basis of Pain
+  in Sensory Neurons}.
+\newblock PLoS ONE 4: e6758 - e6772.
+\bibAnnoteFile{Song:2009b}
+
+\bibitem{Tasseff:2010aa}
+Tasseff R, Nayak S, Salim S, Kaushik P, Rizvi N, et~al. (2010) Analysis of the
+  molecular networks in androgen dependent and independent prostate cancer
+  revealed fragile and robust subsystems.
+\newblock PLoS One 5: e8864.
+\bibAnnoteFile{Tasseff:2010aa}
+
+\bibitem{Tasseff:2011aa}
+Tasseff R, Nayak S, Song SO, Yen A, Varner JD (2011) Modeling and analysis of
+  retinoic acid induced differentiation of uncommitted precursor cells.
+\newblock Integr Biol (Camb) 3: 578-91.
+\bibAnnoteFile{Tasseff:2011aa}
+
+\bibitem{Tran:2008aa}
+Tran LM, Rizk ML, Liao JC (2008) Ensemble modeling of metabolic networks.
+\newblock Biophys J 95: 5606-17.
+\bibAnnoteFile{Tran:2008aa}
+
+\bibitem{Tan:2011aa}
+Tan Y, Rivera JGL, Contador CA, Asenjo JA, Liao JC (2011) Reducing the
+  allowable kinetic space by constructing ensemble of dynamic models with the
+  same steady-state flux.
+\newblock Metab Eng 13: 60-75.
+\bibAnnoteFile{Tan:2011aa}
+
+\bibitem{Contador2009221}
+Contador CA, Rizk ML, Asenjo JA, Liao JC (2009) Ensemble modeling for strain
+  development of l-lysine-producing escherichia coli.
+\newblock Metabolic Engineering 11: 221 - 233.
+\bibAnnoteFile{Contador2009221}
+
+\bibitem{Tan:2012aa}
+Tan Y, Liao JC (2012) Metabolic ensemble modeling for strain engineers.
+\newblock Biotechnol J 7: 343-53.
+\bibAnnoteFile{Tan:2012aa}
+
+\bibitem{Lee:2014aa}
+Lee Y, Lafontaine~Rivera JG, Liao JC (2014) Ensemble modeling for robustness
+  analysis in engineering non-native metabolic pathways.
+\newblock Metab Eng 25: 63-71.
+\bibAnnoteFile{Lee:2014aa}
+
+\bibitem{Khodayari:2014aa}
+Khodayari A, Zomorrodi AR, Liao JC, Maranas CD (2014) A kinetic model of
+  escherichia coli core metabolism satisfying multiple sets of mutant flux
+  data.
+\newblock Metab Eng 25: 50-62.
+\bibAnnoteFile{Khodayari:2014aa}
+
+\bibitem{Luan:2007aa}
+Luan D, Zai M, Varner JD (2007) Computationally derived points of fragility of
+  a human cascade are consistent with current therapeutic strategies.
+\newblock PLoS Comput Biol 3: e142.
+\bibAnnoteFile{Luan:2007aa}
+
+\bibitem{Song:2009aa}
+Song SO, Varner J (2009) Modeling and analysis of the molecular basis of pain
+  in sensory neurons.
+\newblock PLoS One 4: e6758.
+\bibAnnoteFile{Song:2009aa}
+
+\bibitem{Nayak:2011aa}
+Nayak S, Siddiqui JK, Varner JD (2011) Modelling and analysis of an ensemble of
+  eukaryotic translation initiation models.
+\newblock IET Syst Biol 5: 2.
+\bibAnnoteFile{Nayak:2011aa}
+
+\bibitem{Song:2012aa}
+Song SO, Song SOK, Hogg J, Peng ZY, Parker R, et~al. (2012) Ensemble models of
+  neutrophil trafficking in severe sepsis.
+\newblock PLoS Comput Biol 8: e1002422.
+\bibAnnoteFile{Song:2012aa}
+
+\bibitem{Luan:2010aa}
+Luan D, Szlam F, Tanaka KA, Barie PS, Varner JD (2010) Ensembles of uncertain
+  mathematical models can identify network response to therapeutic
+  interventions.
+\newblock Mol Biosyst 6: 2272-86.
+\bibAnnoteFile{Luan:2010aa}
+
+\bibitem{Lequieu:2011aa}
+Lequieu J, Chakrabarti A, Nayak S, Varner JD (2011) Computational modeling and
+  analysis of insulin induced eukaryotic translation initiation.
+\newblock PLoS Comput Biol 7: e1002263.
+\bibAnnoteFile{Lequieu:2011aa}
+
+\bibitem{Song:2010aa}
+Song SO, Chakrabarti A, Varner JD (2010) Ensembles of signal transduction
+  models using pareto optimal ensemble techniques (poets).
+\newblock Biotechnol J 5: 768-80.
+\bibAnnoteFile{Song:2010aa}
+
+\bibitem{CITE_Octave}
+Eaton JW, Bateman D, Hauberg S (2009) GNU Octave version 3.0.1 manual: a
+  high-level interactive language for numerical computations.
+\newblock North Charleston, SC, USA: CreateSpace Independent Publishing
+  Platform.
+\bibAnnoteFile{CITE_Octave}
+
+\bibitem{Julia}
+Bezanson J, Edelman A, Karpinski S, Shah VB (2015) {J}ulia: A fresh approach to
+  numerical computing .
+\bibAnnoteFile{Julia}
+
+\bibitem{RANKING}
+Fonseca C, Fleming PJ (1993) {Genetic Algorithms for Multiobjective
+  Optimization: Formulation, Discussion and Generalization}.
+\newblock In: {Proceedings of the 5th International Conference on Genetic
+  Algorithms}. pp. 416 - 423.
+\bibAnnoteFile{RANKING}
+
+\bibitem{2008_kim_varner_ramkrishna_BiotechProg}
+Kim J, Varner J, Ramkrishna D (2008) A hybrid model of anaerobic e. coli
+  gjt001: Combination of elementary flux modes and cybernetic variables.
+\newblock Biotechnol Prog 24: 993--1006.
+\bibAnnoteFile{2008_kim_varner_ramkrishna_BiotechProg}
+
+\bibitem{Schuster:2000aa}
+Schuster S, Fell DA, Dandekar T (2000) A general definition of metabolic
+  pathways useful for systematic organization and analysis of complex metabolic
+  networks.
+\newblock Nat Biotechnol 18: 326-32.
+\bibAnnoteFile{Schuster:2000aa}
+
+\bibitem{DEB2002}
+Kalyanmoy D, Pratap A, Agarwal S, Meyarivan T (2002) {A Fast and Elitist
+  Multiobjective Genetic Algorithm: NSGA-II}.
+\newblock IEEE Trans Evol Comp 6: 182 - 197.
+\bibAnnoteFile{DEB2002}
+
+\bibitem{HUBAND2006}
+Huband S, Hingston P, Barone L, While L (2006) {A Review of Multiobjective Test
+  Problems and a Scalable Test Problem Toolkit}.
+\newblock IEEE Trans Evol Comp 10: 477 - 506.
+\bibAnnoteFile{HUBAND2006}
+
+\bibitem{SURROGATES}
+Booker A, Dennis J, Frank P, Serafini D, Torczon V, et~al. (1999) {A rigorous
+  framework for optimization of expensive functions by surrogates}.
+\newblock Struct Optim 17: 1 - 13.
+\bibAnnoteFile{SURROGATES}
+
+\end{thebibliography}

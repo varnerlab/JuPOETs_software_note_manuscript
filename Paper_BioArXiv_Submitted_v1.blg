@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Paper_BioArXiv_Submitted_v1.aux
+The style file: plos2009.bst
+Database file #1: References_v1.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
+while executing---line 2643 of file plos2009.bst
+`journal' is a missing field, not a string, for entry Julia
+while executing---line 2643 of file plos2009.bst
+Warning--empty journal in Julia
+You've used 31 entries,
+            2441 wiz_defined-function locations,
+            776 strings with 11299 characters,
+and the built_in function-call counts, 24769 in all, are:
+= -- 2256
+> -- 452
+< -- 1
++ -- 226
+- -- 113
+* -- 2079
+:= -- 2985
+add.period$ -- 62
+call.type$ -- 31
+change.case$ -- 32
+chr.to.int$ -- 0
+cite$ -- 63
+duplicate$ -- 2428
+empty$ -- 2551
+format.name$ -- 142
+if$ -- 5486
+int.to.chr$ -- 0
+int.to.str$ -- 31
+missing$ -- 331
+newline$ -- 169
+num.names$ -- 31
+pop$ -- 392
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 218
+stack$ -- 0
+substring$ -- 3437
+swap$ -- 663
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 203
+width$ -- 33
+write$ -- 351
+(There were 2 error messages)
