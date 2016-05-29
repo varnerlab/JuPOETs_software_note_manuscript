@@ -30,10 +30,9 @@
 \usepackage{textcomp}
 \usepackage{multirow}
 \usepackage{amsmath}
-\usepackage[linesnumbered,lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage[linesnumbered,lined,commentsnumbered]{algorithm2e}
 \DeclareMathOperator*{\argmin}{\arg\!\min}
 
-\usepackage{algorithm2e}
 \usepackage{algpseudocode}
 %\usepackage[space]{cite}
 \urlstyle{rm}
@@ -94,6 +93,43 @@
 
 % Begin ...
 \begin{document}
+
+\begin{titlepage}
+{\par\centering\textbf{\Large {JuPOETs: A Constrained Multiobjective Optimization Approach to Estimate Biochemical Model Ensembles in the Julia Programming Language}}}
+\vspace{0.05in}
+{\par \centering \large{David Bassen$^{1}$, Michael Vilkhovoy, Mason Minot, Jonathan T Butcher$^{1}$ and Jeffrey D. Varner$^{*}$}}
+\vspace{0.10in}
+{\par \centering {School of Chemical and Biomolecular Engineering and}}
+{\par \centering {$^{1}$School of Biomedical Engineering, Cornell University, Ithaca NY 14853}}
+\vspace{0.1in}
+{\par \centering \textbf{Running Title:}~Multiobjective model ensemble generation}
+\vspace{0.1in}
+{\par \centering \textbf{To be submitted:}~\emph{BMC~Systems~Biology}}
+\vspace{0.1in}
+{\par \centering $^{*}$Corresponding author:}
+{\par \centering Jeffrey D. Varner,}
+{\par \centering Professor, School of Chemical and Biomolecular Engineering,}
+{\par \centering 244 Olin Hall, Cornell University, Ithaca NY, 14853}
+{\par \centering Email: jdv27@cornell.edu}
+{\par \centering Phone: (607) 255 - 4258}
+{\par \centering Fax: (607) 255 - 9166}
+\end{titlepage}
+\date{}
+\thispagestyle{empty}
+\pagebreak
+
+\section*{Abstract} % abstract
+Ensemble modeling is a well established approach for obtaining robust predictions and course grained population behavior in large deterministic mathematical models.
+In this study, we present the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
+JuPOETs integrates simulated annealing with Pareto optimality to estimate an ensemble of parameter sets on or near the optimal tradeoff surface between competing training objectives.
+We demonstrated JuPOETs on a suite of multiobjective problems, including test functions with parameter bounds and system constraints as well as identification of a proof-of-concept biochemical model.
+JuPOETs identified optimal or near optimal solutions approximately six-fold faster than a corresponding implementation in Octave.
+JuPOETs can be installed using the Julia package manager from the JuPOETs GitHub repository at https://github.com/varnerlab/POETs.jl.
+
+\clearpage
+
+% Uncomment in production -
+\linenumbers
 
 \section*{Background}
 Ensemble modeling is a well established approach for obtaining robust predictions and course grained population behavior in large deterministic mathematical models.
@@ -200,80 +236,6 @@ However, because both the neighbor and objective functions are user defined, dif
 JuPOETs can be installed using the Julia package manager from the JuPOETs repository at https://github.com/varnerlab/POETs.jl.
 Sample code is included in the \texttt{sample/biochemical} subdirectory of the JuPOETs repository to help users get started using JuPOETs in their projects.
 
-\begin{algorithm}[h!]
-
-  \SetKwFunction{objective}{objective}
-  \SetKwFunction{neighbor}{neighbor}
-  \SetKwFunction{acceptance}{acceptance}
-  \SetKwFunction{rank}{rank}
-
-  \SetKwInOut{Input}{input}
-  \SetKwInOut{Output}{Output}
-
-  \Input{User specified neighbor, objective, acceptance and cooling functions. Initial parameter guess ($\mathcal{D}\times~1$)}
-  \Output{Rank archive $\mathcal{R}$, parameter solution archive $\mathcal{S}$ and objective archive $\mathcal{O}$}
-
-  \BlankLine
-  \BlankLine
-  initialize: $\mathcal{R}$, $\mathcal{S}$ and $\mathcal{O}$ using initial guess\;
-  initialize: T $\leftarrow$1.0\;
-  initialize: $T_{min}\leftarrow$1/10000\;
-  initialize: Maximum number of steps per temperature $\mathcal{I}$\;
-
-  \BlankLine
-  \BlankLine
- \While{$T>T_{min}$}{
-    i $\leftarrow$  1\;
-    \While{i$<\mathcal{I}$}{
-      \BlankLine
-      \BlankLine
-      \tcp{Generate a new parameter solution using user neighbor function}
-      $\mathbf{p}_{i+1}$ $\leftarrow$ user-function::\neighbor{$\mathbf{p}^{*}$}\;
-      \BlankLine
-      \BlankLine
-      \tcp{Evaluate $\mathbf{p}_{i+1}$ using user objective function}
-      $\mathbf{o}_{i+1}$ $\leftarrow$ user-function::\objective{$\mathbf{p}_{i+1}$}\;
-      \BlankLine
-      \BlankLine
-      Add $\mathbf{p}_{i+1}$ to solution archive $\mathcal{S}$\;
-      Add $\mathbf{o}_{i+1}$ to objective archive $\mathcal{O}$\;
-      \BlankLine
-      \BlankLine
-      \tcp{Calculate Pareto rank of solutions in $\mathcal{O}$ using builtin rank function}
-      $\mathcal{R}\leftarrow$ builtin-function::\rank{$\mathcal{O}$}\;
-
-      \BlankLine
-      \tcp{Accept $\mathbf{p}_{i+1}$ into the archive with user defined probability}
-      $\mathcal{P}$ $\leftarrow$ user-function::\acceptance{$\mathcal{R}$,$T$}\;
-      \eIf {$\mathcal{P}>$rand}{
-
-          \BlankLine
-          \tcp{Update the best solution with $\mathbf{p}_{i+1}$}
-          $\mathbf{p}^{*}$ $\leftarrow$ $\mathbf{p}_{i+1}$\;
-          prune $\mathcal{S}$, $\mathcal{R}$ and $\mathcal{O}$ of all solutions above a rank threshold\;
-      }{
-        Remove $\mathbf{p}_{i+1}$ from solution archive $\mathcal{S}$\;
-        Remove $\mathbf{o}_{i+1}$ from error archive $\mathcal{O}$\;
-      }
-
-      \BlankLine
-      i $\leftarrow$  i + 1\;
-    }
-
-    \BlankLine
-    \tcp{Update $T$ using the user cooling function}
-    $T$ $\leftarrow$ user-function::cooling($T$)\;
- }
-\vspace{0.05in}
-\caption{Pseudo-code for the main run-loop of JuPOETs.
-The user specifies the \texttt{neighbor}, \texttt{acceptance}, \texttt{cooling} and \texttt{objective} functions along with an initial parameter guess.
-The rank archive $\mathcal{R}$, solution archive $\mathcal{S}$ and objective archive $\mathcal{O}$ are initialized from the initial guess.
-The initial guess is perturbed in the \texttt{neighbor} function, which generates a new solution whose performance is evaluated using the user supplied \texttt{objective} function.
-The new solution and objective values are then added to the respective archives and ranked using the builtin \texttt{rank} function.
-If the new solution is accepted (based upon a probability calculated with the user supplied \texttt{acceptance} function) it is added to the solution and objective archive.
-This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied \texttt{cooling} function after each $\mathcal{I}$ iterations. }\label{algo:JuPOETs-pcode}
-\end{algorithm}
-
 
 %(Fig. \ref{fig:fig-timing} and Fig. \ref{fig:fig-surfaces}).
 
@@ -345,13 +307,94 @@ a National Science Foundation Graduate Research Fellowship (DGE-1144153) to D.B.
 
 \clearpage
 
+\begin{algorithm}[h!]
+
+\footnotesize{
+  \SetKwFunction{objective}{objective}
+  \SetKwFunction{neighbor}{neighbor}
+  \SetKwFunction{acceptance}{acceptance}
+  \SetKwFunction{rank}{rank}
+
+  \SetKwInOut{Input}{input}
+  \SetKwInOut{Output}{Output}
+
+  \Input{User specified neighbor, objective, acceptance and cooling functions. Initial parameter guess ($\mathcal{D}\times~1$)}
+  \Output{Rank archive $\mathcal{R}$, parameter solution archive $\mathcal{S}$ and objective archive $\mathcal{O}$}
+
+  \BlankLine
+  \BlankLine
+  initialize: $\mathcal{R}$, $\mathcal{S}$ and $\mathcal{O}$ using initial guess\;
+  initialize: T $\leftarrow$1.0\;
+  initialize: $T_{min}\leftarrow$1/10000\;
+  initialize: Maximum number of steps per temperature $\mathcal{I}$\;
+
+  \BlankLine
+  \BlankLine
+ \While{$T>T_{min}$}{
+    i $\leftarrow$  1\;
+    \While{i$<\mathcal{I}$}{
+      \BlankLine
+      \BlankLine
+      \tcp{Generate a new parameter solution using user neighbor function}
+      $\mathbf{p}_{i+1}$ $\leftarrow$ user-function::\neighbor{$\mathbf{p}^{*}$}\;
+      \BlankLine
+      \BlankLine
+      \tcp{Evaluate $\mathbf{p}_{i+1}$ using user objective function}
+      $\mathbf{o}_{i+1}$ $\leftarrow$ user-function::\objective{$\mathbf{p}_{i+1}$}\;
+      \BlankLine
+      \BlankLine
+      Add $\mathbf{p}_{i+1}$ to solution archive $\mathcal{S}$\;
+      Add $\mathbf{o}_{i+1}$ to objective archive $\mathcal{O}$\;
+      \BlankLine
+      \BlankLine
+      \tcp{Calculate Pareto rank of solutions in $\mathcal{O}$ using builtin rank function}
+      $\mathcal{R}\leftarrow$ builtin-function::\rank{$\mathcal{O}$}\;
+
+      \BlankLine
+      \tcp{Accept $\mathbf{p}_{i+1}$ into the archive with user defined probability}
+      $\mathcal{P}$ $\leftarrow$ user-function::\acceptance{$\mathcal{R}$,$T$}\;
+      \eIf {$\mathcal{P}>$rand}{
+
+          \BlankLine
+          \tcp{Update the best solution with $\mathbf{p}_{i+1}$}
+          $\mathbf{p}^{*}$ $\leftarrow$ $\mathbf{p}_{i+1}$\;
+          prune $\mathcal{S}$, $\mathcal{R}$ and $\mathcal{O}$ of all solutions above a rank threshold\;
+      }{
+        Remove $\mathbf{p}_{i+1}$ from solution archive $\mathcal{S}$\;
+        Remove $\mathbf{o}_{i+1}$ from error archive $\mathcal{O}$\;
+      }
+
+      \BlankLine
+      i $\leftarrow$  i + 1\;
+    }
+
+    \BlankLine
+    \tcp{Update $T$ using the user cooling function}
+    $T$ $\leftarrow$ user-function::cooling($T$)\;
+ }}
+
+\vspace{0.05in}
+\caption{\footnotesize{Pseudo-code for the main run-loop of JuPOETs.
+The user specifies the \texttt{neighbor}, \texttt{acceptance}, \texttt{cooling} and \texttt{objective} functions along with an initial parameter guess.
+The rank archive $\mathcal{R}$, solution archive $\mathcal{S}$ and objective archive $\mathcal{O}$ are initialized from the initial guess.
+The initial guess is perturbed in the \texttt{neighbor} function, which generates a new solution whose performance is evaluated using the user supplied \texttt{objective} function.
+The new solution and objective values are then added to the respective archives and ranked using the builtin \texttt{rank} function.
+If the new solution is accepted (based upon a probability calculated with the user supplied \texttt{acceptance} function) it is added to the solution and objective archive.
+This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied \texttt{cooling} function after each $\mathcal{I}$ iterations.} }\label{algo:JuPOETs-pcode}
+\end{algorithm}
+
+\clearpage
+
 \section*{Figures}
 
 \begin{figure}[h]
+  \centering
+  \includegraphics[width=1.0\textwidth]{./figs/Figure-1-Parameter-ObjMapping.pdf}
   \caption{Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.}\label{fig:fig-MOSAalgorithm}
 \end{figure}
 
 \begin{figure}[h]
+  \includegraphics[width=1.0\textwidth]{./figs/Figure-2-ObjectiveDomain-Space.png}
   \caption{The performance of JuPOETs on the multi-objective test suite.
   The execution time (wall-clock) for JuPOETs and POETs implemented in Octave was measured for 10 independent trials for the suite of test problems.
   The number of steps per temperature $\mathcal{I}$ = 10, and the cooling parameter $\alpha$ = 0.9 for all cases.
@@ -360,6 +403,7 @@ a National Science Foundation Graduate Research Fellowship (DGE-1144153) to D.B.
 \end{figure}
 
 \begin{figure}[h]
+  \includegraphics[width=1.0\textwidth]{./figs/Figure-3-PerformanceComparison.pdf}
   \caption{Representative JuPOETs solutions for problems in the multi-objective test suite.
   The number of steps per temperature $\mathcal{I}$ = 10, and the cooling parameter $\alpha$ = 0.9 for all cases.
   The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment.
@@ -367,6 +411,7 @@ a National Science Foundation Graduate Research Fellowship (DGE-1144153) to D.B.
 \end{figure}
 
 \begin{figure}[h]
+  \includegraphics[width=1.0\textwidth]{./figs/Figure-4-BiochemicalProofOfConcept.pdf}
   \caption{Proof of concept biochemical network study.
   Inset right: Prototypical biochemical network with six metabolites and seven reactions modeled using the hybrid cybernetic approach (HCM).
   Intracellular cellmass precursors $A,B$, and $C$ are balanced (no accumulation) while the extracellular metabolites $A_{e},B_{e}$, and $C_{e}$ are dynamic.
@@ -383,6 +428,7 @@ a National Science Foundation Graduate Research Fellowship (DGE-1144153) to D.B.
 \end{figure}
 
 \begin{figure}[h]
+  \includegraphics[width=1.0\textwidth]{./figs/Figure-5-ExperimentToExperimentVariation.pdf}
   \caption{Experiment to experiment variation captured by the ensemble.
   Cellmass measurements (points) versus time for experiment 2 and 3 were compared with ensemble simulations.
   The full ensemble was sorted by simultaneously selecting the top 25\% of solutions for each objective with rank $\leq$~1.
