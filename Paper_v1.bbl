@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{31}
+\begin{thebibliography}{32}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -382,6 +382,22 @@ doi:\doiurl{10.1039/b920693k}
 \endbibitem
 
 %%% 22
+\bibitem{Andreozzi:2016aa}
+\begin{barticle}
+\bauthor{\bsnm{Andreozzi}, \binits{S.}},
+\bauthor{\bsnm{Miskovic}, \binits{L.}},
+\bauthor{\bsnm{Hatzimanikatis}, \binits{V.}}:
+\batitle{ischrunk--in silico approach to characterization and reduction of
+  uncertainty in the kinetic models of genome-scale metabolic networks}.
+\bjtitle{Metab Eng}
+\bvolume{33},
+\bfpage{158}--\blpage{68}
+(\byear{2016}).
+doi:\doiurl{10.1016/j.ymben.2015.10.002}
+\end{barticle}
+\endbibitem
+
+%%% 23
 \bibitem{Lequieu:2011aa}
 \begin{barticle}
 \bauthor{\bsnm{Lequieu}, \binits{J.}},
@@ -398,7 +414,7 @@ doi:\doiurl{10.1371/journal.pcbi.1002263}
 \end{barticle}
 \endbibitem
 
-%%% 23
+%%% 24
 \bibitem{Song:2010aa}
 \begin{barticle}
 \bauthor{\bsnm{Song}, \binits{S.O.}},
@@ -414,7 +430,7 @@ doi:\doiurl{10.1002/biot.201000059}
 \end{barticle}
 \endbibitem
 
-%%% 24
+%%% 25
 \bibitem{CITE_Octave}
 \begin{bbook}
 \bauthor{\bsnm{Eaton}, \binits{J.W.}},
@@ -428,7 +444,7 @@ doi:\doiurl{10.1002/biot.201000059}
 \end{bbook}
 \endbibitem
 
-%%% 25
+%%% 26
 \bibitem{Julia}
 \begin{botherref}
 \oauthor{\bsnm{Bezanson}, \binits{J.}},
@@ -441,7 +457,7 @@ doi:\doiurl{10.1002/biot.201000059}
 \end{botherref}
 \endbibitem
 
-%%% 26
+%%% 27
 \bibitem{RANKING}
 \begin{bchapter}
 \bauthor{\bsnm{Fonseca}, \binits{C.M.}},
@@ -455,7 +471,7 @@ pp. \bfpage{416}--\blpage{423}
 \end{bchapter}
 \endbibitem
 
-%%% 27
+%%% 28
 \bibitem{2008_kim_varner_ramkrishna_BiotechProg}
 \begin{barticle}
 \bauthor{\bsnm{Kim}, \binits{J.}},
@@ -471,7 +487,7 @@ doi:\doiurl{10.1002/btpr.73}
 \end{barticle}
 \endbibitem
 
-%%% 28
+%%% 29
 \bibitem{Schuster:2000aa}
 \begin{barticle}
 \bauthor{\bsnm{Schuster}, \binits{S.}},
@@ -487,7 +503,7 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 29
+%%% 30
 \bibitem{DEB2002}
 \begin{barticle}
 \bauthor{\bsnm{Kalyanmoy}, \binits{D.}},
@@ -502,7 +518,7 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 30
+%%% 31
 \bibitem{HUBAND2006}
 \begin{barticle}
 \bauthor{\bsnm{Huband}, \binits{S.}},
@@ -518,7 +534,7 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 31
+%%% 32
 \bibitem{SURROGATES}
 \begin{barticle}
 \bauthor{\bsnm{Booker}, \binits{A.J.}},
@@ -889,6 +905,22 @@ doi:\doiurl{10.1038/73786}
 </bibl>
 
 <bibl id="B22">
+  <title><p>iSCHRUNK--In Silico Approach to Characterization and Reduction of
+  Uncertainty in the Kinetic Models of Genome-scale Metabolic
+  Networks</p></title>
+  <aug>
+    <au><snm>Andreozzi</snm><fnm>S</fnm></au>
+    <au><snm>Miskovic</snm><fnm>L</fnm></au>
+    <au><snm>Hatzimanikatis</snm><fnm>V</fnm></au>
+  </aug>
+  <source>Metab Eng</source>
+  <pubdate>2016</pubdate>
+  <volume>33</volume>
+  <fpage>158</fpage>
+  <lpage>68</lpage>
+</bibl>
+
+<bibl id="B23">
   <title><p>Computational modeling and analysis of insulin induced eukaryotic
   translation initiation</p></title>
   <aug>
@@ -904,7 +936,7 @@ doi:\doiurl{10.1038/73786}
   <fpage>e1002263</fpage>
 </bibl>
 
-<bibl id="B23">
+<bibl id="B24">
   <title><p>Ensembles of signal transduction models using Pareto Optimal
   Ensemble Techniques (POETs)</p></title>
   <aug>
@@ -920,7 +952,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>80</lpage>
 </bibl>
 
-<bibl id="B24">
+<bibl id="B25">
   <title><p>GNU Octave version 3.0.1 manual: a high-level interactive language
   for numerical computations</p></title>
   <aug>
@@ -933,7 +965,7 @@ doi:\doiurl{10.1038/73786}
   <pubdate>2009</pubdate>
 </bibl>
 
-<bibl id="B25">
+<bibl id="B26">
   <title><p>{J}ulia: A Fresh Approach to Numerical Computing</p></title>
   <aug>
     <au><snm>Bezanson</snm><fnm>J</fnm></au>
@@ -944,7 +976,7 @@ doi:\doiurl{10.1038/73786}
   <pubdate>2015</pubdate>
 </bibl>
 
-<bibl id="B26">
+<bibl id="B27">
   <title><p>{Genetic Algorithms for Multiobjective Optimization: Formulation,
   Discussion and Generalization}</p></title>
   <aug>
@@ -958,7 +990,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>423</lpage>
 </bibl>
 
-<bibl id="B27">
+<bibl id="B28">
   <title><p>A hybrid model of anaerobic E. coli GJT001: Combination of
   elementary flux modes and cybernetic variables</p></title>
   <aug>
@@ -976,7 +1008,7 @@ doi:\doiurl{10.1038/73786}
   <url>http://dx.doi.org/10.1002/btpr.73</url>
 </bibl>
 
-<bibl id="B28">
+<bibl id="B29">
   <title><p>A general definition of metabolic pathways useful for systematic
   organization and analysis of complex metabolic networks</p></title>
   <aug>
@@ -992,7 +1024,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>32</lpage>
 </bibl>
 
-<bibl id="B29">
+<bibl id="B30">
   <title><p>{A Fast and Elitist Multiobjective Genetic Algorithm:
   NSGA-II}</p></title>
   <aug>
@@ -1008,7 +1040,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>197</lpage>
 </bibl>
 
-<bibl id="B30">
+<bibl id="B31">
   <title><p>{A Review of Multiobjective Test Problems and a Scalable Test
   Problem Toolkit}</p></title>
   <aug>
@@ -1024,7 +1056,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>506</lpage>
 </bibl>
 
-<bibl id="B31">
+<bibl id="B32">
   <title><p>{A rigorous framework for optimization of expensive functions by
   surrogates}</p></title>
   <aug>

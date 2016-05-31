@@ -198,7 +198,7 @@
 Ensemble modeling is a well established approach for obtaining robust predictions and for simulating course grained population behavior in deterministic mathematical models.
 In this study, we present a multiobjective based technique to estimate model ensembles, the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
 JuPOETs integrates simulated annealing with Pareto optimality to estimate parameter ensembles on or near the optimal tradeoff surface between competing training objectives.
-We demonstrated JuPOETs on a suite of multiobjective problems, including test functions with parameter bounds and system constraints as well as for the identification of a proof-of-concept biochemical model with four conflicting training objectives.
+We demonstrate JuPOETs on a suite of multiobjective problems, including test functions with parameter bounds and system constraints as well as for the identification of a proof-of-concept biochemical model with four conflicting training objectives.
 JuPOETs identified optimal or near optimal solutions approximately six-fold faster than a corresponding implementation in Octave for the suite of test functions.
 For the proof-of-concept biochemical model, JuPOETs produced an ensemble of parameters that gave both the mean of the training data for conflicting data sets,
 while simultaneously estimating parameter sets that performed well on each of the individual objective functions.
@@ -281,10 +281,12 @@ There are many techniques to generate parameter ensembles.
 Battogtokh et al., Brown et al., and later Tasseff et al. generated experimentally constrained parameter ensembles using a
 Metropolis-type random walk \cite{Battogtokh:2002,Brown:2003,Tasseff:2010aa,Tasseff:2011aa}.
 Liao and coworkers developed methods that generate ensembles that all approach the same steady-state, for example one determined by fluxomics measurements \cite{Tran:2008aa}.
-They have used this approach for model reduction \cite{Tan:2011aa}, strain engineering \cite{Contador2009221,Tan:2012aa} and to study the robustness of non-native pathways and network failure \cite{Lee:2014aa}. Maranas and coworkers have also applied this method to develop a comprehensive kinetic model of bacterial central carbon metabolism,
+They have used this approach for model reduction \cite{Tan:2011aa}, strain engineering \cite{Contador2009221,Tan:2012aa} and to study the robustness of non-native pathways and network failure \cite{Lee:2014aa}.
+Maranas and coworkers have also applied this method to develop a comprehensive kinetic model of bacterial central carbon metabolism,
 including mutant data \cite{Khodayari:2014aa}.
-We and others have used ensemble approaches, generated using both sampling and optimization techniques, to robustly simulate a wide variety of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa}, neutrophil trafficking in sepsis \cite{Song:2012aa},
-patient specific coagulation behavior \cite{Luan:2010aa} and to capture cell to cell variation \cite{Lequieu:2011aa}.
+We and others have used ensemble approaches, generated using both sampling and optimization techniques,
+to robustly simulate a wide variety of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa}, neutrophil trafficking in sepsis \cite{Song:2012aa},
+patient specific coagulation behavior \cite{Luan:2010aa}, uncertainty quantification in metabolic kinetic models \cite{Andreozzi:2016aa} and to capture cell to cell variation \cite{Lequieu:2011aa}.
 Thus, ensemble approaches are widely used to robustly simulate a variety of biochemical systems.
 
 Identification of biochemical models with hundreds or even thousands of states and parameters may not be tractable as a single objective optimization problem.
@@ -517,7 +519,8 @@ JuPOETs has the potential for widespread use due to the flexibility of the imple
 
 \section*{Funding}
 This study was supported by an award from the National Science Foundation (NSF CBET-0955172) and the National Institutes of Health (NIH HL110328) to J.B, and by
-a National Science Foundation Graduate Research Fellowship (DGE-1144153) to D.B.
+a National Science Foundation Graduate Research Fellowship (DGE-1144153) to D.B. Lastly, J.V was supported by an award from
+the US Army and Systems Biology of Trauma Induced Coagulopathy (W911NF-10-1-0376).
 
 \section*{Author's contributions}
     J.V developed the software presented in this study. M.M and M.V developed the proof-of-concept biochemical model.

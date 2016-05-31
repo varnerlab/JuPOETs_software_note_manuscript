@@ -47,45 +47,45 @@ Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for 
 while executing---line 3019 of file bmc-mathphys.bst
 Too many commas in name 1 of "L. Kuepfer, M. Peter, U. Saucer, J. Stelling" for entry Kuepfer:2007
 while executing---line 3019 of file bmc-mathphys.bst
-You've used 31 entries,
+You've used 32 entries,
             7128 wiz_defined-function locations,
-            1354 strings with 15928 characters,
-and the built_in function-call counts, 298170 in all, are:
-= -- 45739
-> -- 1222
-< -- 740
-+ -- 21301
-- -- 343
-* -- 15489
-:= -- 55707
-add.period$ -- 50
-call.type$ -- 31
-change.case$ -- 327
-chr.to.int$ -- 1633
-cite$ -- 31
-duplicate$ -- 3222
-empty$ -- 10491
-format.name$ -- 1152
-if$ -- 71536
+            1361 strings with 16199 characters,
+and the built_in function-call counts, 304612 in all, are:
+= -- 46517
+> -- 1262
+< -- 765
++ -- 21462
+- -- 355
+* -- 15978
+:= -- 57020
+add.period$ -- 52
+call.type$ -- 32
+change.case$ -- 337
+chr.to.int$ -- 1688
+cite$ -- 32
+duplicate$ -- 3321
+empty$ -- 10879
+format.name$ -- 1184
+if$ -- 72973
 int.to.chr$ -- 1
-int.to.str$ -- 86
-missing$ -- 1095
-newline$ -- 990
-num.names$ -- 155
-pop$ -- 1317
+int.to.str$ -- 90
+missing$ -- 1129
+newline$ -- 1019
+num.names$ -- 160
+pop$ -- 1358
 preamble$ -- 1
-purify$ -- 147
-quote$ -- 62
-skip$ -- 25277
+purify$ -- 153
+quote$ -- 64
+skip$ -- 25627
 stack$ -- 0
-substring$ -- 34374
-swap$ -- 1182
-text.length$ -- 529
+substring$ -- 35320
+swap$ -- 1219
+text.length$ -- 549
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1381
+type$ -- 1426
 warning$ -- 0
-while$ -- 1202
+while$ -- 1243
 width$ -- 0
-write$ -- 1357
+write$ -- 1396
 (There were 7 error messages)
