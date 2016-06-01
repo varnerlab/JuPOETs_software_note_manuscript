@@ -195,13 +195,18 @@
 \begin{abstractbox}
 
 \begin{abstract} % abstract
+\parttitle{Background}
 Ensemble modeling is a well established approach for obtaining robust predictions and for simulating course grained population behavior in deterministic mathematical models.
 In this study, we present a multiobjective based technique to estimate model ensembles, the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
 JuPOETs integrates simulated annealing with Pareto optimality to estimate parameter ensembles on or near the optimal tradeoff surface between competing training objectives.
+
+\parttitle{Results}
 We demonstrate JuPOETs on a suite of multiobjective problems, including test functions with parameter bounds and system constraints as well as for the identification of a proof-of-concept biochemical model with four conflicting training objectives.
 JuPOETs identified optimal or near optimal solutions approximately six-fold faster than a corresponding implementation in Octave for the suite of test functions.
 For the proof-of-concept biochemical model, JuPOETs produced an ensemble of parameters that gave both the mean of the training data for conflicting data sets,
 while simultaneously estimating parameter sets that performed well on each of the individual objective functions.
+
+\parttitle{Conclusions}
 JuPOETs can be adapted to solve many problem types, including mixed binary and continuous variable types, bilevel optimization problems
 and constrained problems without altering the base algorithm.
 JuPOETs can be installed using the Julia package manager from the JuPOETs GitHub repository at https://github.com/varnerlab/POETs.jl.
@@ -514,6 +519,12 @@ JuPOETs has the potential for widespread use due to the flexibility of the imple
 
 \begin{backmatter}
 
+\section*{Ethics approval and consent to participate}
+Not applicable
+
+\section*{Consent to publish}
+Not applicable
+
 \section*{Competing interests}
   The authors declare that they have no competing interests.
 
@@ -525,6 +536,18 @@ the US Army and Systems Biology of Trauma Induced Coagulopathy (W911NF-10-1-0376
 \section*{Author's contributions}
     J.V developed the software presented in this study. M.M and M.V developed the proof-of-concept biochemical model.
     The manuscript was prepared and edited for publication by D.B, J.B. and J.V.
+
+\section*{Acknowledgements}
+We gratefully acknowledge Ani Chakrabarti, Russell Gould and Kathy Rogers for their input and suggestions regarding new features to include into JuPOETs.
+We also gratefully acknowledge the suggestions from the anonymous reviewers to improve this manuscript and JuPOETs.
+
+\section*{Availability of data and materials}
+JuPOETs is open source, available under an MIT software license.
+The JuPOETs source code is freely available from the JuPOETs GitHub repository at https://github.com/varnerlab/POETs.jl.
+All samples used in this study are included in the \texttt{sample} subdirectory of the JuPOETs GitHub repository.
+
+\section*{List of abbreviations}
+
 
 %\section*{Acknowledgements}
 %  Text for this section \ldots
