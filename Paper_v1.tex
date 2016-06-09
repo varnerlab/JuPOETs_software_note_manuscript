@@ -196,20 +196,25 @@
 
 \begin{abstract} % abstract
 \parttitle{Background}
-Ensemble modeling is a well established approach for obtaining robust predictions and for simulating course grained population behavior in deterministic mathematical models.
-In this study, we present a multiobjective based technique to estimate model ensembles, the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
-JuPOETs integrates simulated annealing with Pareto optimality to estimate parameter ensembles on or near the optimal tradeoff surface between competing training objectives.
+Ensemble modeling is a promising approach for obtaining robust predictions and course grained population behavior in deterministic mathematical models.
+Ensemble approaches address model uncertainty by using parameter or model families instead of single best-fit parameters or fixed model structures.
+Parameter ensembles can be selected based upon simulation error, along with other criterion such as diversity or steady-state performance.
+Simulations using parameter ensembles can estimate confidence intervals on model variables, and robustly constrain model predictions,
+despite having many poorly constrained parameters.
 
 \parttitle{Results}
+In this study, we present a multiobjective based technique to estimate parameter or models ensembles, the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
+JuPOETs integrates simulated annealing with Pareto optimality to estimate ensembles on or near the optimal tradeoff surface between competing training objectives.
 We demonstrate JuPOETs on a suite of multiobjective problems, including test functions with parameter bounds and system constraints as well as for the identification of a proof-of-concept biochemical model with four conflicting training objectives.
 JuPOETs identified optimal or near optimal solutions approximately six-fold faster than a corresponding implementation in Octave for the suite of test functions.
 For the proof-of-concept biochemical model, JuPOETs produced an ensemble of parameters that gave both the mean of the training data for conflicting data sets,
 while simultaneously estimating parameter sets that performed well on each of the individual objective functions.
 
 \parttitle{Conclusions}
+JuPOETs is a promising approach for the estimation of parameter and model ensembles using multiobjective optimization.
 JuPOETs can be adapted to solve many problem types, including mixed binary and continuous variable types, bilevel optimization problems
 and constrained problems without altering the base algorithm.
-JuPOETs can be installed using the Julia package manager from the JuPOETs GitHub repository at https://github.com/varnerlab/POETs.jl.
+JuPOETs is open source available under an MIT license, and can be installed using the Julia package manager from the JuPOETs GitHub repository
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -273,13 +278,13 @@ JuPOETs can be installed using the Julia package manager from the JuPOETs GitHub
 %separate submodels identified using different types of training data \cite{Purvis:2008}.
 
 \section*{Background}
-Ensemble modeling is a well established approach for obtaining robust predictions and course grained population behavior in large deterministic mathematical models.
+Ensemble modeling is a promising approach for obtaining robust predictions and course grained population behavior in deterministic mathematical models.
 It is often not possible to uniquely identify all the parameters in biochemical models, even when given extensive training data \cite{Gadkar:2005ad}.
 Thus, despite significant advances in standardizing biochemical model identification \cite{Gennemark:2009on},
 the problem of estimating model parameters from experimental data remains challenging.
 Ensemble approaches address parameter uncertainty in systems biology and other fields like weather prediction \cite{Battogtokh:2002,Kuepfer:2007, Brown:2003,Palmer:2005}
 by using parameter families instead of single best-fit parameter sets.
-Parameter families can be selected based upon simulation error, along with other criterion such as diversity or steady-state peformance.
+Parameter families can be selected based upon simulation error, along with other criterion such as diversity or steady-state performance.
 Simulations using parameter ensembles can estimate confidence intervals on model variables, and robustly constrain model predictions,
 despite having many poorly constrained parameters \cite{Gutenkunst2007,Song:2009b}.
 There are many techniques to generate parameter ensembles.
@@ -375,8 +380,11 @@ Parameter bounds were implemented in the \texttt{neighbor} function as box const
   O_{i}+\lambda\sum_{j=1}^{\mathcal{C}}\min\Bigl\{0,g_j\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right)\Bigr\}\qquad~i=1,\hdots,\mathcal{K}
 \end{equation}where $\lambda$ denotes the penalty parameter ($\lambda$ = 100 by default).
 However, because both the neighbor and objective functions are user defined, different constraint implementations are easily defined.
-JuPOETs can be installed using the Julia package manager from the JuPOETs repository at https://github.com/varnerlab/POETs.jl.
-Sample code is included in the \texttt{sample/biochemical} subdirectory of the JuPOETs repository to help users get started using JuPOETs in their projects.
+
+\section*{Availability of data and materials}
+JuPOETs is open source, available under an MIT software license.
+The JuPOETs source code is freely available from the JuPOETs GitHub repository at https://github.com/varnerlab/POETs.jl.
+All samples used in this study are included in the \texttt{sample/biochemical} and \texttt{sample/test\_functions} subdirectories of the JuPOETs GitHub repository.
 
 \begin{algorithm}[h!]
 
@@ -490,18 +498,20 @@ Thus, JuPOETs produced an ensemble of parameters that gave the mean of the train
 while simultaneously estimating parameter sets that performed well on each individual objective function.
 
 \section*{Conclusions}
+JuPOETs is a promising approach for the estimation of parameter and model ensembles using multiobjective optimization.
 JuPOETs is a significant advance over the previous POETs implementation.
 It offers improved performance and is highly adaptable to different problem types.
 We demonstrated JuPOETs on a suite of test problems, and a proof-of-concept biochemical model.
 However, there are several areas that could be explored further to improve JuPOETs.
 First, JuPOETs should be compared with other multiobjective evolutionary algorithms (MOEAs) to determine its relative performance on test and real world problems.
-Many evolutionary approaches e.g., the nondominated sorting genetic algorithm (NSGA) family of algorithms, have been adapted to solve multiobjective optimization problems \cite{DEB2002,HUBAND2006}. It is unclear if JuPOETs will perform as well as these other approaches;
+Many evolutionary approaches e.g., the non-dominated sorting genetic algorithm (NSGA) family of algorithms, have been adapted to solve multiobjective optimization problems \cite{DEB2002,HUBAND2006}. It is unclear if JuPOETs will perform as well as these other approaches;
 one potential advantage that JuPOETs may have is the local refinement step which temporarily reduces the problem to a single objective formulation.
 Previously, this hybrid approach led to better convergence on a proof-of-concept signal transduction model \cite{Song:2010aa}.
 For many real world parameter estimation problems, the bulk of the execution time is spent evaluating the objective functions.
 One strategy to improve performance could be to optimize surrogates \cite{SURROGATES}, while another would be parallel execution of the objective functions.
 Currently, JuPOETs serially evaluates the objective function vector.
-However, parallel evaluation of the objective functions could be easily implemented using a variety of techniques without changing the main run loop of JuPOETs.
+However, parallel evaluation of the objective functions e.g., using the \texttt{\@parallel} Julia macro or other techniques,
+could be easily implemented without changing the main run loop of JuPOETs.
 Because of the flexible function pointer architecture of JuPOETs, the only changes required are in the user defined objective function.
 Taken together, JuPOETs has demonstrated improved flexibility, and performance over POETs in parameter identification and ensemble generation for multiple objectives.
 JuPOETs has the potential for widespread use due to the flexibility of the implementation, and the high level syntax and distribution tools native to Julia.
@@ -544,10 +554,10 @@ We also gratefully acknowledge the suggestions from the anonymous reviewers to i
 \section*{Availability of data and materials}
 JuPOETs is open source, available under an MIT software license.
 The JuPOETs source code is freely available from the JuPOETs GitHub repository at https://github.com/varnerlab/POETs.jl.
-All samples used in this study are included in the \texttt{sample} subdirectory of the JuPOETs GitHub repository.
+All samples used in this study are included in the \texttt{sample/biochemical} and \texttt{sample/test\_functions} subdirectories of the JuPOETs GitHub repository.
 
 \section*{List of abbreviations}
-
+Not applicable
 
 %\section*{Acknowledgements}
 %  Text for this section \ldots
