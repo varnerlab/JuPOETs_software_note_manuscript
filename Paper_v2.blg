@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: Paper_v1.aux
+The top-level auxiliary file: Paper_v2.aux
 The style file: bmc-mathphys.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -22,15 +22,27 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References_v1.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "L. Kuepfer, M Peter, U Saucer, J Stelling" for entry Kuepfer:2007
+Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
 while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "L. Kuepfer, M Peter, U Saucer, J Stelling" for entry Kuepfer:2007
+Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
 while executing---line 2585 of file bmc-mathphys.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "L. Kuepfer, M Peter, U Saucer, J Stelling" for entry Kuepfer:2007
+Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
 while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "L. Kuepfer, M Peter, U Saucer, J Stelling" for entry Kuepfer:2007
+Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
 while executing---line 2686 of file bmc-mathphys.bst
+Warning--"{Unsupervised" isn't a brace-balanced string for entry Bandyopadhyay2013
+while executing--line 2686 of file bmc-mathphys.bst
+Warning--"{Unsupervised" isn't a brace-balanced string for entry Bandyopadhyay2013
+while executing--line 2686 of file bmc-mathphys.bst
+Warning--"{Unsupervised" isn't a brace-balanced string for entry Bandyopadhyay2013
+while executing--line 2686 of file bmc-mathphys.bst
+Warning--"applications}" isn't a brace-balanced string for entry Bandyopadhyay2013
+while executing--line 2686 of file bmc-mathphys.bst
+Warning--"applications}" isn't a brace-balanced string for entry Bandyopadhyay2013
+while executing--line 2686 of file bmc-mathphys.bst
+Warning--"APPLICATIONS}" isn't a brace-balanced string for entry Bandyopadhyay2013
+while executing--line 2686 of file bmc-mathphys.bst
 Warning--"{Proceedings" isn't a brace-balanced string for entry RANKING
 while executing--line 2686 of file bmc-mathphys.bst
 Warning--"{Proceedings" isn't a brace-balanced string for entry RANKING
@@ -41,51 +53,51 @@ Warning--"Algorithms}" isn't a brace-balanced string for entry RANKING
 while executing--line 2686 of file bmc-mathphys.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "L. Kuepfer, M Peter, U Saucer, J Stelling" for entry Kuepfer:2007
+Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
 while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "L. Kuepfer, M Peter, U Saucer, J Stelling" for entry Kuepfer:2007
+Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
 while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "L. Kuepfer, M Peter, U Saucer, J Stelling" for entry Kuepfer:2007
+Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
 while executing---line 3019 of file bmc-mathphys.bst
-You've used 32 entries,
+You've used 36 entries,
             7128 wiz_defined-function locations,
-            1361 strings with 16196 characters,
-and the built_in function-call counts, 304541 in all, are:
-= -- 46507
-> -- 1262
-< -- 765
-+ -- 21462
-- -- 355
-* -- 15972
-:= -- 57007
-add.period$ -- 52
-call.type$ -- 32
-change.case$ -- 337
-chr.to.int$ -- 1688
-cite$ -- 32
-duplicate$ -- 3321
-empty$ -- 10874
-format.name$ -- 1184
-if$ -- 72958
+            1395 strings with 17243 characters,
+and the built_in function-call counts, 384194 in all, are:
+= -- 61214
+> -- 1369
+< -- 830
++ -- 30529
+- -- 396
+* -- 18081
+:= -- 70886
+add.period$ -- 59
+call.type$ -- 36
+change.case$ -- 389
+chr.to.int$ -- 1821
+cite$ -- 36
+duplicate$ -- 3662
+empty$ -- 11924
+format.name$ -- 1283
+if$ -- 93332
 int.to.chr$ -- 1
-int.to.str$ -- 90
-missing$ -- 1129
-newline$ -- 1019
-num.names$ -- 160
-pop$ -- 1358
+int.to.str$ -- 100
+missing$ -- 1258
+newline$ -- 1128
+num.names$ -- 180
+pop$ -- 1499
 preamble$ -- 1
-purify$ -- 153
-quote$ -- 64
-skip$ -- 25623
+purify$ -- 171
+quote$ -- 72
+skip$ -- 34460
 stack$ -- 0
-substring$ -- 35302
-swap$ -- 1219
-text.length$ -- 549
+substring$ -- 43007
+swap$ -- 1330
+text.length$ -- 621
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1426
+type$ -- 1606
 warning$ -- 0
-while$ -- 1243
+while$ -- 1377
 width$ -- 0
-write$ -- 1396
+write$ -- 1536
 (There were 7 error messages)

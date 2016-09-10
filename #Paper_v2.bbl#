@@ -92,7 +92,7 @@ doi:\doiurl{10.1093/bioinformatics/btp050}
 %%% 4
 \bibitem{Kuepfer:2007}
 \begin{barticle}
-\bauthor{\bsnm{L.~Kuepfer}, \binits{U.S.J.S.} \bsuffix{M~Peter}}:
+\bauthor{\bsnm{L.~Kuepfer}, \binits{U.S.J.S.} \bsuffix{M.~Peter}}:
 \batitle{Ensemble modeling for analysis of cell signaling dynamics}.
 \bjtitle{Nat Biotech}
 \bvolume{25}(\bissue{9}),

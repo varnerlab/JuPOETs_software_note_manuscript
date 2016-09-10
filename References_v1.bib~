@@ -734,15 +734,3 @@ url = {http://www.biomedcentral.com/1471-2105/16/280},
 volume = {16},
 year = {2015}
 }
-
-%DB
-@article{Sendin2006,
-author = {Sendin, J O H and Otero-Muras, I and Alonso, A A and Banga, J R},
-file = {:Users/dbassen/Dropbox/Butcher Lab/Literature/ie0605433.pdf:pdf},
-journal = {Industrial and Engineering Chemistry Research},
-pages = {8594--8603},
-title = {{Improved optimization methods for multiple objective design of bioprocesses}},
-volume = {45},
-year = {2006}
-}
-

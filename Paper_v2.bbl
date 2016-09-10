@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{32}
+\begin{thebibliography}{36}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -92,7 +92,7 @@ doi:\doiurl{10.1093/bioinformatics/btp050}
 %%% 4
 \bibitem{Kuepfer:2007}
 \begin{barticle}
-\bauthor{\bsnm{L.~Kuepfer}, \binits{U.S.J.S.} \bsuffix{M~Peter}}:
+\bauthor{\bsnm{L~Kuepfer}, \binits{U.S.J.S.} \bsuffix{M~Peter}}:
 \batitle{Ensemble modeling for analysis of cell signaling dynamics}.
 \bjtitle{Nat Biotech}
 \bvolume{25}(\bissue{9}),
@@ -415,6 +415,48 @@ doi:\doiurl{10.1371/journal.pcbi.1002263}
 \endbibitem
 
 %%% 24
+\bibitem{Otero-Muras2014}
+\begin{barticle}
+\bauthor{\bsnm{Otero-Muras}, \binits{I.}},
+\bauthor{\bsnm{Banga}, \binits{J.R.}}:
+\batitle{{Multicriteria global optimization for biocircuit design}}.
+\bjtitle{BMC Systems Biology}
+\bvolume{8}(\bissue{1}),
+\bfpage{113}
+(\byear{2014}).
+doi:\doiurl{10.1186/s12918-014-0113-3}.
+\arxivurl{1402.7323}
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem{Taneda2015}
+\begin{barticle}
+\bauthor{\bsnm{Taneda}, \binits{A.}}:
+\batitle{{Multi-objective optimization for RNA design with multiple target
+  secondary structures.}}
+\bjtitle{BMC bioinformatics}
+\bvolume{16}(\bissue{1}),
+\bfpage{280}
+(\byear{2015}).
+doi:\doiurl{10.1186/s12859-015-0706-x}
+\end{barticle}
+\endbibitem
+
+%%% 26
+\bibitem{Bandyopadhyay2013}
+\begin{bbook}
+\bauthor{\bsnm{Bandyopadhyay}, \binits{S.}},
+\bauthor{\bsnm{Saha}, \binits{S.}}:
+\bbtitle{{Unsupervised Classification: Similarity Measures, Classical and
+  Metaheuristic Approaches, and Applications}},
+p. \bfpage{17}
+(\byear{2013}).
+doi:\doiurl{10.1007/978-3-642-32451-2}
+\end{bbook}
+\endbibitem
+
+%%% 27
 \bibitem{Song:2010aa}
 \begin{barticle}
 \bauthor{\bsnm{Song}, \binits{S.O.}},
@@ -430,7 +472,7 @@ doi:\doiurl{10.1002/biot.201000059}
 \end{barticle}
 \endbibitem
 
-%%% 25
+%%% 28
 \bibitem{CITE_Octave}
 \begin{bbook}
 \bauthor{\bsnm{Eaton}, \binits{J.W.}},
@@ -444,7 +486,7 @@ doi:\doiurl{10.1002/biot.201000059}
 \end{bbook}
 \endbibitem
 
-%%% 26
+%%% 29
 \bibitem{Julia}
 \begin{botherref}
 \oauthor{\bsnm{Bezanson}, \binits{J.}},
@@ -457,7 +499,7 @@ doi:\doiurl{10.1002/biot.201000059}
 \end{botherref}
 \endbibitem
 
-%%% 27
+%%% 30
 \bibitem{RANKING}
 \begin{bchapter}
 \bauthor{\bsnm{Fonseca}, \binits{C.M.}},
@@ -471,7 +513,7 @@ pp. \bfpage{416}--\blpage{423}
 \end{bchapter}
 \endbibitem
 
-%%% 28
+%%% 31
 \bibitem{2008_kim_varner_ramkrishna_BiotechProg}
 \begin{barticle}
 \bauthor{\bsnm{Kim}, \binits{J.}},
@@ -487,7 +529,7 @@ doi:\doiurl{10.1002/btpr.73}
 \end{barticle}
 \endbibitem
 
-%%% 29
+%%% 32
 \bibitem{Schuster:2000aa}
 \begin{barticle}
 \bauthor{\bsnm{Schuster}, \binits{S.}},
@@ -503,7 +545,7 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 30
+%%% 33
 \bibitem{DEB2002}
 \begin{barticle}
 \bauthor{\bsnm{Kalyanmoy}, \binits{D.}},
@@ -518,7 +560,7 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 31
+%%% 34
 \bibitem{HUBAND2006}
 \begin{barticle}
 \bauthor{\bsnm{Huband}, \binits{S.}},
@@ -534,7 +576,23 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 32
+%%% 35
+\bibitem{Sendin2006}
+\begin{barticle}
+\bauthor{\bsnm{Sendin}, \binits{J.O.H.}},
+\bauthor{\bsnm{Otero-Muras}, \binits{I.}},
+\bauthor{\bsnm{Alonso}, \binits{A.A.}},
+\bauthor{\bsnm{Banga}, \binits{J.R.}}:
+\batitle{{Improved optimization methods for multiple objective design of
+  bioprocesses}}.
+\bjtitle{Industrial and Engineering Chemistry Research}
+\bvolume{45},
+\bfpage{8594}--\blpage{8603}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 36
 \bibitem{SURROGATES}
 \begin{barticle}
 \bauthor{\bsnm{Booker}, \binits{A.J.}},
@@ -615,7 +673,7 @@ doi:\doiurl{10.1038/73786}
   <title><p>Ensemble modeling for analysis of cell signaling
   dynamics</p></title>
   <aug>
-    <au><snm>L. Kuepfer</snm><fnm>USJS</fnm></au>
+    <au><snm>L Kuepfer</snm><fnm>USJS</fnm></au>
   </aug>
   <source>Nat Biotech</source>
   <pubdate>2007</pubdate>
@@ -937,6 +995,49 @@ doi:\doiurl{10.1038/73786}
 </bibl>
 
 <bibl id="B24">
+  <title><p>{Multicriteria global optimization for biocircuit
+  design}</p></title>
+  <aug>
+    <au><snm>Otero Muras</snm><fnm>I</fnm></au>
+    <au><snm>Banga</snm><fnm>JR</fnm></au>
+  </aug>
+  <source>BMC Systems Biology</source>
+  <pubdate>2014</pubdate>
+  <volume>8</volume>
+  <issue>1</issue>
+  <fpage>113</fpage>
+  <url>http://arxiv.org/abs/1402.7323$\backslash$nhttp://www.biomedcentral.com/1752-0509/8/113</url>
+</bibl>
+
+<bibl id="B25">
+  <title><p>{Multi-objective optimization for RNA design with multiple target
+  secondary structures.}</p></title>
+  <aug>
+    <au><snm>Taneda</snm><fnm>A</fnm></au>
+  </aug>
+  <source>BMC bioinformatics</source>
+  <publisher>BMC Bioinformatics</publisher>
+  <pubdate>2015</pubdate>
+  <volume>16</volume>
+  <issue>1</issue>
+  <fpage>280</fpage>
+  <url>http://www.biomedcentral.com/1471-2105/16/280</url>
+</bibl>
+
+<bibl id="B26">
+  <title><p>{Unsupervised classification: Similarity measures, classical and
+  metaheuristic approaches, and applications}</p></title>
+  <aug>
+    <au><snm>Bandyopadhyay</snm><fnm>S</fnm></au>
+    <au><snm>Saha</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Unsupervised Classification: Similarity Measures, Classical and
+  Metaheuristic Approaches, and Applications</source>
+  <pubdate>2013</pubdate>
+  <fpage>17</fpage>
+</bibl>
+
+<bibl id="B27">
   <title><p>Ensembles of signal transduction models using Pareto Optimal
   Ensemble Techniques (POETs)</p></title>
   <aug>
@@ -952,7 +1053,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>80</lpage>
 </bibl>
 
-<bibl id="B25">
+<bibl id="B28">
   <title><p>GNU Octave version 3.0.1 manual: a high-level interactive language
   for numerical computations</p></title>
   <aug>
@@ -965,7 +1066,7 @@ doi:\doiurl{10.1038/73786}
   <pubdate>2009</pubdate>
 </bibl>
 
-<bibl id="B26">
+<bibl id="B29">
   <title><p>{J}ulia: A Fresh Approach to Numerical Computing</p></title>
   <aug>
     <au><snm>Bezanson</snm><fnm>J</fnm></au>
@@ -976,7 +1077,7 @@ doi:\doiurl{10.1038/73786}
   <pubdate>2015</pubdate>
 </bibl>
 
-<bibl id="B27">
+<bibl id="B30">
   <title><p>{Genetic Algorithms for Multiobjective Optimization: Formulation,
   Discussion and Generalization}</p></title>
   <aug>
@@ -990,7 +1091,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>423</lpage>
 </bibl>
 
-<bibl id="B28">
+<bibl id="B31">
   <title><p>A hybrid model of anaerobic E. coli GJT001: Combination of
   elementary flux modes and cybernetic variables</p></title>
   <aug>
@@ -1008,7 +1109,7 @@ doi:\doiurl{10.1038/73786}
   <url>http://dx.doi.org/10.1002/btpr.73</url>
 </bibl>
 
-<bibl id="B29">
+<bibl id="B32">
   <title><p>A general definition of metabolic pathways useful for systematic
   organization and analysis of complex metabolic networks</p></title>
   <aug>
@@ -1024,7 +1125,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>32</lpage>
 </bibl>
 
-<bibl id="B30">
+<bibl id="B33">
   <title><p>{A Fast and Elitist Multiobjective Genetic Algorithm:
   NSGA-II}</p></title>
   <aug>
@@ -1040,7 +1141,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>197</lpage>
 </bibl>
 
-<bibl id="B31">
+<bibl id="B34">
   <title><p>{A Review of Multiobjective Test Problems and a Scalable Test
   Problem Toolkit}</p></title>
   <aug>
@@ -1056,7 +1157,23 @@ doi:\doiurl{10.1038/73786}
   <lpage>506</lpage>
 </bibl>
 
-<bibl id="B32">
+<bibl id="B35">
+  <title><p>{Improved optimization methods for multiple objective design of
+  bioprocesses}</p></title>
+  <aug>
+    <au><snm>Sendin</snm><fnm>J O H</fnm></au>
+    <au><snm>Otero Muras</snm><fnm>I</fnm></au>
+    <au><snm>Alonso</snm><fnm>A A</fnm></au>
+    <au><snm>Banga</snm><fnm>J R</fnm></au>
+  </aug>
+  <source>Industrial and Engineering Chemistry Research</source>
+  <pubdate>2006</pubdate>
+  <volume>45</volume>
+  <fpage>8594</fpage>
+  <lpage>-8603</lpage>
+</bibl>
+
+<bibl id="B36">
   <title><p>{A rigorous framework for optimization of expensive functions by
   surrogates}</p></title>
   <aug>
