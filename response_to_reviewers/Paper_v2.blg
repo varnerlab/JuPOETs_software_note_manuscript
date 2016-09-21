@@ -22,15 +22,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References_v1.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
-while executing---line 2585 of file bmc-mathphys.bst
-Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
-while executing---line 2585 of file bmc-mathphys.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
-while executing---line 2686 of file bmc-mathphys.bst
-Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
-while executing---line 2686 of file bmc-mathphys.bst
 Warning--"{Unsupervised" isn't a brace-balanced string for entry Bandyopadhyay2013
 while executing--line 2686 of file bmc-mathphys.bst
 Warning--"{Unsupervised" isn't a brace-balanced string for entry Bandyopadhyay2013
@@ -53,51 +45,45 @@ Warning--"Algorithms}" isn't a brace-balanced string for entry RANKING
 while executing--line 2686 of file bmc-mathphys.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
-while executing---line 3019 of file bmc-mathphys.bst
-Too many commas in name 1 of "L Kuepfer,M Peter,U Saucer,J Stelling" for entry Kuepfer:2007
-while executing---line 3019 of file bmc-mathphys.bst
 You've used 36 entries,
             7128 wiz_defined-function locations,
-            1395 strings with 17243 characters,
-and the built_in function-call counts, 384194 in all, are:
-= -- 61214
-> -- 1369
-< -- 830
-+ -- 30529
-- -- 396
-* -- 18081
-:= -- 70886
-add.period$ -- 59
+            1397 strings with 17329 characters,
+and the built_in function-call counts, 386268 in all, are:
+= -- 61475
+> -- 1385
+< -- 832
++ -- 30577
+- -- 407
+* -- 18310
+:= -- 71289
+add.period$ -- 60
 call.type$ -- 36
-change.case$ -- 389
-chr.to.int$ -- 1821
+change.case$ -- 394
+chr.to.int$ -- 1815
 cite$ -- 36
-duplicate$ -- 3662
-empty$ -- 11924
-format.name$ -- 1283
-if$ -- 93332
+duplicate$ -- 3694
+empty$ -- 12054
+format.name$ -- 1322
+if$ -- 93756
 int.to.chr$ -- 1
-int.to.str$ -- 100
-missing$ -- 1258
-newline$ -- 1128
+int.to.str$ -- 101
+missing$ -- 1266
+newline$ -- 1141
 num.names$ -- 180
-pop$ -- 1499
+pop$ -- 1509
 preamble$ -- 1
-purify$ -- 171
+purify$ -- 172
 quote$ -- 72
-skip$ -- 34460
+skip$ -- 34559
 stack$ -- 0
-substring$ -- 43007
-swap$ -- 1330
-text.length$ -- 621
+substring$ -- 43300
+swap$ -- 1339
+text.length$ -- 625
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1606
+type$ -- 1605
 warning$ -- 0
-while$ -- 1377
+while$ -- 1394
 width$ -- 0
-write$ -- 1536
-(There were 7 error messages)
+write$ -- 1561
+(There were 10 warnings)

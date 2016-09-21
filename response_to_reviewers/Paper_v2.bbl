@@ -90,21 +90,26 @@ doi:\doiurl{10.1093/bioinformatics/btp050}
 \endbibitem
 
 %%% 4
-\bibitem{Kuepfer:2007}
+\bibitem{Kuepfer:2007aa}
 \begin{barticle}
-\bauthor{\bsnm{L~Kuepfer}, \binits{U.S.J.S.} \bsuffix{M~Peter}}:
+\bauthor{\bsnm{Kuepfer}, \binits{L.}},
+\bauthor{\bsnm{Peter}, \binits{M.}},
+\bauthor{\bsnm{Sauer}, \binits{U.}},
+\bauthor{\bsnm{Stelling}, \binits{J.}}:
 \batitle{Ensemble modeling for analysis of cell signaling dynamics}.
-\bjtitle{Nat Biotech}
+\bjtitle{Nat Biotechnol}
 \bvolume{25}(\bissue{9}),
-\bfpage{1001}--\blpage{1006}
-(\byear{2007})
+\bfpage{1001}--\blpage{6}
+(\byear{2007}).
+doi:\doiurl{10.1038/nbt1330}
 \end{barticle}
 \endbibitem
 
 %%% 5
 \bibitem{Brown:2003}
 \begin{barticle}
-\bauthor{\bsnm{K~S~Brown}, \binits{J.P.S.}}:
+\bauthor{\bsnm{Brown}, \binits{K.S.}},
+\bauthor{\bsnm{Sethna}, \binits{J.P.}}:
 \batitle{Statistical mechanial approaches to models with many poorly known
   parameters}.
 \bjtitle{Phys Rev E}
@@ -387,7 +392,7 @@ doi:\doiurl{10.1039/b920693k}
 \bauthor{\bsnm{Andreozzi}, \binits{S.}},
 \bauthor{\bsnm{Miskovic}, \binits{L.}},
 \bauthor{\bsnm{Hatzimanikatis}, \binits{V.}}:
-\batitle{ischrunk--in silico approach to characterization and reduction of
+\batitle{{iSCHRUNK}--in silico approach to characterization and reduction of
   uncertainty in the kinetic models of genome-scale metabolic networks}.
 \bjtitle{Metab Eng}
 \bvolume{33},
@@ -493,9 +498,10 @@ doi:\doiurl{10.1002/biot.201000059}
 \oauthor{\bsnm{Edelman}, \binits{A.}},
 \oauthor{\bsnm{Karpinski}, \binits{S.}},
 \oauthor{\bsnm{Shah}, \binits{V.B.}}:
-{J}ulia: A fresh approach to numerical computing
-(2015).
-\arxivurl{1411.1607}
+Julia: {A} fresh approach to numerical computing.
+CoRR
+\textbf{abs/1411.1607}
+(2014)
 \end{botherref}
 \endbibitem
 
@@ -673,21 +679,25 @@ doi:\doiurl{10.1038/73786}
   <title><p>Ensemble modeling for analysis of cell signaling
   dynamics</p></title>
   <aug>
-    <au><snm>L Kuepfer</snm><fnm>USJS</fnm></au>
+    <au><snm>Kuepfer</snm><fnm>L</fnm></au>
+    <au><snm>Peter</snm><fnm>M</fnm></au>
+    <au><snm>Sauer</snm><fnm>U</fnm></au>
+    <au><snm>Stelling</snm><fnm>J</fnm></au>
   </aug>
-  <source>Nat Biotech</source>
+  <source>Nat Biotechnol</source>
   <pubdate>2007</pubdate>
   <volume>25</volume>
   <issue>9</issue>
   <fpage>1001</fpage>
-  <lpage>1006</lpage>
+  <lpage>6</lpage>
 </bibl>
 
 <bibl id="B5">
   <title><p>Statistical mechanial approaches to models with many poorly known
   parameters</p></title>
   <aug>
-    <au><snm>K S Brown</snm><fnm>JPS</fnm></au>
+    <au><snm>Brown</snm><fnm>K S</fnm></au>
+    <au><snm>Sethna</snm><fnm>JP</fnm></au>
   </aug>
   <source>Phys Rev E</source>
   <pubdate>2003</pubdate>
@@ -963,7 +973,7 @@ doi:\doiurl{10.1038/73786}
 </bibl>
 
 <bibl id="B22">
-  <title><p>iSCHRUNK--In Silico Approach to Characterization and Reduction of
+  <title><p>{iSCHRUNK}--In Silico Approach to Characterization and Reduction of
   Uncertainty in the Kinetic Models of Genome-scale Metabolic
   Networks</p></title>
   <aug>
@@ -1067,14 +1077,17 @@ doi:\doiurl{10.1038/73786}
 </bibl>
 
 <bibl id="B29">
-  <title><p>{J}ulia: A Fresh Approach to Numerical Computing</p></title>
+  <title><p>Julia: {A} Fresh Approach to Numerical Computing</p></title>
   <aug>
     <au><snm>Bezanson</snm><fnm>J</fnm></au>
     <au><snm>Edelman</snm><fnm>A</fnm></au>
     <au><snm>Karpinski</snm><fnm>S</fnm></au>
     <au><snm>Shah</snm><fnm>VB</fnm></au>
   </aug>
-  <pubdate>2015</pubdate>
+  <source>CoRR</source>
+  <pubdate>2014</pubdate>
+  <volume>abs/1411.1607</volume>
+  <url>http://arxiv.org/abs/1411.1607</url>
 </bibl>
 
 <bibl id="B30">

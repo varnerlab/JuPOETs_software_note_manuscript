@@ -1,18 +1,51 @@
 %% This BibTeX bibliography file was created using BibDesk.
 %% http://bibdesk.sourceforge.net/
 
-%% Created for Jeffrey Varner at 2016-05-31 13:38:30 -0400 
+%% Created for Jeffrey Varner at 2016-09-21 16:56:15 -0400 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
 
+@article{Julia,
+	Author = {Jeff Bezanson and Alan Edelman and Stefan Karpinski and Viral B. Shah},
+	Bibsource = {dblp computer science bibliography, http://dblp.org},
+	Biburl = {http://dblp.uni-trier.de/rec/bib/journals/corr/BezansonEKS14},
+	Date-Added = {2016-09-21 20:55:40 +0000},
+	Date-Modified = {2016-09-21 20:55:54 +0000},
+	Journal = {CoRR},
+	Timestamp = {Mon, 01 Dec 2014 14:32:13 +0100},
+	Title = {Julia: {A} Fresh Approach to Numerical Computing},
+	Url = {http://arxiv.org/abs/1411.1607},
+	Volume = {abs/1411.1607},
+	Year = {2014},
+	Bdsk-Url-1 = {http://arxiv.org/abs/1411.1607}}
+
+@article{Kuepfer:2007aa,
+	Abstract = {Systems biology iteratively combines experimentation with mathematical modeling. However, limited mechanistic knowledge, conflicting hypotheses and scarce experimental data severely hamper the development of predictive mechanistic models in many areas of biology. Even under such high uncertainty, we show here that ensemble modeling, when combined with targeted experimental analysis, can unravel key operating principles in complex cellular pathways. For proof of concept, we develop a library of mechanistically alternative dynamic models for the highly conserved target-of-rapamycin (TOR) pathway of Saccharomyces cerevisiae. In contrast to the prevailing view of a de novo assembly of type 2A phosphatases (PP2As), our integrated computational and experimental analysis proposes a specificity factor, based on Tap42p-Tip41p, for PP2As as the key signaling mechanism that is quantitatively consistent with all available experimental data. Beyond revising our picture of TOR signaling, we expect ensemble modeling to help elucidate other insufficiently characterized cellular circuits.},
+	Author = {Kuepfer, Lars and Peter, Matthias and Sauer, Uwe and Stelling, J{\"o}rg},
+	Date-Added = {2016-09-21 20:50:03 +0000},
+	Date-Modified = {2016-09-21 20:50:03 +0000},
+	Doi = {10.1038/nbt1330},
+	Journal = {Nat Biotechnol},
+	Journal-Full = {Nature biotechnology},
+	Mesh = {Models, Biological; Protein-Serine-Threonine Kinases; Reproducibility of Results; Saccharomyces cerevisiae; Saccharomyces cerevisiae Proteins; Signal Transduction},
+	Month = {Sep},
+	Number = {9},
+	Pages = {1001-6},
+	Pmid = {17846631},
+	Pst = {ppublish},
+	Title = {Ensemble modeling for analysis of cell signaling dynamics},
+	Volume = {25},
+	Year = {2007},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1038/nbt1330}}
+
 @article{Andreozzi:2016aa,
 	Abstract = {Accurate determination of physiological states of cellular metabolism requires detailed information about metabolic fluxes, metabolite concentrations and distribution of enzyme states. Integration of fluxomics and metabolomics data, and thermodynamics-based metabolic flux analysis contribute to improved understanding of steady-state properties of metabolism. However, knowledge about kinetics and enzyme activities though essential for quantitative understanding of metabolic dynamics remains scarce and involves uncertainty. Here, we present a computational methodology that allow us to determine and quantify the kinetic parameters that correspond to a certain physiology as it is described by a given metabolic flux profile and a given metabolite concentration vector. Though we initially determine kinetic parameters that involve a high degree of uncertainty, through the use of kinetic modeling and machine learning principles we are able to obtain more accurate ranges of kinetic parameters, and hence we are able to reduce the uncertainty in the model analysis. We computed the distribution of kinetic parameters for glucose-fed E. coli producing 1,4-butanediol and we discovered that the observed physiological state corresponds to a narrow range of kinetic parameters of only a few enzymes, whereas the kinetic parameters of other enzymes can vary widely. Furthermore, this analysis suggests which are the enzymes that should be manipulated in order to engineer the reference state of the cell in a desired way. The proposed approach also sets up the foundations of a novel type of approaches for efficient, non-asymptotic, uniform sampling of solution spaces.},
 	Author = {Andreozzi, Stefano and Miskovic, Ljubisa and Hatzimanikatis, Vassily},
 	Date-Added = {2016-05-31 17:37:46 +0000},
-	Date-Modified = {2016-05-31 17:37:46 +0000},
+	Date-Modified = {2016-09-21 20:56:15 +0000},
 	Doi = {10.1016/j.ymben.2015.10.002},
 	Journal = {Metab Eng},
 	Journal-Full = {Metabolic engineering},
@@ -21,7 +54,7 @@
 	Pages = {158-68},
 	Pmid = {26474788},
 	Pst = {ppublish},
-	Title = {iSCHRUNK--In Silico Approach to Characterization and Reduction of Uncertainty in the Kinetic Models of Genome-scale Metabolic Networks},
+	Title = {{iSCHRUNK}--In Silico Approach to Characterization and Reduction of Uncertainty in the Kinetic Models of Genome-scale Metabolic Networks},
 	Volume = {33},
 	Year = {2016},
 	Bdsk-Url-1 = {http://dx.doi.org/10.1016/j.ymben.2015.10.002}}
@@ -355,26 +388,6 @@
 	Title = {{Genetic Algorithms for Multiobjective Optimization: Formulation, Discussion and Generalization}},
 	Year = {1993}}
 
-@article{Julia,
-	Abstract = {The Julia programming language is gaining enormous popularity. Julia was designed to be easy and fast. Most importantly, Julia shatters deeply established notions widely held in the applied community:
-
-1. High-level, dynamic code has to be slow by some sort of law of nature.
-2. It is sensible to prototype in one language and then recode in another language.
-3. There are parts of a system for the programmer, and other parts best left untouched as they are built by the experts.
-
-Julia began with a deep understanding of the needs of the scientific programmer and the needs of the computer in mind. Bridging cultures that have often been distant, Julia combines expertise from computer science and computational science creating a new approach to scientific computing. This note introduces the programmer to the language and the underlying design theory. It invites the reader to rethink the fundamental foundations of numerical computing systems.
-
-In particular, there is the fascinating dance between specialization and abstraction. Specialization allows for custom treatment. We can pick just the right algorithm for the right circumstance and this can happen at runtime based on argument types (code selection via multiple dispatch). Abstraction recognizes what remains the same after differences are stripped away and ignored as irrelevant. The recognition of abstraction allows for code reuse (generic programming). A simple idea that yields incredible power. The Julia design facilitates this interplay in many explicit and subtle ways for machine performance and, most importantly, human convenience.},
-	Author = {Jeff Bezanson and Alan Edelman and Stefan Karpinski and Viral B. Shah},
-	Date-Added = {2016-05-11 14:07:27 +0000},
-	Date-Modified = {2016-05-11 14:07:56 +0000},
-	Eprint = {1411.1607},
-	Eprintclass = {cs.MS},
-	Eprinttype = {arXiv},
-	Month = {July},
-	Title = {{J}ulia: A Fresh Approach to Numerical Computing},
-	Year = {2015}}
-
 @article{Lequieu:2011aa,
 	Abstract = {Insulin, the primary hormone regulating the level of glucose in the bloodstream, modulates a variety of cellular and enzymatic processes in normal and diseased cells. Insulin signals are processed by a complex network of biochemical interactions which ultimately induce gene expression programs or other processes such as translation initiation. Surprisingly, despite the wealth of literature on insulin signaling, the relative importance of the components linking insulin with translation initiation remains unclear. We addressed this question by developing and interrogating a family of mathematical models of insulin induced translation initiation. The insulin network was modeled using mass-action kinetics within an ordinary differential equation (ODE) framework. A family of model parameters was estimated, starting from an initial best fit parameter set, using 24 experimental data sets taken from literature. The residual between model simulations and each of the experimental constraints were simultaneously minimized using multiobjective optimization. Interrogation of the model population, using sensitivity and robustness analysis, identified an insulin-dependent switch that controlled translation initiation. Our analysis suggested that without insulin, a balance between the pro-initiation activity of the GTP-binding protein Rheb and anti-initiation activity of PTEN controlled basal initiation. On the other hand, in the presence of insulin a combination of PI3K and Rheb activity controlled inducible initiation, where PI3K was only critical in the presence of insulin. Other well known regulatory mechanisms governing insulin action, for example IRS-1 negative feedback, modulated the relative importance of PI3K and Rheb but did not fundamentally change the signal flow.},
 	Author = {Lequieu, Joshua and Chakrabarti, Anirikh and Nayak, Satyaprakash and Varner, Jeffrey D},
@@ -502,9 +515,9 @@ In particular, there is the fascinating dance between specialization and abstrac
 
 @article{Brown:2003,
 	Abstract = {Models of biochemical regulation in prokaryotes and eukaryotes, typically consisting of a set of first-order nonlinear ordinary differential equations, have become increasingly popular of late. These systems have large numbers of poorly known parameters, simplified dynamics, and uncertain connectivity: three key features of a class of problems we call sloppy models, which are shared by many other high-dimensional multiparameter nonlinear models. We use a statistical ensemble method to study the behavior of there models, in order to extract as much useful predictive information as possible from a sloppy model, given the available data used to contrain it. We discuss numerical challenges that emerge in using the ensemble method for a large systems. We characterize features of sloppy model parameter fluctuations by various spectral decompositions and find indeed that five parameters can be used to fit an elephant. We also find that model entropy is as important to the problem of model choice as model energy is to parameter choice.},
-	Author = {K S Brown, J P Sethna},
+	Author = {K S Brown and James P Sethna},
 	Date-Added = {2016-05-11 12:43:47 +0000},
-	Date-Modified = {2016-05-11 12:43:47 +0000},
+	Date-Modified = {2016-09-21 20:52:57 +0000},
 	Journal = {Phys Rev E},
 	Pages = {021904:1-9},
 	Title = {Statistical mechanial approaches to models with many poorly known parameters},
@@ -592,19 +605,6 @@ In particular, there is the fascinating dance between specialization and abstrac
 	Volume = {33},
 	Year = {2005}}
 
-@article{Kuepfer:2007,
-	Abstract = {Systems biology iteratively combines experimentation with mathematical modeling, However, limited mechanistic knowledge, conflicting hypotheses and scarce experimental data severely hamper the development of predictive mechanistic models in many areas of biology. Even under such high uncertainty, we show here that ensemble modeling, when combined with targeted experimental analysis, can unravel key operating principles in complex cellular pathways. For proof of concept, we develop a library of mechanistically alternative dynamic models for the highly conserved target-of-rapamycin (TOR) pathway of Saccharomyces cerevisiae. In contrast to the prevailing view of a de novo assembly of type 2A phosphatases (PP2As), our integrated computational and experimental analysis proposes a specificity factor, based on Tap42p-Tip41p, for PP2As as the key signaling mechanism that is quantitatively consistent with all available experimental data. Beyond revisiting our picture of TOR signaling, we expect ensemble modeling to help elucidate other insufficiently characterized cellular circuits.},
-	Author = {L Kuepfer,M Peter,U Saucer,J Stelling},
-	Date-Added = {2016-05-11 12:41:12 +0000},
-	Date-Modified = {2016-05-11 12:41:12 +0000},
-	Journal = {Nat Biotech},
-	Keywords = {ensemble modeling, cell signaling, TOR},
-	Number = {9},
-	Pages = {1001-1006},
-	Title = {Ensemble modeling for analysis of cell signaling dynamics},
-	Volume = {25},
-	Year = {2007}}
-
 @article{Battogtokh:2002,
 	Abstract = {A chemical reaction network for the regulation of the quinic acid (qa) gene cluster of Neurospora crassa is proposed. An efficient Monte Carlo method for walking through the parameter space of possible chemical reaction networks is developed to identify an ensemble of deterministic kinetics models with rate constants consistent with RNA and protein profiling data. This method was successful in identifying a model ensemble fitting available RNA profiling data on the qa gene cluster.},
 	Author = {Battogtokh, D and Asch, D.K and Case, M.E and Arnold, J and Sh{\"u}ttler, H.B},
@@ -683,66 +683,63 @@ In particular, there is the fascinating dance between specialization and abstrac
 	Volume = {1},
 	Year = {2004}}
 
-% DB
 @book{Bandyopadhyay2013,
-abstract = {Clustering is an important unsupervised classification technique where data points are grouped such that points that are similar in some sense belong to the same cluster. Cluster analysis is a complex problem as a variety of similarity and dissimilarity measures exist in the literature. This is the first book focused on clustering with a particular emphasis on symmetry-based measures of similarity and metaheuristic approaches. The aim is to find a suitable grouping of the input data set so that some criteria are optimized, and using this the authors frame the clustering problem as an optimization one where the objectives to be optimized may represent different characteristics such as compactness, symmetrical compactness, separation between clusters, or connectivity within a cluster. They explain the techniques in detail and outline many detailed applications in data mining, remote sensing and brain imaging, gene expression data analysis, and face detection. The book will be useful to graduate students and researchers in computer science, electrical engineering, system science, and information technology, both as a text and as a reference book. It will also be useful to researchers and practitioners in industry working on pattern recognition, data mining, soft computing, metaheuristics, bioinformatics, remote sensing, and brain imaging. {\textcopyright} Springer-Verlag Berlin Heidelberg 2013. All rights are reserved.},
-author = {Bandyopadhyay, Sanghamitra and Saha, Sriparna},
-booktitle = {Unsupervised Classification: Similarity Measures, Classical and Metaheuristic Approaches, and Applications},
-doi = {10.1007/978-3-642-32451-2},
-file = {:Users/dbassen/Dropbox/Butcher Lab/Literature/single and multi obj.pdf:pdf},
-isbn = {9783642324512},
-pages = {17},
-title = {{Unsupervised classification: Similarity measures, classical and metaheuristic approaches, and applications}},
-year = {2013}
-}
+	Abstract = {Clustering is an important unsupervised classification technique where data points are grouped such that points that are similar in some sense belong to the same cluster. Cluster analysis is a complex problem as a variety of similarity and dissimilarity measures exist in the literature. This is the first book focused on clustering with a particular emphasis on symmetry-based measures of similarity and metaheuristic approaches. The aim is to find a suitable grouping of the input data set so that some criteria are optimized, and using this the authors frame the clustering problem as an optimization one where the objectives to be optimized may represent different characteristics such as compactness, symmetrical compactness, separation between clusters, or connectivity within a cluster. They explain the techniques in detail and outline many detailed applications in data mining, remote sensing and brain imaging, gene expression data analysis, and face detection. The book will be useful to graduate students and researchers in computer science, electrical engineering, system science, and information technology, both as a text and as a reference book. It will also be useful to researchers and practitioners in industry working on pattern recognition, data mining, soft computing, metaheuristics, bioinformatics, remote sensing, and brain imaging. {\textcopyright} Springer-Verlag Berlin Heidelberg 2013. All rights are reserved.},
+	Author = {Bandyopadhyay, Sanghamitra and Saha, Sriparna},
+	Booktitle = {Unsupervised Classification: Similarity Measures, Classical and Metaheuristic Approaches, and Applications},
+	Doi = {10.1007/978-3-642-32451-2},
+	File = {:Users/dbassen/Dropbox/Butcher Lab/Literature/single and multi obj.pdf:pdf},
+	Isbn = {9783642324512},
+	Pages = {17},
+	Title = {{Unsupervised classification: Similarity measures, classical and metaheuristic approaches, and applications}},
+	Year = {2013},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1007/978-3-642-32451-2}}
 
-% DB
 @article{Otero-Muras2014,
-abstract = {One of the challenges in Synthetic Biology is to design circuits with increasing levels of complexity. While circuits in Biology are complex and subject to natural tradeoffs, most synthetic circuits are simple in terms of the number of regulatory regions, and have been designed to meet a single design criterion. In this contribution we introduce a multiobjective formulation for the design of biocircuits. We set up the basis for an advanced optimization tool for the modular and systematic design of biocircuits capable of handling high levels of complexity and multiple design criteria. Our methodology combines the efficiency of global Mixed Integer Nonlinear Programming solvers with multiobjective optimization techniques. Through a number of examples we show the capability of the method to generate non intuitive designs with a desired functionality setting up a priori the desired level of complexity. The presence of more than one competing objective provides a realistic design setting where every design solution represents a trade-off between different criteria. The tool can be useful to explore and identify different design principles for synthetic gene circuits.},
-archivePrefix = {arXiv},
-arxivId = {1402.7323},
-author = {Otero-Muras, Irene and Banga, Julio R},
-doi = {10.1186/s12918-014-0113-3},
-eprint = {1402.7323},
-file = {:Users/dbassen/Dropbox/Butcher Lab/Literature/art{\%}3A10.1186{\%}2Fs12918-014-0113-3.pdf:pdf},
-issn = {1752-0509},
-journal = {BMC Systems Biology},
-keywords = {gene circuit,global optimization,multiobjective optimization,synthetic biology},
-number = {1},
-pages = {113},
-pmid = {25248337},
-title = {{Multicriteria global optimization for biocircuit design}},
-url = {http://arxiv.org/abs/1402.7323$\backslash$nhttp://www.biomedcentral.com/1752-0509/8/113},
-volume = {8},
-year = {2014}
-}
+	Abstract = {One of the challenges in Synthetic Biology is to design circuits with increasing levels of complexity. While circuits in Biology are complex and subject to natural tradeoffs, most synthetic circuits are simple in terms of the number of regulatory regions, and have been designed to meet a single design criterion. In this contribution we introduce a multiobjective formulation for the design of biocircuits. We set up the basis for an advanced optimization tool for the modular and systematic design of biocircuits capable of handling high levels of complexity and multiple design criteria. Our methodology combines the efficiency of global Mixed Integer Nonlinear Programming solvers with multiobjective optimization techniques. Through a number of examples we show the capability of the method to generate non intuitive designs with a desired functionality setting up a priori the desired level of complexity. The presence of more than one competing objective provides a realistic design setting where every design solution represents a trade-off between different criteria. The tool can be useful to explore and identify different design principles for synthetic gene circuits.},
+	Archiveprefix = {arXiv},
+	Arxivid = {1402.7323},
+	Author = {Otero-Muras, Irene and Banga, Julio R},
+	Doi = {10.1186/s12918-014-0113-3},
+	Eprint = {1402.7323},
+	File = {:Users/dbassen/Dropbox/Butcher Lab/Literature/art{\%}3A10.1186{\%}2Fs12918-014-0113-3.pdf:pdf},
+	Issn = {1752-0509},
+	Journal = {BMC Systems Biology},
+	Keywords = {gene circuit,global optimization,multiobjective optimization,synthetic biology},
+	Number = {1},
+	Pages = {113},
+	Pmid = {25248337},
+	Title = {{Multicriteria global optimization for biocircuit design}},
+	Url = {http://arxiv.org/abs/1402.7323$\backslash$nhttp://www.biomedcentral.com/1752-0509/8/113},
+	Volume = {8},
+	Year = {2014},
+	Bdsk-Url-1 = {http://arxiv.org/abs/1402.7323$%5Cbackslash$nhttp://www.biomedcentral.com/1752-0509/8/113},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1186/s12918-014-0113-3}}
 
 @article{Taneda2015,
-abstract = {BACKGROUND: RNAs are attractive molecules as the biological parts for synthetic biology. In particular, the ability of conformational changes, which can be encoded in designer RNAs, enables us to create multistable molecular switches that function in biological circuits. Although various algorithms for designing such RNA switches have been proposed, the previous algorithms optimize the RNA sequences against the weighted sum of objective functions, where empirical weights among objective functions are used. In addition, an RNA design algorithm for multiple pseudoknot targets is currently not available.$\backslash$n$\backslash$nRESULTS: We developed a novel computational tool for automatically designing RNA sequences which fold into multiple target secondary structures. Our algorithm designs RNA sequences based on multi-objective genetic algorithm, by which we can explore the RNA sequences having good objective function values without empirical weight parameters among the objective functions. Our algorithm has great flexibility by virtue of this weight-free nature. We benchmarked our multi-target RNA design algorithm with the datasets of two, three, and four target structures and found that our algorithm shows better or comparable design performances compared with the previous algorithms, RNAdesign and Frnakenstein. In addition to the benchmarks with pseudoknot-free datasets, we benchmarked MODENA with two-target pseudoknot datasets and found that MODENA can design the RNAs which have the target pseudoknotted secondary structures whose free energies are close to the lowest free energy. Moreover, we applied our algorithm to a ribozyme-based ON-switch which takes a ribozyme-inactive secondary structure when the theophylline aptamer structure is assumed.$\backslash$n$\backslash$nCONCLUSIONS: Currently, MODENA is the only RNA design software which can be applied to multiple pseudoknot targets. Successful design results for the multiple targets and an RNA device indicate usefulness of our multi-objective RNA design algorithm.},
-author = {Taneda, Akito},
-doi = {10.1186/s12859-015-0706-x},
-file = {:Users/dbassen/Dropbox/Butcher Lab/Literature/art{\%}3A10.1186{\%}2Fs12859-015-0706-x.pdf:pdf},
-issn = {1471-2105},
-journal = {BMC bioinformatics},
-keywords = {RNA switch,Artificial riboswitch,Multi-objective g,artificial riboswitch,multi-objective genetic algorithm,pseudoknot,rna switch},
-number = {1},
-pages = {280},
-pmid = {26335276},
-publisher = {BMC Bioinformatics},
-title = {{Multi-objective optimization for RNA design with multiple target secondary structures.}},
-url = {http://www.biomedcentral.com/1471-2105/16/280},
-volume = {16},
-year = {2015}
-}
+	Abstract = {BACKGROUND: RNAs are attractive molecules as the biological parts for synthetic biology. In particular, the ability of conformational changes, which can be encoded in designer RNAs, enables us to create multistable molecular switches that function in biological circuits. Although various algorithms for designing such RNA switches have been proposed, the previous algorithms optimize the RNA sequences against the weighted sum of objective functions, where empirical weights among objective functions are used. In addition, an RNA design algorithm for multiple pseudoknot targets is currently not available.$\backslash$n$\backslash$nRESULTS: We developed a novel computational tool for automatically designing RNA sequences which fold into multiple target secondary structures. Our algorithm designs RNA sequences based on multi-objective genetic algorithm, by which we can explore the RNA sequences having good objective function values without empirical weight parameters among the objective functions. Our algorithm has great flexibility by virtue of this weight-free nature. We benchmarked our multi-target RNA design algorithm with the datasets of two, three, and four target structures and found that our algorithm shows better or comparable design performances compared with the previous algorithms, RNAdesign and Frnakenstein. In addition to the benchmarks with pseudoknot-free datasets, we benchmarked MODENA with two-target pseudoknot datasets and found that MODENA can design the RNAs which have the target pseudoknotted secondary structures whose free energies are close to the lowest free energy. Moreover, we applied our algorithm to a ribozyme-based ON-switch which takes a ribozyme-inactive secondary structure when the theophylline aptamer structure is assumed.$\backslash$n$\backslash$nCONCLUSIONS: Currently, MODENA is the only RNA design software which can be applied to multiple pseudoknot targets. Successful design results for the multiple targets and an RNA device indicate usefulness of our multi-objective RNA design algorithm.},
+	Author = {Taneda, Akito},
+	Doi = {10.1186/s12859-015-0706-x},
+	File = {:Users/dbassen/Dropbox/Butcher Lab/Literature/art{\%}3A10.1186{\%}2Fs12859-015-0706-x.pdf:pdf},
+	Issn = {1471-2105},
+	Journal = {BMC bioinformatics},
+	Keywords = {RNA switch,Artificial riboswitch,Multi-objective g,artificial riboswitch,multi-objective genetic algorithm,pseudoknot,rna switch},
+	Number = {1},
+	Pages = {280},
+	Pmid = {26335276},
+	Publisher = {BMC Bioinformatics},
+	Title = {{Multi-objective optimization for RNA design with multiple target secondary structures.}},
+	Url = {http://www.biomedcentral.com/1471-2105/16/280},
+	Volume = {16},
+	Year = {2015},
+	Bdsk-Url-1 = {http://www.biomedcentral.com/1471-2105/16/280},
+	Bdsk-Url-2 = {http://dx.doi.org/10.1186/s12859-015-0706-x}}
 
-%DB
 @article{Sendin2006,
-author = {Sendin, J O H and Otero-Muras, I and Alonso, A A and Banga, J R},
-file = {:Users/dbassen/Dropbox/Butcher Lab/Literature/ie0605433.pdf:pdf},
-journal = {Industrial and Engineering Chemistry Research},
-pages = {8594--8603},
-title = {{Improved optimization methods for multiple objective design of bioprocesses}},
-volume = {45},
-year = {2006}
-}
-
+	Author = {Sendin, J O H and Otero-Muras, I and Alonso, A A and Banga, J R},
+	File = {:Users/dbassen/Dropbox/Butcher Lab/Literature/ie0605433.pdf:pdf},
+	Journal = {Industrial and Engineering Chemistry Research},
+	Pages = {8594--8603},
+	Title = {{Improved optimization methods for multiple objective design of bioprocesses}},
+	Volume = {45},
+	Year = {2006}}
