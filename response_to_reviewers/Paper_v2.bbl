@@ -1,0 +1,1195 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{36}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem{Gadkar:2005ad}
+\begin{barticle}
+\bauthor{\bsnm{Gadkar}, \binits{K.G.}},
+\bauthor{\bsnm{Varner}, \binits{J.}},
+\bauthor{\bsnm{Doyle}, \binits{F.J.}}:
+\batitle{{Model identification of signal transduction networks from data using
+  a state regulator problem.}}
+\bjtitle{Syst Biol (Stevenage)}
+\bvolume{2}(\bissue{1}),
+\bfpage{17}--\blpage{30}
+(\byear{2005})
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem{Gennemark:2009on}
+\begin{barticle}
+\bauthor{\bsnm{Gennemark}, \binits{P.}},
+\bauthor{\bsnm{Wedelin}, \binits{D.}}:
+\batitle{Benchmarks for identification of ordinary differential equations from
+  time series data}.
+\bjtitle{Bioinformatics}
+\bvolume{25}(\bissue{6}),
+\bfpage{780}--\blpage{6}
+(\byear{2009}).
+doi:\doiurl{10.1093/bioinformatics/btp050}
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem{Battogtokh:2002}
+\begin{barticle}
+\bauthor{\bsnm{Battogtokh}, \binits{D.}},
+\bauthor{\bsnm{Asch}, \binits{D.K.}},
+\bauthor{\bsnm{Case}, \binits{M.E.}},
+\bauthor{\bsnm{Arnold}, \binits{J.}},
+\bauthor{\bsnm{Sh{\"u}ttler}, \binits{H.B.}}:
+\batitle{{An ensemble method for identifying regulatory circuits with special
+  reference to the qa gene cluster of Neurospora crassa}}.
+\bjtitle{Proc Natl Acad Sci U S A}
+\bvolume{99}(\bissue{26}),
+\bfpage{16904}--\blpage{16909}
+(\byear{2002})
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem{Kuepfer:2007}
+\begin{barticle}
+\bauthor{\bsnm{L~Kuepfer}, \binits{U.S.J.S.} \bsuffix{M~Peter}}:
+\batitle{Ensemble modeling for analysis of cell signaling dynamics}.
+\bjtitle{Nat Biotech}
+\bvolume{25}(\bissue{9}),
+\bfpage{1001}--\blpage{1006}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem{Brown:2003}
+\begin{barticle}
+\bauthor{\bsnm{K~S~Brown}, \binits{J.P.S.}}:
+\batitle{Statistical mechanial approaches to models with many poorly known
+  parameters}.
+\bjtitle{Phys Rev E}
+\bvolume{68},
+\bfpage{021904}--\blpage{19}
+(\byear{2003})
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem{Palmer:2005}
+\begin{barticle}
+\bauthor{\bsnm{Palmer}, \binits{T.N.}},
+\bauthor{\bsnm{Shutts}, \binits{G.J.}},
+\bauthor{\bsnm{Hagedorn}, \binits{R.}},
+\bauthor{\bsnm{Doblas-Reyes}, \binits{F.J.}},
+\bauthor{\bsnm{Jung}, \binits{T.}},
+\bauthor{\bsnm{Leutbecher}, \binits{M.}}:
+\batitle{{Representing model uncertainty in weather and climate prediction}}.
+\bjtitle{Ann Rev Earth and Planetary Sci}
+\bvolume{33},
+\bfpage{163}--\blpage{193}
+(\byear{2005})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem{Gutenkunst2007}
+\begin{barticle}
+\bauthor{\bsnm{Gutenkunst}, \binits{R.N.}},
+\bauthor{\bsnm{Waterfall}, \binits{J.J.}},
+\bauthor{\bsnm{Casey}, \binits{F.P.}},
+\bauthor{\bsnm{Brown}, \binits{K.S.}},
+\bauthor{\bsnm{Myers}, \binits{C.R.}},
+\bauthor{\bsnm{Sethna}, \binits{J.P.}}:
+\batitle{Universally sloppy parameter sensitivities in systems biology models.}
+\bjtitle{PLoS Comput Biol}
+\bvolume{3}(\bissue{10}),
+\bfpage{1871}--\blpage{1878}
+(\byear{2007}).
+doi:\doiurl{10.1371/journal.pcbi.0030189}
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem{Song:2009b}
+\begin{barticle}
+\bauthor{\bsnm{Song}, \binits{S.}},
+\bauthor{\bsnm{Varner}, \binits{J.}}:
+\batitle{{Modeling and Analysis of the Molecular Basis of Pain in Sensory
+  Neurons}}.
+\bjtitle{PLoS ONE}
+\bvolume{4},
+\bfpage{6758}--\blpage{6772}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem{Tasseff:2010aa}
+\begin{barticle}
+\bauthor{\bsnm{Tasseff}, \binits{R.}},
+\bauthor{\bsnm{Nayak}, \binits{S.}},
+\bauthor{\bsnm{Salim}, \binits{S.}},
+\bauthor{\bsnm{Kaushik}, \binits{P.}},
+\bauthor{\bsnm{Rizvi}, \binits{N.}},
+\bauthor{\bsnm{Varner}, \binits{J.D.}}:
+\batitle{Analysis of the molecular networks in androgen dependent and
+  independent prostate cancer revealed fragile and robust subsystems}.
+\bjtitle{PLoS One}
+\bvolume{5}(\bissue{1}),
+\bfpage{8864}
+(\byear{2010}).
+doi:\doiurl{10.1371/journal.pone.0008864}
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem{Tasseff:2011aa}
+\begin{barticle}
+\bauthor{\bsnm{Tasseff}, \binits{R.}},
+\bauthor{\bsnm{Nayak}, \binits{S.}},
+\bauthor{\bsnm{Song}, \binits{S.O.}},
+\bauthor{\bsnm{Yen}, \binits{A.}},
+\bauthor{\bsnm{Varner}, \binits{J.D.}}:
+\batitle{Modeling and analysis of retinoic acid induced differentiation of
+  uncommitted precursor cells}.
+\bjtitle{Integr Biol (Camb)}
+\bvolume{3}(\bissue{5}),
+\bfpage{578}--\blpage{91}
+(\byear{2011}).
+doi:\doiurl{10.1039/c0ib00141d}
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem{Tran:2008aa}
+\begin{barticle}
+\bauthor{\bsnm{Tran}, \binits{L.M.}},
+\bauthor{\bsnm{Rizk}, \binits{M.L.}},
+\bauthor{\bsnm{Liao}, \binits{J.C.}}:
+\batitle{Ensemble modeling of metabolic networks}.
+\bjtitle{Biophys J}
+\bvolume{95}(\bissue{12}),
+\bfpage{5606}--\blpage{17}
+(\byear{2008}).
+doi:\doiurl{10.1529/biophysj.108.135442}
+\end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem{Tan:2011aa}
+\begin{barticle}
+\bauthor{\bsnm{Tan}, \binits{Y.}},
+\bauthor{\bsnm{Rivera}, \binits{J.G.L.}},
+\bauthor{\bsnm{Contador}, \binits{C.A.}},
+\bauthor{\bsnm{Asenjo}, \binits{J.A.}},
+\bauthor{\bsnm{Liao}, \binits{J.C.}}:
+\batitle{Reducing the allowable kinetic space by constructing ensemble of
+  dynamic models with the same steady-state flux}.
+\bjtitle{Metab Eng}
+\bvolume{13}(\bissue{1}),
+\bfpage{60}--\blpage{75}
+(\byear{2011}).
+doi:\doiurl{10.1016/j.ymben.2010.11.001}
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem{Contador2009221}
+\begin{barticle}
+\bauthor{\bsnm{Contador}, \binits{C.A.}},
+\bauthor{\bsnm{Rizk}, \binits{M.L.}},
+\bauthor{\bsnm{Asenjo}, \binits{J.A.}},
+\bauthor{\bsnm{Liao}, \binits{J.C.}}:
+\batitle{Ensemble modeling for strain development of l-lysine-producing
+  escherichia coli}.
+\bjtitle{Metabolic Engineering}
+\bvolume{11}(\bissue{4--5}),
+\bfpage{221}--\blpage{233}
+(\byear{2009}).
+doi:\doiurl{10.1016/j.ymben.2009.04.002}
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem{Tan:2012aa}
+\begin{barticle}
+\bauthor{\bsnm{Tan}, \binits{Y.}},
+\bauthor{\bsnm{Liao}, \binits{J.C.}}:
+\batitle{Metabolic ensemble modeling for strain engineers}.
+\bjtitle{Biotechnol J}
+\bvolume{7}(\bissue{3}),
+\bfpage{343}--\blpage{53}
+(\byear{2012}).
+doi:\doiurl{10.1002/biot.201100186}
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem{Lee:2014aa}
+\begin{barticle}
+\bauthor{\bsnm{Lee}, \binits{Y.}},
+\bauthor{\bsnm{Lafontaine~Rivera}, \binits{J.G.}},
+\bauthor{\bsnm{Liao}, \binits{J.C.}}:
+\batitle{Ensemble modeling for robustness analysis in engineering non-native
+  metabolic pathways}.
+\bjtitle{Metab Eng}
+\bvolume{25},
+\bfpage{63}--\blpage{71}
+(\byear{2014}).
+doi:\doiurl{10.1016/j.ymben.2014.06.006}
+\end{barticle}
+\endbibitem
+
+%%% 16
+\bibitem{Khodayari:2014aa}
+\begin{barticle}
+\bauthor{\bsnm{Khodayari}, \binits{A.}},
+\bauthor{\bsnm{Zomorrodi}, \binits{A.R.}},
+\bauthor{\bsnm{Liao}, \binits{J.C.}},
+\bauthor{\bsnm{Maranas}, \binits{C.D.}}:
+\batitle{A kinetic model of escherichia coli core metabolism satisfying
+  multiple sets of mutant flux data}.
+\bjtitle{Metab Eng}
+\bvolume{25},
+\bfpage{50}--\blpage{62}
+(\byear{2014}).
+doi:\doiurl{10.1016/j.ymben.2014.05.014}
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem{Luan:2007aa}
+\begin{barticle}
+\bauthor{\bsnm{Luan}, \binits{D.}},
+\bauthor{\bsnm{Zai}, \binits{M.}},
+\bauthor{\bsnm{Varner}, \binits{J.D.}}:
+\batitle{Computationally derived points of fragility of a human cascade are
+  consistent with current therapeutic strategies}.
+\bjtitle{PLoS Comput Biol}
+\bvolume{3}(\bissue{7}),
+\bfpage{142}
+(\byear{2007}).
+doi:\doiurl{10.1371/journal.pcbi.0030142}
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem{Song:2009aa}
+\begin{barticle}
+\bauthor{\bsnm{Song}, \binits{S.O.}},
+\bauthor{\bsnm{Varner}, \binits{J.}}:
+\batitle{Modeling and analysis of the molecular basis of pain in sensory
+  neurons}.
+\bjtitle{PLoS One}
+\bvolume{4}(\bissue{9}),
+\bfpage{6758}
+(\byear{2009}).
+doi:\doiurl{10.1371/journal.pone.0006758}
+\end{barticle}
+\endbibitem
+
+%%% 19
+\bibitem{Nayak:2011aa}
+\begin{barticle}
+\bauthor{\bsnm{Nayak}, \binits{S.}},
+\bauthor{\bsnm{Siddiqui}, \binits{J.K.}},
+\bauthor{\bsnm{Varner}, \binits{J.D.}}:
+\batitle{Modelling and analysis of an ensemble of eukaryotic translation
+  initiation models}.
+\bjtitle{IET Syst Biol}
+\bvolume{5}(\bissue{1}),
+\bfpage{2}
+(\byear{2011}).
+doi:\doiurl{10.1049/iet-syb.2009.0065}
+\end{barticle}
+\endbibitem
+
+%%% 20
+\bibitem{Song:2012aa}
+\begin{barticle}
+\bauthor{\bsnm{Song}, \binits{S.O.}},
+\bauthor{\bsnm{Song}, \binits{S.O.K.}},
+\bauthor{\bsnm{Hogg}, \binits{J.}},
+\bauthor{\bsnm{Peng}, \binits{Z.-Y.}},
+\bauthor{\bsnm{Parker}, \binits{R.}},
+\bauthor{\bsnm{Kellum}, \binits{J.A.}},
+\bauthor{\bsnm{Clermont}, \binits{G.}}:
+\batitle{Ensemble models of neutrophil trafficking in severe sepsis}.
+\bjtitle{PLoS Comput Biol}
+\bvolume{8}(\bissue{3}),
+\bfpage{1002422}
+(\byear{2012}).
+doi:\doiurl{10.1371/journal.pcbi.1002422}
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem{Luan:2010aa}
+\begin{barticle}
+\bauthor{\bsnm{Luan}, \binits{D.}},
+\bauthor{\bsnm{Szlam}, \binits{F.}},
+\bauthor{\bsnm{Tanaka}, \binits{K.A.}},
+\bauthor{\bsnm{Barie}, \binits{P.S.}},
+\bauthor{\bsnm{Varner}, \binits{J.D.}}:
+\batitle{Ensembles of uncertain mathematical models can identify network
+  response to therapeutic interventions}.
+\bjtitle{Mol Biosyst}
+\bvolume{6}(\bissue{11}),
+\bfpage{2272}--\blpage{86}
+(\byear{2010}).
+doi:\doiurl{10.1039/b920693k}
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem{Andreozzi:2016aa}
+\begin{barticle}
+\bauthor{\bsnm{Andreozzi}, \binits{S.}},
+\bauthor{\bsnm{Miskovic}, \binits{L.}},
+\bauthor{\bsnm{Hatzimanikatis}, \binits{V.}}:
+\batitle{ischrunk--in silico approach to characterization and reduction of
+  uncertainty in the kinetic models of genome-scale metabolic networks}.
+\bjtitle{Metab Eng}
+\bvolume{33},
+\bfpage{158}--\blpage{68}
+(\byear{2016}).
+doi:\doiurl{10.1016/j.ymben.2015.10.002}
+\end{barticle}
+\endbibitem
+
+%%% 23
+\bibitem{Lequieu:2011aa}
+\begin{barticle}
+\bauthor{\bsnm{Lequieu}, \binits{J.}},
+\bauthor{\bsnm{Chakrabarti}, \binits{A.}},
+\bauthor{\bsnm{Nayak}, \binits{S.}},
+\bauthor{\bsnm{Varner}, \binits{J.D.}}:
+\batitle{Computational modeling and analysis of insulin induced eukaryotic
+  translation initiation}.
+\bjtitle{PLoS Comput Biol}
+\bvolume{7}(\bissue{11}),
+\bfpage{1002263}
+(\byear{2011}).
+doi:\doiurl{10.1371/journal.pcbi.1002263}
+\end{barticle}
+\endbibitem
+
+%%% 24
+\bibitem{Otero-Muras2014}
+\begin{barticle}
+\bauthor{\bsnm{Otero-Muras}, \binits{I.}},
+\bauthor{\bsnm{Banga}, \binits{J.R.}}:
+\batitle{{Multicriteria global optimization for biocircuit design}}.
+\bjtitle{BMC Systems Biology}
+\bvolume{8}(\bissue{1}),
+\bfpage{113}
+(\byear{2014}).
+doi:\doiurl{10.1186/s12918-014-0113-3}.
+\arxivurl{1402.7323}
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem{Taneda2015}
+\begin{barticle}
+\bauthor{\bsnm{Taneda}, \binits{A.}}:
+\batitle{{Multi-objective optimization for RNA design with multiple target
+  secondary structures.}}
+\bjtitle{BMC bioinformatics}
+\bvolume{16}(\bissue{1}),
+\bfpage{280}
+(\byear{2015}).
+doi:\doiurl{10.1186/s12859-015-0706-x}
+\end{barticle}
+\endbibitem
+
+%%% 26
+\bibitem{Bandyopadhyay2013}
+\begin{bbook}
+\bauthor{\bsnm{Bandyopadhyay}, \binits{S.}},
+\bauthor{\bsnm{Saha}, \binits{S.}}:
+\bbtitle{{Unsupervised Classification: Similarity Measures, Classical and
+  Metaheuristic Approaches, and Applications}},
+p. \bfpage{17}
+(\byear{2013}).
+doi:\doiurl{10.1007/978-3-642-32451-2}
+\end{bbook}
+\endbibitem
+
+%%% 27
+\bibitem{Song:2010aa}
+\begin{barticle}
+\bauthor{\bsnm{Song}, \binits{S.O.}},
+\bauthor{\bsnm{Chakrabarti}, \binits{A.}},
+\bauthor{\bsnm{Varner}, \binits{J.D.}}:
+\batitle{Ensembles of signal transduction models using pareto optimal ensemble
+  techniques (poets)}.
+\bjtitle{Biotechnol J}
+\bvolume{5}(\bissue{7}),
+\bfpage{768}--\blpage{80}
+(\byear{2010}).
+doi:\doiurl{10.1002/biot.201000059}
+\end{barticle}
+\endbibitem
+
+%%% 28
+\bibitem{CITE_Octave}
+\begin{bbook}
+\bauthor{\bsnm{Eaton}, \binits{J.W.}},
+\bauthor{\bsnm{Bateman}, \binits{D.}},
+\bauthor{\bsnm{Hauberg}, \binits{S.}}:
+\bbtitle{GNU Octave Version 3.0.1 Manual: a High-level Interactive Language for
+  Numerical Computations}.
+\bpublisher{CreateSpace Independent Publishing Platform},
+\blocation{North Charleston, SC, USA}
+(\byear{2009})
+\end{bbook}
+\endbibitem
+
+%%% 29
+\bibitem{Julia}
+\begin{botherref}
+\oauthor{\bsnm{Bezanson}, \binits{J.}},
+\oauthor{\bsnm{Edelman}, \binits{A.}},
+\oauthor{\bsnm{Karpinski}, \binits{S.}},
+\oauthor{\bsnm{Shah}, \binits{V.B.}}:
+{J}ulia: A fresh approach to numerical computing
+(2015).
+\arxivurl{1411.1607}
+\end{botherref}
+\endbibitem
+
+%%% 30
+\bibitem{RANKING}
+\begin{bchapter}
+\bauthor{\bsnm{Fonseca}, \binits{C.M.}},
+\bauthor{\bsnm{Fleming}, \binits{P.J.}}:
+\bctitle{{Genetic Algorithms for Multiobjective Optimization: Formulation,
+  Discussion and Generalization}}.
+In: \bbtitle{{Proceedings of the 5th International Conference on Genetic
+  Algorithms}},
+pp. \bfpage{416}--\blpage{423}
+(\byear{1993})
+\end{bchapter}
+\endbibitem
+
+%%% 31
+\bibitem{2008_kim_varner_ramkrishna_BiotechProg}
+\begin{barticle}
+\bauthor{\bsnm{Kim}, \binits{J.}},
+\bauthor{\bsnm{Varner}, \binits{J.}},
+\bauthor{\bsnm{Ramkrishna}, \binits{D.}}:
+\batitle{A hybrid model of anaerobic e. coli gjt001: Combination of elementary
+  flux modes and cybernetic variables}.
+\bjtitle{Biotechnol. Prog.}
+\bvolume{24}(\bissue{5}),
+\bfpage{993}--\blpage{1006}
+(\byear{2008}).
+doi:\doiurl{10.1002/btpr.73}
+\end{barticle}
+\endbibitem
+
+%%% 32
+\bibitem{Schuster:2000aa}
+\begin{barticle}
+\bauthor{\bsnm{Schuster}, \binits{S.}},
+\bauthor{\bsnm{Fell}, \binits{D.A.}},
+\bauthor{\bsnm{Dandekar}, \binits{T.}}:
+\batitle{A general definition of metabolic pathways useful for systematic
+  organization and analysis of complex metabolic networks}.
+\bjtitle{Nat Biotechnol}
+\bvolume{18}(\bissue{3}),
+\bfpage{326}--\blpage{32}
+(\byear{2000}).
+doi:\doiurl{10.1038/73786}
+\end{barticle}
+\endbibitem
+
+%%% 33
+\bibitem{DEB2002}
+\begin{barticle}
+\bauthor{\bsnm{Kalyanmoy}, \binits{D.}},
+\bauthor{\bsnm{Pratap}, \binits{A.}},
+\bauthor{\bsnm{Agarwal}, \binits{S.}},
+\bauthor{\bsnm{Meyarivan}, \binits{T.}}:
+\batitle{{A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II}}.
+\bjtitle{IEEE Trans. Evol. Comp.}
+\bvolume{6},
+\bfpage{182}--\blpage{197}
+(\byear{2002})
+\end{barticle}
+\endbibitem
+
+%%% 34
+\bibitem{HUBAND2006}
+\begin{barticle}
+\bauthor{\bsnm{Huband}, \binits{S.}},
+\bauthor{\bsnm{Hingston}, \binits{P.}},
+\bauthor{\bsnm{Barone}, \binits{L.}},
+\bauthor{\bsnm{While}, \binits{L.}}:
+\batitle{{A Review of Multiobjective Test Problems and a Scalable Test Problem
+  Toolkit}}.
+\bjtitle{IEEE Trans. Evol. Comp.}
+\bvolume{10},
+\bfpage{477}--\blpage{506}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 35
+\bibitem{Sendin2006}
+\begin{barticle}
+\bauthor{\bsnm{Sendin}, \binits{J.O.H.}},
+\bauthor{\bsnm{Otero-Muras}, \binits{I.}},
+\bauthor{\bsnm{Alonso}, \binits{A.A.}},
+\bauthor{\bsnm{Banga}, \binits{J.R.}}:
+\batitle{{Improved optimization methods for multiple objective design of
+  bioprocesses}}.
+\bjtitle{Industrial and Engineering Chemistry Research}
+\bvolume{45},
+\bfpage{8594}--\blpage{8603}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 36
+\bibitem{SURROGATES}
+\begin{barticle}
+\bauthor{\bsnm{Booker}, \binits{A.J.}},
+\bauthor{\bsnm{Dennis}, \binits{J.E.}},
+\bauthor{\bsnm{Frank}, \binits{P.D.}},
+\bauthor{\bsnm{Serafini}, \binits{D.B.}},
+\bauthor{\bsnm{Torczon}, \binits{V.}},
+\bauthor{\bsnm{Trosset}, \binits{M.W.}}:
+\batitle{{A rigorous framework for optimization of expensive functions by
+  surrogates}}.
+\bjtitle{Struct Optim}
+\bvolume{17},
+\bfpage{1}--\blpage{13}
+(\byear{1999})
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+  <title><p>{Model identification of signal transduction networks from data
+  using a state regulator problem.}</p></title>
+  <aug>
+    <au><snm>Gadkar</snm><fnm>K. G.</fnm></au>
+    <au><snm>Varner</snm><fnm>J</fnm></au>
+    <au><snm>Doyle</snm><fnm>F J</fnm></au>
+  </aug>
+  <source>Syst Biol (Stevenage)</source>
+  <publisher>Department of Chemical Engineering, University of California Santa
+  Barbara, 93106, USA.</publisher>
+  <pubdate>2005</pubdate>
+  <volume>2</volume>
+  <issue>1</issue>
+  <fpage>17</fpage>
+  <lpage>-30</lpage>
+</bibl>
+
+<bibl id="B2">
+  <title><p>Benchmarks for identification of ordinary differential equations
+  from time series data</p></title>
+  <aug>
+    <au><snm>Gennemark</snm><fnm>P</fnm></au>
+    <au><snm>Wedelin</snm><fnm>D</fnm></au>
+  </aug>
+  <source>Bioinformatics</source>
+  <pubdate>2009</pubdate>
+  <volume>25</volume>
+  <issue>6</issue>
+  <fpage>780</fpage>
+  <lpage>6</lpage>
+</bibl>
+
+<bibl id="B3">
+  <title><p>{An ensemble method for identifying regulatory circuits with
+  special reference to the qa gene cluster of Neurospora crassa}</p></title>
+  <aug>
+    <au><snm>Battogtokh</snm><fnm>D</fnm></au>
+    <au><snm>Asch</snm><fnm>D.K</fnm></au>
+    <au><snm>Case</snm><fnm>M.E</fnm></au>
+    <au><snm>Arnold</snm><fnm>J</fnm></au>
+    <au><snm>Sh{\"u}ttler</snm><fnm>H.B</fnm></au>
+  </aug>
+  <source>Proc Natl Acad Sci U S A</source>
+  <pubdate>2002</pubdate>
+  <volume>99</volume>
+  <issue>26</issue>
+  <fpage>16904</fpage>
+  <lpage>16909</lpage>
+</bibl>
+
+<bibl id="B4">
+  <title><p>Ensemble modeling for analysis of cell signaling
+  dynamics</p></title>
+  <aug>
+    <au><snm>L Kuepfer</snm><fnm>USJS</fnm></au>
+  </aug>
+  <source>Nat Biotech</source>
+  <pubdate>2007</pubdate>
+  <volume>25</volume>
+  <issue>9</issue>
+  <fpage>1001</fpage>
+  <lpage>1006</lpage>
+</bibl>
+
+<bibl id="B5">
+  <title><p>Statistical mechanial approaches to models with many poorly known
+  parameters</p></title>
+  <aug>
+    <au><snm>K S Brown</snm><fnm>JPS</fnm></au>
+  </aug>
+  <source>Phys Rev E</source>
+  <pubdate>2003</pubdate>
+  <volume>68</volume>
+  <fpage>021904:1</fpage>
+  <lpage>9</lpage>
+</bibl>
+
+<bibl id="B6">
+  <title><p>{Representing model uncertainty in weather and climate
+  prediction}</p></title>
+  <aug>
+    <au><snm>Palmer</snm><fnm>T.N</fnm></au>
+    <au><snm>Shutts</snm><fnm>G.J</fnm></au>
+    <au><snm>Hagedorn</snm><fnm>R</fnm></au>
+    <au><snm>Doblas Reyes</snm><fnm>F.J</fnm></au>
+    <au><snm>Jung</snm><fnm>T</fnm></au>
+    <au><snm>Leutbecher</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Ann Rev Earth and Planetary Sci</source>
+  <pubdate>2005</pubdate>
+  <volume>33</volume>
+  <fpage>163</fpage>
+  <lpage>193</lpage>
+</bibl>
+
+<bibl id="B7">
+  <title><p>Universally sloppy parameter sensitivities in systems biology
+  models.</p></title>
+  <aug>
+    <au><snm>Gutenkunst</snm><fnm>RN</fnm></au>
+    <au><snm>Waterfall</snm><fnm>JJ</fnm></au>
+    <au><snm>Casey</snm><fnm>FP</fnm></au>
+    <au><snm>Brown</snm><fnm>KS</fnm></au>
+    <au><snm>Myers</snm><fnm>CR</fnm></au>
+    <au><snm>Sethna</snm><fnm>JP</fnm></au>
+  </aug>
+  <source>PLoS Comput Biol</source>
+  <pubdate>2007</pubdate>
+  <volume>3</volume>
+  <issue>10</issue>
+  <fpage>1871</fpage>
+  <lpage>-1878</lpage>
+  <url>http://dx.doi.org/10.1371/journal.pcbi.0030189</url>
+</bibl>
+
+<bibl id="B8">
+  <title><p>{Modeling and Analysis of the Molecular Basis of Pain in Sensory
+  Neurons}</p></title>
+  <aug>
+    <au><snm>Song</snm><fnm>S</fnm></au>
+    <au><snm>Varner</snm><fnm>J</fnm></au>
+  </aug>
+  <source>PLoS ONE</source>
+  <pubdate>2009</pubdate>
+  <volume>4</volume>
+  <fpage>e6758</fpage>
+  <lpage>e6772</lpage>
+</bibl>
+
+<bibl id="B9">
+  <title><p>Analysis of the molecular networks in androgen dependent and
+  independent prostate cancer revealed fragile and robust
+  subsystems</p></title>
+  <aug>
+    <au><snm>Tasseff</snm><fnm>R</fnm></au>
+    <au><snm>Nayak</snm><fnm>S</fnm></au>
+    <au><snm>Salim</snm><fnm>S</fnm></au>
+    <au><snm>Kaushik</snm><fnm>P</fnm></au>
+    <au><snm>Rizvi</snm><fnm>N</fnm></au>
+    <au><snm>Varner</snm><fnm>JD</fnm></au>
+  </aug>
+  <source>PLoS One</source>
+  <pubdate>2010</pubdate>
+  <volume>5</volume>
+  <issue>1</issue>
+  <fpage>e8864</fpage>
+</bibl>
+
+<bibl id="B10">
+  <title><p>Modeling and analysis of retinoic acid induced differentiation of
+  uncommitted precursor cells</p></title>
+  <aug>
+    <au><snm>Tasseff</snm><fnm>R</fnm></au>
+    <au><snm>Nayak</snm><fnm>S</fnm></au>
+    <au><snm>Song</snm><fnm>SO</fnm></au>
+    <au><snm>Yen</snm><fnm>A</fnm></au>
+    <au><snm>Varner</snm><fnm>JD</fnm></au>
+  </aug>
+  <source>Integr Biol (Camb)</source>
+  <pubdate>2011</pubdate>
+  <volume>3</volume>
+  <issue>5</issue>
+  <fpage>578</fpage>
+  <lpage>91</lpage>
+</bibl>
+
+<bibl id="B11">
+  <title><p>Ensemble modeling of metabolic networks</p></title>
+  <aug>
+    <au><snm>Tran</snm><fnm>LM</fnm></au>
+    <au><snm>Rizk</snm><fnm>ML</fnm></au>
+    <au><snm>Liao</snm><fnm>JC</fnm></au>
+  </aug>
+  <source>Biophys J</source>
+  <pubdate>2008</pubdate>
+  <volume>95</volume>
+  <issue>12</issue>
+  <fpage>5606</fpage>
+  <lpage>17</lpage>
+</bibl>
+
+<bibl id="B12">
+  <title><p>Reducing the allowable kinetic space by constructing ensemble of
+  dynamic models with the same steady-state flux</p></title>
+  <aug>
+    <au><snm>Tan</snm><fnm>Y</fnm></au>
+    <au><snm>Rivera</snm><fnm>JGL</fnm></au>
+    <au><snm>Contador</snm><fnm>CA</fnm></au>
+    <au><snm>Asenjo</snm><fnm>JA</fnm></au>
+    <au><snm>Liao</snm><fnm>JC</fnm></au>
+  </aug>
+  <source>Metab Eng</source>
+  <pubdate>2011</pubdate>
+  <volume>13</volume>
+  <issue>1</issue>
+  <fpage>60</fpage>
+  <lpage>75</lpage>
+</bibl>
+
+<bibl id="B13">
+  <title><p>Ensemble modeling for strain development of l-lysine-producing
+  Escherichia coli</p></title>
+  <aug>
+    <au><snm>Contador</snm><fnm>CA</fnm></au>
+    <au><snm>Rizk</snm><fnm>ML</fnm></au>
+    <au><snm>Asenjo</snm><fnm>JA</fnm></au>
+    <au><snm>Liao</snm><fnm>JC</fnm></au>
+  </aug>
+  <source>Metabolic Engineering</source>
+  <pubdate>2009</pubdate>
+  <volume>11</volume>
+  <issue>4--5</issue>
+  <fpage>221</fpage>
+  <lpage>233</lpage>
+  <url>http://www.sciencedirect.com/science/article/pii/S1096717609000366</url>
+</bibl>
+
+<bibl id="B14">
+  <title><p>Metabolic ensemble modeling for strain engineers</p></title>
+  <aug>
+    <au><snm>Tan</snm><fnm>Y</fnm></au>
+    <au><snm>Liao</snm><fnm>JC</fnm></au>
+  </aug>
+  <source>Biotechnol J</source>
+  <pubdate>2012</pubdate>
+  <volume>7</volume>
+  <issue>3</issue>
+  <fpage>343</fpage>
+  <lpage>53</lpage>
+</bibl>
+
+<bibl id="B15">
+  <title><p>Ensemble Modeling for Robustness Analysis in engineering non-native
+  metabolic pathways</p></title>
+  <aug>
+    <au><snm>Lee</snm><fnm>Y</fnm></au>
+    <au><snm>Lafontaine Rivera</snm><fnm>JG</fnm></au>
+    <au><snm>Liao</snm><fnm>JC</fnm></au>
+  </aug>
+  <source>Metab Eng</source>
+  <pubdate>2014</pubdate>
+  <volume>25</volume>
+  <fpage>63</fpage>
+  <lpage>71</lpage>
+</bibl>
+
+<bibl id="B16">
+  <title><p>A kinetic model of Escherichia coli core metabolism satisfying
+  multiple sets of mutant flux data</p></title>
+  <aug>
+    <au><snm>Khodayari</snm><fnm>A</fnm></au>
+    <au><snm>Zomorrodi</snm><fnm>AR</fnm></au>
+    <au><snm>Liao</snm><fnm>JC</fnm></au>
+    <au><snm>Maranas</snm><fnm>CD</fnm></au>
+  </aug>
+  <source>Metab Eng</source>
+  <pubdate>2014</pubdate>
+  <volume>25</volume>
+  <fpage>50</fpage>
+  <lpage>62</lpage>
+</bibl>
+
+<bibl id="B17">
+  <title><p>Computationally derived points of fragility of a human cascade are
+  consistent with current therapeutic strategies</p></title>
+  <aug>
+    <au><snm>Luan</snm><fnm>D</fnm></au>
+    <au><snm>Zai</snm><fnm>M</fnm></au>
+    <au><snm>Varner</snm><fnm>JD</fnm></au>
+  </aug>
+  <source>PLoS Comput Biol</source>
+  <pubdate>2007</pubdate>
+  <volume>3</volume>
+  <issue>7</issue>
+  <fpage>e142</fpage>
+</bibl>
+
+<bibl id="B18">
+  <title><p>Modeling and analysis of the molecular basis of pain in sensory
+  neurons</p></title>
+  <aug>
+    <au><snm>Song</snm><fnm>SO</fnm></au>
+    <au><snm>Varner</snm><fnm>J</fnm></au>
+  </aug>
+  <source>PLoS One</source>
+  <pubdate>2009</pubdate>
+  <volume>4</volume>
+  <issue>9</issue>
+  <fpage>e6758</fpage>
+</bibl>
+
+<bibl id="B19">
+  <title><p>Modelling and analysis of an ensemble of eukaryotic translation
+  initiation models</p></title>
+  <aug>
+    <au><snm>Nayak</snm><fnm>S</fnm></au>
+    <au><snm>Siddiqui</snm><fnm>J K</fnm></au>
+    <au><snm>Varner</snm><fnm>J D</fnm></au>
+  </aug>
+  <source>IET Syst Biol</source>
+  <pubdate>2011</pubdate>
+  <volume>5</volume>
+  <issue>1</issue>
+  <fpage>2</fpage>
+</bibl>
+
+<bibl id="B20">
+  <title><p>Ensemble models of neutrophil trafficking in severe
+  sepsis</p></title>
+  <aug>
+    <au><snm>Song</snm><fnm>SO</fnm></au>
+    <au><snm>Song</snm><fnm>SOK</fnm></au>
+    <au><snm>Hogg</snm><fnm>J</fnm></au>
+    <au><snm>Peng</snm><fnm>ZY</fnm></au>
+    <au><snm>Parker</snm><fnm>R</fnm></au>
+    <au><snm>Kellum</snm><fnm>JA</fnm></au>
+    <au><snm>Clermont</snm><fnm>G</fnm></au>
+  </aug>
+  <source>PLoS Comput Biol</source>
+  <pubdate>2012</pubdate>
+  <volume>8</volume>
+  <issue>3</issue>
+  <fpage>e1002422</fpage>
+</bibl>
+
+<bibl id="B21">
+  <title><p>Ensembles of uncertain mathematical models can identify network
+  response to therapeutic interventions</p></title>
+  <aug>
+    <au><snm>Luan</snm><fnm>D</fnm></au>
+    <au><snm>Szlam</snm><fnm>F</fnm></au>
+    <au><snm>Tanaka</snm><fnm>KA</fnm></au>
+    <au><snm>Barie</snm><fnm>PS</fnm></au>
+    <au><snm>Varner</snm><fnm>JD</fnm></au>
+  </aug>
+  <source>Mol Biosyst</source>
+  <pubdate>2010</pubdate>
+  <volume>6</volume>
+  <issue>11</issue>
+  <fpage>2272</fpage>
+  <lpage>86</lpage>
+</bibl>
+
+<bibl id="B22">
+  <title><p>iSCHRUNK--In Silico Approach to Characterization and Reduction of
+  Uncertainty in the Kinetic Models of Genome-scale Metabolic
+  Networks</p></title>
+  <aug>
+    <au><snm>Andreozzi</snm><fnm>S</fnm></au>
+    <au><snm>Miskovic</snm><fnm>L</fnm></au>
+    <au><snm>Hatzimanikatis</snm><fnm>V</fnm></au>
+  </aug>
+  <source>Metab Eng</source>
+  <pubdate>2016</pubdate>
+  <volume>33</volume>
+  <fpage>158</fpage>
+  <lpage>68</lpage>
+</bibl>
+
+<bibl id="B23">
+  <title><p>Computational modeling and analysis of insulin induced eukaryotic
+  translation initiation</p></title>
+  <aug>
+    <au><snm>Lequieu</snm><fnm>J</fnm></au>
+    <au><snm>Chakrabarti</snm><fnm>A</fnm></au>
+    <au><snm>Nayak</snm><fnm>S</fnm></au>
+    <au><snm>Varner</snm><fnm>JD</fnm></au>
+  </aug>
+  <source>PLoS Comput Biol</source>
+  <pubdate>2011</pubdate>
+  <volume>7</volume>
+  <issue>11</issue>
+  <fpage>e1002263</fpage>
+</bibl>
+
+<bibl id="B24">
+  <title><p>{Multicriteria global optimization for biocircuit
+  design}</p></title>
+  <aug>
+    <au><snm>Otero Muras</snm><fnm>I</fnm></au>
+    <au><snm>Banga</snm><fnm>JR</fnm></au>
+  </aug>
+  <source>BMC Systems Biology</source>
+  <pubdate>2014</pubdate>
+  <volume>8</volume>
+  <issue>1</issue>
+  <fpage>113</fpage>
+  <url>http://arxiv.org/abs/1402.7323$\backslash$nhttp://www.biomedcentral.com/1752-0509/8/113</url>
+</bibl>
+
+<bibl id="B25">
+  <title><p>{Multi-objective optimization for RNA design with multiple target
+  secondary structures.}</p></title>
+  <aug>
+    <au><snm>Taneda</snm><fnm>A</fnm></au>
+  </aug>
+  <source>BMC bioinformatics</source>
+  <publisher>BMC Bioinformatics</publisher>
+  <pubdate>2015</pubdate>
+  <volume>16</volume>
+  <issue>1</issue>
+  <fpage>280</fpage>
+  <url>http://www.biomedcentral.com/1471-2105/16/280</url>
+</bibl>
+
+<bibl id="B26">
+  <title><p>{Unsupervised classification: Similarity measures, classical and
+  metaheuristic approaches, and applications}</p></title>
+  <aug>
+    <au><snm>Bandyopadhyay</snm><fnm>S</fnm></au>
+    <au><snm>Saha</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Unsupervised Classification: Similarity Measures, Classical and
+  Metaheuristic Approaches, and Applications</source>
+  <pubdate>2013</pubdate>
+  <fpage>17</fpage>
+</bibl>
+
+<bibl id="B27">
+  <title><p>Ensembles of signal transduction models using Pareto Optimal
+  Ensemble Techniques (POETs)</p></title>
+  <aug>
+    <au><snm>Song</snm><fnm>SO</fnm></au>
+    <au><snm>Chakrabarti</snm><fnm>A</fnm></au>
+    <au><snm>Varner</snm><fnm>JD</fnm></au>
+  </aug>
+  <source>Biotechnol J</source>
+  <pubdate>2010</pubdate>
+  <volume>5</volume>
+  <issue>7</issue>
+  <fpage>768</fpage>
+  <lpage>80</lpage>
+</bibl>
+
+<bibl id="B28">
+  <title><p>GNU Octave version 3.0.1 manual: a high-level interactive language
+  for numerical computations</p></title>
+  <aug>
+    <au><snm>Eaton</snm><fnm>JW</fnm></au>
+    <au><snm>Bateman</snm><fnm>D</fnm></au>
+    <au><snm>Hauberg</snm><fnm>S</fnm></au>
+  </aug>
+  <publisher>North Charleston, SC, USA: CreateSpace Independent Publishing
+  Platform</publisher>
+  <pubdate>2009</pubdate>
+</bibl>
+
+<bibl id="B29">
+  <title><p>{J}ulia: A Fresh Approach to Numerical Computing</p></title>
+  <aug>
+    <au><snm>Bezanson</snm><fnm>J</fnm></au>
+    <au><snm>Edelman</snm><fnm>A</fnm></au>
+    <au><snm>Karpinski</snm><fnm>S</fnm></au>
+    <au><snm>Shah</snm><fnm>VB</fnm></au>
+  </aug>
+  <pubdate>2015</pubdate>
+</bibl>
+
+<bibl id="B30">
+  <title><p>{Genetic Algorithms for Multiobjective Optimization: Formulation,
+  Discussion and Generalization}</p></title>
+  <aug>
+    <au><snm>Fonseca</snm><fnm>C.M.</fnm></au>
+    <au><snm>Fleming</snm><fnm>P. J.</fnm></au>
+  </aug>
+  <source>{Proceedings of the 5th International Conference on Genetic
+  Algorithms}</source>
+  <pubdate>1993</pubdate>
+  <fpage>416</fpage>
+  <lpage>423</lpage>
+</bibl>
+
+<bibl id="B31">
+  <title><p>A hybrid model of anaerobic E. coli GJT001: Combination of
+  elementary flux modes and cybernetic variables</p></title>
+  <aug>
+    <au><snm>Kim</snm><fnm>JI</fnm></au>
+    <au><snm>Varner</snm><fnm>JD</fnm></au>
+    <au><snm>Ramkrishna</snm><fnm>D</fnm></au>
+  </aug>
+  <source>Biotechnol. Prog.</source>
+  <publisher>Wiley Subscription Services, Inc., A Wiley Company</publisher>
+  <pubdate>2008</pubdate>
+  <volume>24</volume>
+  <issue>5</issue>
+  <fpage>993</fpage>
+  <lpage>-1006</lpage>
+  <url>http://dx.doi.org/10.1002/btpr.73</url>
+</bibl>
+
+<bibl id="B32">
+  <title><p>A general definition of metabolic pathways useful for systematic
+  organization and analysis of complex metabolic networks</p></title>
+  <aug>
+    <au><snm>Schuster</snm><fnm>S</fnm></au>
+    <au><snm>Fell</snm><fnm>D A</fnm></au>
+    <au><snm>Dandekar</snm><fnm>T</fnm></au>
+  </aug>
+  <source>Nat Biotechnol</source>
+  <pubdate>2000</pubdate>
+  <volume>18</volume>
+  <issue>3</issue>
+  <fpage>326</fpage>
+  <lpage>32</lpage>
+</bibl>
+
+<bibl id="B33">
+  <title><p>{A Fast and Elitist Multiobjective Genetic Algorithm:
+  NSGA-II}</p></title>
+  <aug>
+    <au><snm>Kalyanmoy</snm><fnm>D</fnm></au>
+    <au><snm>Pratap</snm><fnm>A</fnm></au>
+    <au><snm>Agarwal</snm><fnm>S</fnm></au>
+    <au><snm>Meyarivan</snm><fnm>T.</fnm></au>
+  </aug>
+  <source>IEEE Trans. Evol. Comp.</source>
+  <pubdate>2002</pubdate>
+  <volume>6</volume>
+  <fpage>182</fpage>
+  <lpage>197</lpage>
+</bibl>
+
+<bibl id="B34">
+  <title><p>{A Review of Multiobjective Test Problems and a Scalable Test
+  Problem Toolkit}</p></title>
+  <aug>
+    <au><snm>Huband</snm><fnm>S</fnm></au>
+    <au><snm>Hingston</snm><fnm>P</fnm></au>
+    <au><snm>Barone</snm><fnm>L</fnm></au>
+    <au><snm>While</snm><fnm>L</fnm></au>
+  </aug>
+  <source>IEEE Trans. Evol. Comp.</source>
+  <pubdate>2006</pubdate>
+  <volume>10</volume>
+  <fpage>477</fpage>
+  <lpage>506</lpage>
+</bibl>
+
+<bibl id="B35">
+  <title><p>{Improved optimization methods for multiple objective design of
+  bioprocesses}</p></title>
+  <aug>
+    <au><snm>Sendin</snm><fnm>J O H</fnm></au>
+    <au><snm>Otero Muras</snm><fnm>I</fnm></au>
+    <au><snm>Alonso</snm><fnm>A A</fnm></au>
+    <au><snm>Banga</snm><fnm>J R</fnm></au>
+  </aug>
+  <source>Industrial and Engineering Chemistry Research</source>
+  <pubdate>2006</pubdate>
+  <volume>45</volume>
+  <fpage>8594</fpage>
+  <lpage>-8603</lpage>
+</bibl>
+
+<bibl id="B36">
+  <title><p>{A rigorous framework for optimization of expensive functions by
+  surrogates}</p></title>
+  <aug>
+    <au><snm>Booker</snm><fnm>A.J</fnm></au>
+    <au><snm>Dennis</snm><fnm>J.E</fnm></au>
+    <au><snm>Frank</snm><fnm>P.D</fnm></au>
+    <au><snm>Serafini</snm><fnm>D.B</fnm></au>
+    <au><snm>Torczon</snm><fnm>V</fnm></au>
+    <au><snm>Trosset</snm><fnm>M.W</fnm></au>
+  </aug>
+  <source>Struct Optim</source>
+  <pubdate>1999</pubdate>
+  <volume>17</volume>
+  <fpage>1</fpage>
+  <lpage>13</lpage>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment
