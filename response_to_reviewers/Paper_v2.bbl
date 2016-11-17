@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{36}
+\begin{thebibliography}{37}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -449,16 +449,19 @@ doi:\doiurl{10.1186/s12859-015-0706-x}
 \endbibitem
 
 %%% 26
-\bibitem{Bandyopadhyay2013}
-\begin{bbook}
-\bauthor{\bsnm{Bandyopadhyay}, \binits{S.}},
-\bauthor{\bsnm{Saha}, \binits{S.}}:
-\bbtitle{{Unsupervised Classification: Similarity Measures, Classical and
-  Metaheuristic Approaches, and Applications}},
-p. \bfpage{17}
-(\byear{2013}).
-doi:\doiurl{10.1007/978-3-642-32451-2}
-\end{bbook}
+\bibitem{Handl:2007aa}
+\begin{barticle}
+\bauthor{\bsnm{Handl}, \binits{J.}},
+\bauthor{\bsnm{Kell}, \binits{D.B.}},
+\bauthor{\bsnm{Knowles}, \binits{J.}}:
+\batitle{Multiobjective optimization in bioinformatics and computational
+  biology}.
+\bjtitle{IEEE/ACM Trans Comput Biol Bioinform}
+\bvolume{4}(\bissue{2}),
+\bfpage{279}--\blpage{92}
+(\byear{2007}).
+doi:\doiurl{10.1109/TCBB.2007.070203}
+\end{barticle}
 \endbibitem
 
 %%% 27
@@ -506,6 +509,21 @@ CoRR
 \endbibitem
 
 %%% 30
+\bibitem{Kirkpatrick:1983aa}
+\begin{barticle}
+\bauthor{\bsnm{Kirkpatrick}, \binits{S.}},
+\bauthor{\bsnm{Gelatt}, \binits{C.D.} \bsuffix{Jr}},
+\bauthor{\bsnm{Vecchi}, \binits{M.P.}}:
+\batitle{Optimization by simulated annealing}.
+\bjtitle{Science}
+\bvolume{220}(\bissue{4598}),
+\bfpage{671}--\blpage{80}
+(\byear{1983}).
+doi:\doiurl{10.1126/science.220.4598.671}
+\end{barticle}
+\endbibitem
+
+%%% 31
 \bibitem{RANKING}
 \begin{bchapter}
 \bauthor{\bsnm{Fonseca}, \binits{C.M.}},
@@ -519,7 +537,7 @@ pp. \bfpage{416}--\blpage{423}
 \end{bchapter}
 \endbibitem
 
-%%% 31
+%%% 32
 \bibitem{2008_kim_varner_ramkrishna_BiotechProg}
 \begin{barticle}
 \bauthor{\bsnm{Kim}, \binits{J.}},
@@ -535,7 +553,7 @@ doi:\doiurl{10.1002/btpr.73}
 \end{barticle}
 \endbibitem
 
-%%% 32
+%%% 33
 \bibitem{Schuster:2000aa}
 \begin{barticle}
 \bauthor{\bsnm{Schuster}, \binits{S.}},
@@ -551,7 +569,7 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 33
+%%% 34
 \bibitem{DEB2002}
 \begin{barticle}
 \bauthor{\bsnm{Kalyanmoy}, \binits{D.}},
@@ -566,7 +584,7 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 34
+%%% 35
 \bibitem{HUBAND2006}
 \begin{barticle}
 \bauthor{\bsnm{Huband}, \binits{S.}},
@@ -582,7 +600,7 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 35
+%%% 36
 \bibitem{Sendin2006}
 \begin{barticle}
 \bauthor{\bsnm{Sendin}, \binits{J.O.H.}},
@@ -598,7 +616,7 @@ doi:\doiurl{10.1038/73786}
 \end{barticle}
 \endbibitem
 
-%%% 36
+%%% 37
 \bibitem{SURROGATES}
 \begin{barticle}
 \bauthor{\bsnm{Booker}, \binits{A.J.}},
@@ -1035,16 +1053,19 @@ doi:\doiurl{10.1038/73786}
 </bibl>
 
 <bibl id="B26">
-  <title><p>{Unsupervised classification: Similarity measures, classical and
-  metaheuristic approaches, and applications}</p></title>
+  <title><p>Multiobjective optimization in bioinformatics and computational
+  biology</p></title>
   <aug>
-    <au><snm>Bandyopadhyay</snm><fnm>S</fnm></au>
-    <au><snm>Saha</snm><fnm>S</fnm></au>
+    <au><snm>Handl</snm><fnm>J</fnm></au>
+    <au><snm>Kell</snm><fnm>DB</fnm></au>
+    <au><snm>Knowles</snm><fnm>J</fnm></au>
   </aug>
-  <source>Unsupervised Classification: Similarity Measures, Classical and
-  Metaheuristic Approaches, and Applications</source>
-  <pubdate>2013</pubdate>
-  <fpage>17</fpage>
+  <source>IEEE/ACM Trans Comput Biol Bioinform</source>
+  <pubdate>2007</pubdate>
+  <volume>4</volume>
+  <issue>2</issue>
+  <fpage>279</fpage>
+  <lpage>92</lpage>
 </bibl>
 
 <bibl id="B27">
@@ -1091,6 +1112,21 @@ doi:\doiurl{10.1038/73786}
 </bibl>
 
 <bibl id="B30">
+  <title><p>Optimization by simulated annealing</p></title>
+  <aug>
+    <au><snm>Kirkpatrick</snm><fnm>S</fnm></au>
+    <au><snm>Gelatt</snm><fnm>C D</fnm></au>
+    <au><snm>Vecchi</snm><fnm>M P</fnm></au>
+  </aug>
+  <source>Science</source>
+  <pubdate>1983</pubdate>
+  <volume>220</volume>
+  <issue>4598</issue>
+  <fpage>671</fpage>
+  <lpage>80</lpage>
+</bibl>
+
+<bibl id="B31">
   <title><p>{Genetic Algorithms for Multiobjective Optimization: Formulation,
   Discussion and Generalization}</p></title>
   <aug>
@@ -1104,7 +1140,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>423</lpage>
 </bibl>
 
-<bibl id="B31">
+<bibl id="B32">
   <title><p>A hybrid model of anaerobic E. coli GJT001: Combination of
   elementary flux modes and cybernetic variables</p></title>
   <aug>
@@ -1122,7 +1158,7 @@ doi:\doiurl{10.1038/73786}
   <url>http://dx.doi.org/10.1002/btpr.73</url>
 </bibl>
 
-<bibl id="B32">
+<bibl id="B33">
   <title><p>A general definition of metabolic pathways useful for systematic
   organization and analysis of complex metabolic networks</p></title>
   <aug>
@@ -1138,7 +1174,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>32</lpage>
 </bibl>
 
-<bibl id="B33">
+<bibl id="B34">
   <title><p>{A Fast and Elitist Multiobjective Genetic Algorithm:
   NSGA-II}</p></title>
   <aug>
@@ -1154,7 +1190,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>197</lpage>
 </bibl>
 
-<bibl id="B34">
+<bibl id="B35">
   <title><p>{A Review of Multiobjective Test Problems and a Scalable Test
   Problem Toolkit}</p></title>
   <aug>
@@ -1170,7 +1206,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>506</lpage>
 </bibl>
 
-<bibl id="B35">
+<bibl id="B36">
   <title><p>{Improved optimization methods for multiple objective design of
   bioprocesses}</p></title>
   <aug>
@@ -1186,7 +1222,7 @@ doi:\doiurl{10.1038/73786}
   <lpage>-8603</lpage>
 </bibl>
 
-<bibl id="B36">
+<bibl id="B37">
   <title><p>{A rigorous framework for optimization of expensive functions by
   surrogates}</p></title>
   <aug>

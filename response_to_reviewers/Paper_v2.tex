@@ -299,11 +299,11 @@ that have robustly simulated a wide variety of signal transduction processes \ci
 patient specific coagulation behavior \cite{Luan:2010aa}, uncertainty quantification in metabolic kinetic models \cite{Andreozzi:2016aa} and to capture cell to cell variation \cite{Lequieu:2011aa}. Further, ensemble approaches have been used in synthetic biology to sample possible biocircuit configurations and to design folding behaviors of novel mRNAs \cite{Otero-Muras2014,Taneda2015}.
 Thus, ensemble approaches are widely used to robustly simulate a variety of biochemical systems.
 
-Identification of biochemical models with hundreds or even thousands of states and parameters may not be tractable as a single objective optimization problem.
-Further, large models require significant training data perhaps taken from diverse sources. These data often contain intrinsic conflicts resulting from, for example, the use of different cell lines or cross laboratory variability.
-Parameter ensembles that optimally balance tradeoffs between submodels and conflicts in training data can
-lead to robust model performance.
-Multiobjective optimization is an ensemble generation technique that naturally balances conflicting training data and is preferred over single objective optimization in cases where optimizing one objective will hurt the performance of other objectives \cite{Bandyopadhyay2013}.
+Identification of biochemical models often requires significant training data perhaps taken from diverse sources.
+These data often can contain intrinsic conflicts resulting from, for example, the use of different cell lines or cross laboratory variability.
+Parameter ensembles that optimally balance these conflicts in training data can lead to more robust model performance.
+Multiobjective optimization is an ensemble generation technique that naturally balances conflicting training data \cite{Handl:2007aa}.
+Multiobjective optimization has been used us and others to identify biochemical models [REFHERE].
 Previously, we developed the Pareto Optimal Ensemble Technique (POETs) algorithm to address the challenge of competing or conflicting objectives.
 POETs, which integrates simulated annealing (SA) and multiobjective optimization through the notion of Pareto rank, estimates parameter ensembles which optimally trade-off between
 competing (and potentially conflicting) experimental objectives \cite{Song:2010aa}.
@@ -312,10 +312,11 @@ For example, Octave-POETs does not accommodate user definable objective function
 source code management (SCM) system. Thus, upgrades to the approach containing new features, or bug fixes were not centrally managed.
 
 \section*{Implementation}
-In this study, we present an open-source implementation of the Pareto optimal ensemble technique in the Julia programming language (JuPOETs).
+In this software note, we present an open-source implementation of the Pareto optimal ensemble technique in the Julia programming language (JuPOETs).
 JuPOETs offers many advantages and improvements compared to Octave-POETs.
 JuPOETs takes advantage of the unique features of Julia.
-Julia is a cross-platform, high-performance programming language for technical computing that has performance comparable to C but with syntax similar to MATLAB/Octave and Python \cite{Julia}. Julia also offers a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive function library.
+Julia is a cross-platform, high-performance programming language for technical computing that has performance comparable to C but with syntax similar to MATLAB/Octave and Python \cite{Julia}.
+Julia also offers a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive function library.
 Further, the architecture of JuPOETs takes advantage of the first-class function type in Julia allowing user definable behavior for all key aspects of the algorithm, including objective functions, custom diversity generation logic, linear/non-linear parameter constraints (and parameter bounds constraints) as well as custom cooling schedules.
 Julia's ability to naturally call other languages such as Python or C also allows JuPOETs to be used with models implemented in a variety of languages across many platforms.
 Additionally, Julia offers a built-in package manager which is directly integrated with GitHub,
@@ -332,7 +333,7 @@ JuPOETs solves the $\mathcal{K}-$dimensional constrained multiobjective optimiza
   O_{\mathcal{K}}\left(\mathbf{x}(t,\mathbf{p}),\mathbf{p}\right) \\
 \end{cases}
 \end{equation}
-subject to:
+subject to the constraints:
 \begin{eqnarray}\nonumber
   \mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\dot{\mathbf{x}}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}) &=&\mathbf{0} \\\nonumber
   g_{1}\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right) &\geq& 0 \\\nonumber
@@ -342,20 +343,31 @@ subject to:
 \begin{equation}\nonumber
   \mathcal{L} \leq \mathbf{p} \leq \mathcal{U}
 \end{equation}using a modified simulated annealing approach.
-The quantity $t$ denotes time, $\mathbf{x}\left(t,\mathbf{p}\right)$ denotes the model state (with an initial state $\mathbf{x}_{0}$), and $\mathbf{u}(t)$ denotes an input vector.
+The quantity $O_{j}$ denotes the $j^{th}$ objective function ($j=1,2,\hdots,\mathcal{K}$), typically the sum of squared errors for the $j^{th}$ data set for biochemical modeling applications.
 The terms $\mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\dot{\mathbf{x}}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p})$ denote the system of model equations (e.g., differential equations,
-differential algebraic equations or linear/non-linear algebraic equations) where $\mathbf{p}$ denotes the unknown parameter vector ($\mathcal{D}\times~1$).
-The parameter search can be subject to parameter bound constraints, where $\mathcal{L}$ and $\mathcal{U}$ denote the lower and upper parameter bounds, respectively
+differential algebraic equations or linear/non-linear algebraic equations) where $\mathbf{p}$ denotes the decision variable vector e.g., unknown model parameters ($\mathcal{D}\times~1$).
+In typical biochemical modeling applications, the model equations $\mathbf{f}\left(\cdot\right)$
+are a system of continuous real-valued non-linear differential equations that comprise a kinetic model, but other types of models e.g., stoichiometric models are also common.
+The quantity $t$ denotes time, $\mathbf{x}\left(t,\mathbf{p}\right)$ denotes the model state (with an initial state $\mathbf{x}_{0}$), and $\mathbf{u}(t)$ denotes an input vector.
+The decision variables (e.g., kinetic parameters) can be subject to bounds constraints, where $\mathcal{L}$ and $\mathcal{U}$ denote the lower and upper bounds, respectively
 as well as $\mathcal{C}$ problem specific constraints $g_i\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right),i=1,\hdots,\mathcal{C}$.
-JuPOETs integrates simulated annealing with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives
+The decision variables $\mathbf{p}$ are typically real-valued kinetic constants, or metabolic fluxes in the case of stoichiometric models.
+However, other variables types e.g., binary or categorical decision variables can also be accommodated.
+
+%Pareto rank measures the quality of a parameter solution relative to the optimal tradeoff surface between competing training objectives.
+%The surface within objective space on which these Pareto optimal parameter sets lie is called the tradeoff surface.
+
+JuPOETs integrates simulated annealing (SA) \cite{Kirkpatrick:1983aa} with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives
 (Fig. \ref{fig:fig-MOSAalgorithm} and Algorithm \ref{algo:JuPOETs-pcode}).
-The central idea of POETs is a mapping between the value of the objective vector evaluated at $\mathbf{p}_{i+1}$ (parameter guess at iteration $i+1$) and Pareto rank.
+A tradeoff surface defines the best possible error value for every conflicting objective, and Pareto rank is a measure of distance away from the optimal tradeoff surface.
+Thus, the central idea underlying POETs is a mapping between the value of the objective vector evaluated at $\mathbf{p}_{i+1}$ (parameter guess at iteration $i+1$) and Pareto rank (Fig. \ref{fig:fig-MOSAalgorithm}).
+A parameter set $\mathbf{p}_{i+1}$ lies along the optimal tradeoff surface if no other parameter guess leads to decreased error for every objective.
 JuPOETs calculates the performance of a candidate parameter set $\mathbf{p}_{i+1}$ by calling the user defined \texttt{objective} function; \texttt{objective} takes
-a parameter set as an input and returns a $\mathcal{K}\times{1}$ objective vector. Candidate parameter sets are generated by the user supplied \texttt{neighbor} function.
-The error vector associated with $\mathbf{p}_{i+1}$ is ranked using the builtin Pareto \texttt{rank} function, by comparing the current error at iteration $i+1$ to the error archive $\mathcal{O}_{i}$ (all error vectors up to iteration $i-1$ meeting a ranking criterion). Pareto rank is a measure of distance from the trade-off surface;
+a parameter set as an input, evaluates the model equations, and using this solution, returns the $\mathcal{K}\times{1}$ objective vector.
+Candidate parameter sets are generated by the user supplied \texttt{neighbor} function; the default implementation of \texttt{neighbor} is a random perturbation, however other perturbation logic can be implemented by the user.
+The error vector associated with $\mathbf{p}_{i+1}$ is ranked using the builtin Pareto \texttt{rank} function, by comparing the error at iteration $i+1$ to the error archive $\mathcal{O}_{i}$ (all error vectors up to iteration $i$ meeting a ranking criterion). Pareto rank is a measure of distance from the trade-off surface;
 parameter sets on or near the optimal trade-off surface between the objectives have a rank equal to $0$ (no other current parameter sets are better).
-These rank zero parameter sets define the Pareto optimal group for the ensemble, wherein Pareto optimality is defined as a parameter set not being dominated by any other sets within the ensemble. The surface within objective space on which these Pareto optimal parameter sets lie is called the tradeoff surface.
-Sets with increasing non-zero rank are progressively further away from the optimal trade-off surface.
+These rank zero parameter sets define the Pareto optimal group for the ensemble, wherein Pareto optimality is defined as a parameter set not being dominated by any other sets within the ensemble. Sets with increasing non-zero rank are progressively further away from the optimal trade-off surface.
 Thus, a parameter set with a rank $=0$ is \emph{better} in a trade-off sense than rank $>0$.
 We implemented the Fonseca and Fleming ranking scheme in the builtin \texttt{rank} function \cite{RANKING}:
 \begin{equation}\label{eqn_rank}

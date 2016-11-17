@@ -44,13 +44,14 @@
 \gdef\hy@author{David M Bassen, Michael Vilkhovoy, Mason Minot, Jonathan T Butcher, Jeffrey D Varner}
 \gdef\hy@subject{}
 \gdef\hy@keywords{Ensemble modeling, Multiobjective optimization, Julia}
-\citation{Bandyopadhyay2013}
+\citation{Handl:2007aa}
 \citation{Song:2010aa}
 \citation{CITE_Octave}
 \citation{Julia}
+\citation{Kirkpatrick:1983aa}
 \citation{RANKING}
 \newlabel{eqn_rank}{{2}{4}{JuPOETs optimization problem formulation}{equation.0.2}{}}
-\newlabel{eqn_costMOSA}{{3}{4}{JuPOETs optimization problem formulation}{equation.0.3}{}}
+\newlabel{eqn_costMOSA}{{3}{5}{JuPOETs optimization problem formulation}{equation.0.3}{}}
 \@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Pseudo-code for the main run-loop of JuPOETs. The user specifies the \texttt  {neighbor}, \texttt  {acceptance}, \texttt  {cooling} and \texttt  {objective} functions along with an initial parameter guess. The rank archive $\mathcal  {R}$, solution archive $\mathcal  {S}$ and objective archive $\mathcal  {O}$ are initialized from the initial guess. The initial guess is perturbed in the \texttt  {neighbor} function, which generates a new solution whose performance is evaluated using the user supplied \texttt  {objective} function. The new solution and objective values are then added to the respective archives and ranked using the builtin \texttt  {rank} function. If the new solution is accepted (based upon a probability calculated with the user supplied \texttt  {acceptance} function) it is added to the solution and objective archive. This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied \texttt  {cooling} function after each $\mathcal  {I}$ iterations. \relax }}{6}{algocf.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{algo:JuPOETs-pcode}{{1}{6}{Availability of data and materials}{algocf.1}{}}
@@ -89,17 +90,18 @@
 \thanksnewlabel{aff2thanks}{{2}{9}}
 \bibcite{Otero-Muras2014}{{24}{}{{}}{{}}}
 \bibcite{Taneda2015}{{25}{}{{}}{{}}}
-\bibcite{Bandyopadhyay2013}{{26}{}{{}}{{}}}
+\bibcite{Handl:2007aa}{{26}{}{{}}{{}}}
 \bibcite{Song:2010aa}{{27}{}{{}}{{}}}
 \bibcite{CITE_Octave}{{28}{}{{}}{{}}}
 \bibcite{Julia}{{29}{}{{}}{{}}}
-\bibcite{RANKING}{{30}{}{{}}{{}}}
-\bibcite{2008_kim_varner_ramkrishna_BiotechProg}{{31}{}{{}}{{}}}
-\bibcite{Schuster:2000aa}{{32}{}{{}}{{}}}
-\bibcite{DEB2002}{{33}{}{{}}{{}}}
-\bibcite{HUBAND2006}{{34}{}{{}}{{}}}
-\bibcite{Sendin2006}{{35}{}{{}}{{}}}
-\bibcite{SURROGATES}{{36}{}{{}}{{}}}
+\bibcite{Kirkpatrick:1983aa}{{30}{}{{}}{{}}}
+\bibcite{RANKING}{{31}{}{{}}{{}}}
+\bibcite{2008_kim_varner_ramkrishna_BiotechProg}{{32}{}{{}}{{}}}
+\bibcite{Schuster:2000aa}{{33}{}{{}}{{}}}
+\bibcite{DEB2002}{{34}{}{{}}{{}}}
+\bibcite{HUBAND2006}{{35}{}{{}}{{}}}
+\bibcite{Sendin2006}{{36}{}{{}}{{}}}
+\bibcite{SURROGATES}{{37}{}{{}}{{}}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.\relax }}{11}{figure.1}}
 \newlabel{fig:fig-MOSAalgorithm}{{1}{11}{Schematic of multiobjective parameter mapping. The performance of any given parameter set is mapped into an objective space using a ranking function which quantifies the quality of the parameters. The distance away from the optimal tradeoff surface is quantified using the Pareto ranking scheme of Fonseca and Fleming in JuPOETs.\relax }{figure.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The performance of JuPOETs on the multi-objective test suite. The execution time (wall-clock) for JuPOETs and POETs implemented in Octave was measured for 10 independent trials for the suite of test problems. The number of steps per temperature $\mathcal  {I}$ = 10, and the cooling parameter $\alpha $ = 0.9 for all cases. The problem domain was partitioned into 10 equal segments, an initial guess was drawn from each segment. For each of the test functions, JuPOETs estimated solutions on (rank zero solutions, black) or near (gray) the optimal tradeoff surface, subject to bounds and problem constraints. \relax }}{11}{figure.2}}

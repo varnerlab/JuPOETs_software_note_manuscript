@@ -23,18 +23,6 @@ Database file #1: References_v1.bib
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Warning--"{Unsupervised" isn't a brace-balanced string for entry Bandyopadhyay2013
-while executing--line 2686 of file bmc-mathphys.bst
-Warning--"{Unsupervised" isn't a brace-balanced string for entry Bandyopadhyay2013
-while executing--line 2686 of file bmc-mathphys.bst
-Warning--"{Unsupervised" isn't a brace-balanced string for entry Bandyopadhyay2013
-while executing--line 2686 of file bmc-mathphys.bst
-Warning--"applications}" isn't a brace-balanced string for entry Bandyopadhyay2013
-while executing--line 2686 of file bmc-mathphys.bst
-Warning--"applications}" isn't a brace-balanced string for entry Bandyopadhyay2013
-while executing--line 2686 of file bmc-mathphys.bst
-Warning--"APPLICATIONS}" isn't a brace-balanced string for entry Bandyopadhyay2013
-while executing--line 2686 of file bmc-mathphys.bst
 Warning--"{Proceedings" isn't a brace-balanced string for entry RANKING
 while executing--line 2686 of file bmc-mathphys.bst
 Warning--"{Proceedings" isn't a brace-balanced string for entry RANKING
@@ -45,45 +33,45 @@ Warning--"Algorithms}" isn't a brace-balanced string for entry RANKING
 while executing--line 2686 of file bmc-mathphys.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 36 entries,
+You've used 37 entries,
             7128 wiz_defined-function locations,
-            1397 strings with 17329 characters,
-and the built_in function-call counts, 386268 in all, are:
-= -- 61475
-> -- 1385
-< -- 832
-+ -- 30577
-- -- 407
-* -- 18310
-:= -- 71289
-add.period$ -- 60
-call.type$ -- 36
-change.case$ -- 394
-chr.to.int$ -- 1815
-cite$ -- 36
-duplicate$ -- 3694
-empty$ -- 12054
-format.name$ -- 1322
-if$ -- 93756
+            1406 strings with 17380 characters,
+and the built_in function-call counts, 330620 in all, are:
+= -- 49723
+> -- 1444
+< -- 871
++ -- 22169
+- -- 413
+* -- 18038
+:= -- 62291
+add.period$ -- 63
+call.type$ -- 37
+change.case$ -- 385
+chr.to.int$ -- 1909
+cite$ -- 37
+duplicate$ -- 3819
+empty$ -- 12321
+format.name$ -- 1362
+if$ -- 78788
 int.to.chr$ -- 1
-int.to.str$ -- 101
-missing$ -- 1266
-newline$ -- 1141
-num.names$ -- 180
-pop$ -- 1509
+int.to.str$ -- 106
+missing$ -- 1303
+newline$ -- 1178
+num.names$ -- 185
+pop$ -- 1546
 preamble$ -- 1
-purify$ -- 172
-quote$ -- 72
-skip$ -- 34559
+purify$ -- 179
+quote$ -- 74
+skip$ -- 27153
 stack$ -- 0
-substring$ -- 43300
-swap$ -- 1339
-text.length$ -- 625
+substring$ -- 38484
+swap$ -- 1401
+text.length$ -- 639
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1605
+type$ -- 1652
 warning$ -- 0
-while$ -- 1394
+while$ -- 1437
 width$ -- 0
-write$ -- 1561
-(There were 10 warnings)
+write$ -- 1611
+(There were 4 warnings)
