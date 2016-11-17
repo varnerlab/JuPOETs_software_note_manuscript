@@ -396,7 +396,7 @@ Parameter bounds were implemented in the \texttt{neighbor} function as box const
 However, because both the neighbor and objective functions are user defined, different constraint implementations are easily defined.
 
 To use JuPOETs, the user specifies the \texttt{neighbor}, \texttt{acceptance}, \texttt{cooling} and \texttt{objective} functions along with an initial decision variable guess.
-If the user is operating JuPOETs in hybrid mode, then a \texttt{local\_refinement} function pointer must also be specified; the default \texttt{local\_refinement} implementation is simply a pass through function. Default implementations of the \texttt{neighbor}, \texttt{acceptance} and \texttt{cooling} functions can be used directly, or they can be overridden by user defined logic. However, the user must provide an implementation of the \texttt{objective} function and provide an initial decision variable guess.
+If the user is operating JuPOETs in hybrid mode, then a \texttt{refinement} function pointer must also be specified; the default \texttt{local\_refinement} implementation is simply a pass through function. Default implementations of the \texttt{neighbor}, \texttt{acceptance} and \texttt{cooling} functions can be used directly, or they can be overridden by user defined logic. However, the user must provide an implementation of the \texttt{objective} function and provide an initial decision variable guess.
 In addition, there are several user configurable parameters that can be adjusted to control the performance of JuPOETs:
 \texttt{maximum\_number\_of\_iterations} controls the number of iterations per temperature (default 20);
 \texttt{rank\_cutoff} controls the upper rank bound on the solution archive (default 5);
@@ -417,6 +417,7 @@ All samples used in this study are included in the \texttt{sample/biochemical} a
   \SetKwFunction{objective}{objective}
   \SetKwFunction{neighbor}{neighbor}
   \SetKwFunction{acceptance}{acceptance}
+  \SetKwFunction{refinement}{refinement}
   \SetKwFunction{rank}{rank}
 
   \SetKwInOut{Input}{input}
@@ -427,10 +428,17 @@ All samples used in this study are included in the \texttt{sample/biochemical} a
 
   \BlankLine
   \BlankLine
-  initialize: $\mathcal{R}$, $\mathcal{S}$ and $\mathcal{O}$ using initial guess\;
+  initialize: $\mathcal{R}$, $\mathcal{S}$ and $\mathcal{O}$ using initial guess $\mathbf{p}_{o}$\;
   initialize: T $\leftarrow$1.0\;
   initialize: $T_{min}\leftarrow$1/10000\;
   initialize: Maximum number of steps per temperature $\mathcal{I}$\;
+
+  \BlankLine
+  \BlankLine
+
+  \tcp{Locally refine initial guess (single objective problem)}
+  $\mathbf{p}_{o}$ $\leftarrow$ user-function:\refinement{$\mathbf{p}_{o}$}\;
+
 
   \BlankLine
   \BlankLine
