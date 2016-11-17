@@ -203,7 +203,7 @@ Simulations using parameter ensembles can estimate confidence intervals on model
 despite having many poorly constrained parameters.
 
 \parttitle{Results}
-In this study, we present a multiobjective based technique to estimate parameter or models ensembles, the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
+In this software note, we present a multiobjective based technique to estimate parameter or models ensembles, the Pareto Optimal Ensemble Technique in the Julia programming language (JuPOETs).
 JuPOETs integrates simulated annealing with Pareto optimality to estimate ensembles on or near the optimal tradeoff surface between competing training objectives.
 We demonstrate JuPOETs on a suite of multiobjective problems, including test functions with parameter bounds and system constraints as well as for the identification of a proof-of-concept biochemical model with four conflicting training objectives.
 JuPOETs identified optimal or near optimal solutions approximately six-fold faster than a corresponding implementation in Octave for the suite of test functions.
@@ -311,9 +311,10 @@ However, the previous implementation of POETs, in the Octave programming languag
 For example, Octave-POETs does not accommodate user definable objective functions, bounds and problem constraints, cooling schedules, different variable types e.g., a mixture of binary and continuous design variables or custom diversity generation routines. Octave-POETs was also not well integrated into a package or
 source code management (SCM) system. Thus, upgrades to the approach containing new features, or bug fixes were not centrally managed.
 
+%JuPOETs offers many advantages and improvements compared to Octave-POETs.
+
 \section*{Implementation}
 In this software note, we present an open-source implementation of the Pareto optimal ensemble technique in the Julia programming language (JuPOETs).
-JuPOETs offers many advantages and improvements compared to Octave-POETs.
 JuPOETs takes advantage of the unique features of Julia.
 Julia is a cross-platform, high-performance programming language for technical computing that has performance comparable to C but with syntax similar to MATLAB/Octave and Python \cite{Julia}.
 Julia also offers a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive function library.
@@ -333,7 +334,7 @@ JuPOETs solves the $\mathcal{K}-$dimensional constrained multiobjective optimiza
   O_{\mathcal{K}}\left(\mathbf{x}(t,\mathbf{p}),\mathbf{p}\right) \\
 \end{cases}
 \end{equation}
-subject to the constraints:
+subject to the model equations and constraints:
 \begin{eqnarray}\nonumber
   \mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\dot{\mathbf{x}}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}) &=&\mathbf{0} \\\nonumber
   g_{1}\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right) &\geq& 0 \\\nonumber
@@ -342,7 +343,7 @@ subject to the constraints:
 \end{eqnarray}and parameter bound constraints:
 \begin{equation}\nonumber
   \mathcal{L} \leq \mathbf{p} \leq \mathcal{U}
-\end{equation}using a modified simulated annealing approach.
+\end{equation}
 The quantity $O_{j}$ denotes the $j^{th}$ objective function ($j=1,2,\hdots,\mathcal{K}$), typically the sum of squared errors for the $j^{th}$ data set for biochemical modeling applications.
 The terms $\mathbf{f}(t,\mathbf{x}(t,\mathbf{p}),\dot{\mathbf{x}}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p})$ denote the system of model equations (e.g., differential equations,
 differential algebraic equations or linear/non-linear algebraic equations) where $\mathbf{p}$ denotes the decision variable vector e.g., unknown model parameters ($\mathcal{D}\times~1$).
@@ -354,12 +355,13 @@ as well as $\mathcal{C}$ problem specific constraints $g_i\left(t,\mathbf{x}(t,\
 The decision variables $\mathbf{p}$ are typically real-valued kinetic constants, or metabolic fluxes in the case of stoichiometric models.
 However, other variables types e.g., binary or categorical decision variables can also be accommodated.
 
+
+
 %Pareto rank measures the quality of a parameter solution relative to the optimal tradeoff surface between competing training objectives.
 %The surface within objective space on which these Pareto optimal parameter sets lie is called the tradeoff surface.
 
-JuPOETs integrates simulated annealing (SA) \cite{Kirkpatrick:1983aa} with Pareto optimality to estimate parameter sets on or near the optimal tradeoff surface between competing training objectives
-(Fig. \ref{fig:fig-MOSAalgorithm} and Algorithm \ref{algo:JuPOETs-pcode}).
-A tradeoff surface defines the best possible error value for every conflicting objective, and Pareto rank is a measure of distance away from the optimal tradeoff surface.
+JuPOETs integrates simulated annealing (SA) \cite{Kirkpatrick:1983aa} with Pareto ranking to estimate parameter sets on or near the optimal tradeoff surface between competing objectives (Fig. \ref{fig:fig-MOSAalgorithm} and Algorithm \ref{algo:JuPOETs-pcode}).
+A tradeoff surface defines the best possible performance for every conflicting objective, such that an increase in the performance of one objective does not decrease the performance of at least one other objective.  Pareto rank is a measure of distance away from the optimal tradeoff surface.
 Thus, the central idea underlying POETs is a mapping between the value of the objective vector evaluated at $\mathbf{p}_{i+1}$ (parameter guess at iteration $i+1$) and Pareto rank (Fig. \ref{fig:fig-MOSAalgorithm}).
 A parameter set $\mathbf{p}_{i+1}$ lies along the optimal tradeoff surface if no other parameter guess leads to decreased error for every objective.
 JuPOETs calculates the performance of a candidate parameter set $\mathbf{p}_{i+1}$ by calling the user defined \texttt{objective} function; \texttt{objective} takes
@@ -392,6 +394,18 @@ Parameter bounds were implemented in the \texttt{neighbor} function as box const
   O_{i}+\lambda\sum_{j=1}^{\mathcal{C}}\min\Bigl\{0,g_j\left(t,\mathbf{x}(t,\mathbf{p}),\mathbf{u}(t),\mathbf{p}\right)\Bigr\}\qquad~i=1,\hdots,\mathcal{K}
 \end{equation}where $\lambda$ denotes the penalty parameter ($\lambda$ = 100 by default).
 However, because both the neighbor and objective functions are user defined, different constraint implementations are easily defined.
+
+To use JuPOETs, the user specifies the \texttt{neighbor}, \texttt{acceptance}, \texttt{cooling} and \texttt{objective} functions along with an initial decision variable guess.
+If the user is operating JuPOETs in hybrid mode, then a \texttt{local\_refinement} function pointer must also be specified; the default \texttt{local\_refinement} implementation is simply a pass through function. Default implementations of the \texttt{neighbor}, \texttt{acceptance} and \texttt{cooling} functions can be used directly, or they can be overridden by user defined logic. However, the user must provide an implementation of the \texttt{objective} function and provide an initial decision variable guess.
+In addition, there are several user configurable parameters that can be adjusted to control the performance of JuPOETs:
+\texttt{maximum\_number\_of\_iterations} controls the number of iterations per temperature (default 20);
+\texttt{rank\_cutoff} controls the upper rank bound on the solution archive (default 5);
+\texttt{temperature\_min} controls the minimum temperature after which JuPOETs returns the error and solution archives (default 0.001);
+\texttt{show\_trace} controls the level of output shown to the user (default true).
+After the completion of the run, JuPOETs returns the parameter solution archive $\mathcal{S}$ and objective archive $\mathcal{O}$.
+The parameter solution archive $\mathcal{S}$ contains is an $\mathcal{D}\times\mathcal{A}$ array, where $\mathcal{A}$ denotes the number of solutions in the archive when
+JuPOETs terminated. On the other hand, the objective archive $\mathcal{O}$ is an $\mathcal{K}\times\mathcal{A}$ array containing the performance values for each objective corresponding the columns of $\mathcal{S}$. Lastly, JuPOETs returns the rank archive $\mathcal{R}$ which is an $\mathcal{A}\times{1}$ array of Pareto ranks corresponding to the
+columns of $\mathcal{S}$.
 
 \section*{Availability of data and materials}
 JuPOETs is open source, available under an MIT software license.
@@ -479,26 +493,73 @@ This solution is then perturbed during the next iteration of the algorithm. Howe
 
 \section*{Results and Discussion}
 
-JuPOETs identified optimal or nearly optimal solutions significantly faster than Octave-POETs for a suite of multiobjective test problems (Table \ref{table:objective-table}).
+JuPOETs identified optimal or nearly optimal solutions significantly faster than Octave-POETs for a suite of multiobjective algebraic test problems (Table \ref{table:objective-table}).
+The algebraic test problems were constrained non-linear functions with bound constraints and additional non-linear constraints on the decision variables in one case.
+The problems had up to three-dimensional continuous real-valued decision vectors, and each case had two objective functions.
 The wall-clock time for JuPOETs and Octave-POETs was measured for 10 independent trials for each of the test problems.
 The same \texttt{cooling}, \texttt{neighbor}, \texttt{acceptance}, and \texttt{objective} logic was employed between the implementations, and all other parameters were held constant.
 For each test function, the search domain was partitioned into 10 segments, where an initial parameter guess was drawn from each partition.
 The number of search steps for each temperate was $\mathcal{I}$ = 10 for all cases, and the cooling parameter was $\alpha$ = 0.9.
 On average, JuPOETs identified optimal or near optimal solutions for the suite of test problems six-fold faster (60s versus 400s)
-than Octave-POETs (Fig. \ref{fig:fig-timing}). JuPOETs produced the characteristic tradeoff curves for each test problem, given both parameter bound and
+than Octave-POETs (Fig. \ref{fig:fig-timing}). JuPOETs produced the characteristic tradeoff curves for each test problem, given both decision variable bound and
 problem constraints (Fig. \ref{fig:fig-surfaces}).
-Thus, JuPOETs estimated an ensemble of solutions to constrained multiobjective optimization test problems significantly faster than the current Octave implementation.
+Thus, JuPOETs estimated an ensemble of solutions to constrained multiobjective algebraic test problems significantly faster than the current Octave implementation.
 Next, we tested JuPOETs on a proof-of-concept biochemical model identification problem.
 
-JuPOETs estimated an ensemble of biochemical models that was consistent with the mean of synthetic training data (Fig. \ref{fig:fig-biochemical}).
+JuPOETs estimated an ensemble of biochemical model parameters that were consistent with the mean of synthetic training data (Fig. \ref{fig:fig-biochemical}).
 Four synthetic training data sets were generated from a prototypical biochemical network consisting of 6 metabolites and 7 reactions (Fig. \ref{fig:fig-biochemical}, inset right).
-We considered a common case in which the same measurements were made on four hypothetical cell types, each having the same biological connectivity but different performance.
-Network dynamics were modeled using the hybrid cybernetic model with elementary modes (HCM-EM) approach of Ramkrishna and coworkers \cite{2008_kim_varner_ramkrishna_BiotechProg}.
-In the HCM-EM approach, metabolic networks are first decomposed into a set of elementary modes (EMs) (chemically balanced steady-state pathways, see \cite{Schuster:2000aa}).
+We considered a common case in which the same extracellular measurements of $A_{e},B_{e},C_{e}$ and cellmass were made on four hypothetical cell types, each having the same biological connectivity but different performance.
+Network dynamics were modeled using the hybrid cybernetic model with elementary modes (HCM) approach of Ramkrishna and coworkers \cite{2008_kim_varner_ramkrishna_BiotechProg}.
+In the HCM approach, metabolic networks are first decomposed into a set of elementary modes (EMs) (chemically balanced steady-state pathways, see \cite{Schuster:2000aa}).
 Dynamic combinations of elementary modes are then used to characterize network behavior.
 Each elementary mode is catalyzed by a pseudo enzyme; thus, each mode has both kinetic and enzyme synthesis parameters.
-The proof of concept network generated 6 EMs, resulting in 13 model parameters.
-The synthetic data was generated by randomly varying these parameters.
+The proof of concept network generated 6 EMs, resulting in 13 model parameters (continuos real-valued decision variables).
+The synthetic training data was generated by randomly varying these parameters.
+
+The general form of the biochemical model optimization test problem was given by:
+\begin{equation}
+  \min_{\mathbf{p}}\left(O_{1},\hdots,O_{\mathcal{K}}\right)
+\end{equation}subject to model and bounds constraints. We considered four training data sets, thus $\mathcal{K}=4$.
+Each objective $O_{j},~j=1,\hdots,\mathcal{K}$ quantified the squared difference between the simulated ($x_{i}$) and measured extracellular species abundance ($y_{i}$)
+in the $j^{th}$ data set:
+\begin{equation}
+  O_{j} = \sum_{i}\sum_{\tau}\left(x_{i}(\tau)-y_{i}(\tau)\right)^2\qquad j=1,\hdots,\mathcal{K}
+\end{equation}where the abundance of extracellular species $i$ ($x_{i}$), the pseudo enzyme $e_{l}$ (catalyzes flux through mode $l$), and cellmass were governed by the model equations:
+\begin{eqnarray}\nonumber
+	\frac{dx_{i}}{dt}  & = &  \sum_{j = 1}^{\mathcal{R}}\sum_{l = 1}^{\mathcal{L}}\sigma_{ij}z_{jl}q_{l}\left(\mathbf{e},\mathbf{p},\mathbf{x}\right)c \qquad{i=1,\hdots,\mathcal{M}}\\\nonumber
+  \frac{de_{l}}{dt}  & = & \alpha_{l} + r_{El}\left(\mathbf{p},\mathbf{x}\right)u_{l} - \left(\beta_{l}+r_{G}\right)e_{l} \qquad l=1,\hdots,\mathcal{L} \\\nonumber
+  \frac{dc}{dt} & = & r_{G}c
+\end{eqnarray}
+where $\mathcal{R}$ and $\mathcal{M}$ denote the number of reactions and extracellular species in the model and $\mathcal{L}$ denotes the number of elementary modes.
+The quantity $\sigma_{ij}$ denotes the stoichiometric coefficient for species $i$ in reaction $j$ and $z_{jl}$ denotes the normalized flux for reaction $j$ in mode $l$.
+If $\sigma_{ij}>0$, species $i$ is produced by reaction $j$;
+if $\sigma_{ij}<0$, species $i$ is consumed by reaction $j$; if $\sigma_{ij} = 0$, species $i$ is not connected with reaction $j$.
+Extracellular species, cellmass and pseudo-enzyme were subject to the initial conditions $\mathbf{x}\left(t_{o}\right) = \mathbf{x}_{o}$, $c(t_{o})=c_{o}$ and $e_{l}=0.5$, respectively.
+The term $q_{l}\left(\mathbf{e},\mathbf{p},\mathbf{x}\right)$ denotes the specific uptake/secretion rate for mode $l$
+where $\mathbf{e}$ denotes the pseudo enzyme vector, $\mathbf{p}$ denotes the unknown kinetic parameter vector (decision variables),
+$\mathbf{x}$ denotes the extracellular species vector, and $c$ denotes the cell mass;
+$q_{l}\left(\mathbf{e},\mathbf{p},\mathbf{x}\right)$ is the product of a kinetic term ($\bar{q}_{l}$) and a control variable governing enzyme activity.
+Flux through each mode was catalyzed by a pseudo enzyme $e_{l}$, synthesized at the regulated specific rate $r_{E,l}\left(\mathbf{p},\mathbf{x}\right)$, and constitutively at the rate $\alpha_{l}$.
+The term $u_{l}$ denotes the cybernetic variable controlling the synthesis of enzyme $l$.
+The term $\beta_{l}$ denotes the rate constant governing non-specific enzyme degradation, and $r_{G}$ denotes the specific growth rate through all modes.
+The specific uptake/secretion rates and the specific rate of enzyme synthesis were modeled using saturation kinetics.
+The specific growth rate was given by:
+\begin{equation}\nonumber
+	r_{G}  = \sum_{l = 1}^{\mathcal{L}}z_{\mu l}q_{l}\left(\mathbf{e},\mathbf{p},\mathbf{x}\right)
+\end{equation}
+where $z_{\mu l}$ denotes the growth flux $\mu$ through mode $l$.
+The control variables $u_{l}$ and $v_{l}$, which control the synthesis and activity of each enzyme respectively, were given by:
+\begin{equation}
+	u_{l} = \frac{z_{sl}\bar{q}_{l}}{\sum\limits_{l = 1}^{\mathcal{L}}z_{sl}\bar{q}_{l}}
+\end{equation}
+and
+\begin{equation}
+    v_{l} = \frac{z_{sl}\bar{q}_{l}}{\max\limits_{l=1,\hdots,\mathcal{L}}z_{sl}\bar{q}_{l}}
+\end{equation}
+where $z_{sl}$ denotes the uptake flux of substrate $s$ through mode $l$.
+Each unknown kinetic parameter was continuous and real-valued, and subject to bounds constraints: $\mathcal{L} \leq \mathbf{p} \leq \mathcal{U}$.
+
+
 JuPOETs produced an ensemble of approximately $\dim{\mathcal{S}}\simeq$ 13,000 parameter sets that captured the mean of the measured data sets for extracellular metabolites and cellmass
 (Fig. \ref{fig:fig-biochemical}A and B). JuPOETs minimized the difference between the simulated and measured values for extracellular metabolites A$_{e}$, B$_{e}$, C$_{e}$ and cellmass,
 where the residual for each data set was treated as a single objective (leading to four objectives).
