@@ -52,7 +52,7 @@
 \citation{RANKING}
 \newlabel{eqn_rank}{{2}{4}{JuPOETs optimization problem formulation}{equation.0.2}{}}
 \newlabel{eqn_costMOSA}{{3}{5}{JuPOETs optimization problem formulation}{equation.0.3}{}}
-\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Pseudo-code for the main run-loop of JuPOETs. The user specifies the \texttt  {neighbor}, \texttt  {acceptance}, \texttt  {cooling} and \texttt  {objective} functions along with an initial parameter guess. The rank archive $\mathcal  {R}$, solution archive $\mathcal  {S}$ and objective archive $\mathcal  {O}$ are initialized from the initial guess. The initial guess is perturbed in the \texttt  {neighbor} function, which generates a new solution whose performance is evaluated using the user supplied \texttt  {objective} function. The new solution and objective values are then added to the respective archives and ranked using the builtin \texttt  {rank} function. If the new solution is accepted (based upon a probability calculated with the user supplied \texttt  {acceptance} function) it is added to the solution and objective archive. This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The computational temperature is adjusted using the user supplied \texttt  {cooling} function after each $\mathcal  {I}$ iterations. \relax }}{7}{algocf.1}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces Pseudo-code for the JuPOETs run-loop. The user must specify the \texttt  {objective} function and an initial parameter guess. The user can optionally specify the \texttt  {neighbor}, \texttt  {acceptance}, \texttt  {cooling} and \texttt  {refinement} functions (or use the default implementations). The rank archive $\mathcal  {R}$, solution archive $\mathcal  {S}$ and objective archive $\mathcal  {O}$ are initialized from the initial guess. The initial guess (potentially following a single objective local refinement step) is perturbed in the \texttt  {neighbor} function, which generates a new solution whose performance is evaluated using the user supplied \texttt  {objective} function. The new solution and objective values are then added to the respective archives and ranked using the builtin \texttt  {rank} function. If the new solution is accepted (based upon a probability calculated with the user supplied \texttt  {acceptance} function) it is added to the solution and objective archive. This solution is then perturbed during the next iteration of the algorithm. However, if the solution is not accepted, it is removed from the archive and discarded. The temperature is adjusted using the user supplied \texttt  {cooling} function after each $\mathcal  {I}$ iterations. When JuPOETs terminates, the parameter solution archive $\mathcal  {S}$, objective archive $\mathcal  {O}$ and rank archive $\mathcal  {R}$ are retuned to the caller.\relax }}{7}{algocf.1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{algo:JuPOETs-pcode}{{1}{7}{Availability of data and materials}{algocf.1}{}}
 \citation{2008_kim_varner_ramkrishna_BiotechProg}
@@ -73,12 +73,12 @@
 \bibcite{Song:2009b}{{8}{}{{}}{{}}}
 \bibcite{Tasseff:2010aa}{{9}{}{{}}{{}}}
 \bibcite{Tasseff:2011aa}{{10}{}{{}}{{}}}
+\thanksnewlabel{aff1thanks}{{1}{11}}
+\thanksnewlabel{aff2thanks}{{2}{11}}
 \bibcite{Tran:2008aa}{{11}{}{{}}{{}}}
 \bibcite{Tan:2011aa}{{12}{}{{}}{{}}}
 \bibcite{Contador2009221}{{13}{}{{}}{{}}}
 \bibcite{Tan:2012aa}{{14}{}{{}}{{}}}
-\thanksnewlabel{aff1thanks}{{1}{11}}
-\thanksnewlabel{aff2thanks}{{2}{11}}
 \bibcite{Lee:2014aa}{{15}{}{{}}{{}}}
 \bibcite{Khodayari:2014aa}{{16}{}{{}}{{}}}
 \bibcite{Luan:2007aa}{{17}{}{{}}{{}}}
