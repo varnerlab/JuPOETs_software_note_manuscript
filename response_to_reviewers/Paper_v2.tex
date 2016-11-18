@@ -296,17 +296,22 @@ Maranas and coworkers have also applied this method to develop a comprehensive k
 including mutant data \cite{Khodayari:2014aa}.
 We and others have used ensemble approaches, generated using both sampling and optimization techniques,
 that have robustly simulated a wide variety of signal transduction processes \citep{Luan:2007aa,Song:2009aa,Tasseff:2010aa,Tasseff:2011aa,Nayak:2011aa}, neutrophil trafficking in sepsis \cite{Song:2012aa},
-patient specific coagulation behavior \cite{Luan:2010aa}, uncertainty quantification in metabolic kinetic models \cite{Andreozzi:2016aa} and to capture cell to cell variation \cite{Lequieu:2011aa}. Further, ensemble approaches have been used in synthetic biology to sample possible biocircuit configurations and to design folding behaviors of novel mRNAs \cite{Otero-Muras2014,Taneda2015}.
+patient specific coagulation behavior \cite{Luan:2010aa}, uncertainty quantification in metabolic kinetic models \cite{Andreozzi:2016aa} and to capture cell to cell variation \cite{Lequieu:2011aa}.
+Further, ensemble approaches have been used in synthetic biology to sample possible biocircuit configurations \cite{Otero-Muras:2014aa}.
 Thus, ensemble approaches are widely used to robustly simulate a variety of biochemical systems.
 
-Identification of biochemical models often requires significant training data perhaps taken from diverse sources.
-These data often can contain intrinsic conflicts resulting from, for example, the use of different cell lines or cross laboratory variability.
-Parameter ensembles that optimally balance these conflicts in training data can lead to more robust model performance.
-Multiobjective optimization is an ensemble generation technique that naturally balances conflicting training data \cite{Handl:2007aa}.
-Multiobjective optimization has been used us and others to identify biochemical models [REFHERE].
-Previously, we developed the Pareto Optimal Ensemble Technique (POETs) algorithm to address the challenge of competing or conflicting objectives.
-POETs, which integrates simulated annealing (SA) and multiobjective optimization through the notion of Pareto rank, estimates parameter ensembles which optimally trade-off between
-competing (and potentially conflicting) experimental objectives \cite{Song:2010aa}.
+Identification of biochemical models requires significant training data perhaps taken from diverse sources.
+These real-world data sets often contain intrinsic conflicts resulting from, for example, the use of different cell lines,
+different measurement technologies, different reagent vendors or lots, uncontrollable experimental artifacts or general cross laboratory variability.
+Parameter ensembles that optimally balance these inherent conflicts lead to more robust model performance.
+Multiobjective optimization is an ensemble generation technique that naturally balances conflicts in noisy training data \cite{Handl:2007aa}.
+Multiobjective optimization has been used to identify signal transduction models \cite{Lequieu:2011aa,Song:2009aa},
+for the design of synthetic circuits \cite{Otero-Muras:2014aa}, to design the folding behaviors of novel RNAs \cite{Taneda2015}, to design bioprocesses \cite{Banga2006},
+and to understand bacterial adaptation \cite{Angione:2015aa}.
+Thus, it is a widely used approach for a variety of biochemical applications.
+Previously, we developed the Pareto Optimal Ensemble Technique (POETs) algorithm to address the challenge of competing or conflicting training objectives.
+POETs, which integrates simulated annealing (SA) and multiobjective optimization through the notion of Pareto rank, estimates parameter ensembles which optimally
+trade-off between competing (and potentially conflicting) experimental objectives \cite{Song:2010aa}.
 However, the previous implementation of POETs, in the Octave programming language \cite{CITE_Octave}, suffered from poor performance and was not configurable.
 For example, Octave-POETs does not accommodate user definable objective functions, bounds and problem constraints, cooling schedules, different variable types e.g., a mixture of binary and continuous design variables or custom diversity generation routines. Octave-POETs was also not well integrated into a package or
 source code management (SCM) system. Thus, upgrades to the approach containing new features, or bug fixes were not centrally managed.
@@ -315,7 +320,7 @@ source code management (SCM) system. Thus, upgrades to the approach containing n
 
 \section*{Implementation}
 In this software note, we present an open-source implementation of the Pareto optimal ensemble technique in the Julia programming language (JuPOETs).
-JuPOETs takes advantage of the unique features of Julia.
+JuPOETs takes advantage of the unique features of Julia to address many of the shortcomings of the previous implementation. 
 Julia is a cross-platform, high-performance programming language for technical computing that has performance comparable to C but with syntax similar to MATLAB/Octave and Python \cite{Julia}.
 Julia also offers a sophisticated compiler, distributed parallel execution, numerical accuracy, and an extensive function library.
 Further, the architecture of JuPOETs takes advantage of the first-class function type in Julia allowing user definable behavior for all key aspects of the algorithm, including objective functions, custom diversity generation logic, linear/non-linear parameter constraints (and parameter bounds constraints) as well as custom cooling schedules.
@@ -599,7 +604,7 @@ However, since there is a lack of open source Julia implementations of these alt
 One advantage that JuPOETs may have when compared to a strictly evolutionary approaches,
 is the inclusion of a local refinement step (hybrid mode), which temporarily reduces the problem to a single objective formulation.
 Previously, POETs run in hybrid mode led to better convergence on a proof-of-concept signal transduction model compared to the same approach without the hybrid refinement step \cite{Song:2010aa}.
-Other hybrid multiobjective methods have also been shown to be more efficient than evolutionary approaches alone, for a variety of biochemical optimization problems \cite{Otero-Muras2014,Sendin2006}.
+Other hybrid multiobjective methods have also been shown to be more efficient than evolutionary approaches alone, for a variety of biochemical optimization problems \cite{Otero-Muras:2014aa,Sendin2006}.
 Thus, there are several different algorithms that we can use to benchmark, and improve the performance of JuPOETs, after we implement them in Julia.
 Another strategy to improve the performance of JuPOETs is to reduce the number (or cost) of function evaluations that are required to obtain optimal or near optimal solutions.
 For example, in many real world parameter estimation problems, the bulk of the execution time is spent evaluating the objective functions.

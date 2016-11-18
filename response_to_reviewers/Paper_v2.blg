@@ -33,45 +33,45 @@ Warning--"Algorithms}" isn't a brace-balanced string for entry RANKING
 while executing--line 2686 of file bmc-mathphys.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 37 entries,
+You've used 39 entries,
             7128 wiz_defined-function locations,
-            1406 strings with 17380 characters,
-and the built_in function-call counts, 330620 in all, are:
-= -- 49723
-> -- 1444
-< -- 871
-+ -- 22169
-- -- 413
-* -- 18038
-:= -- 62291
-add.period$ -- 63
-call.type$ -- 37
-change.case$ -- 385
-chr.to.int$ -- 1909
-cite$ -- 37
-duplicate$ -- 3819
-empty$ -- 12321
-format.name$ -- 1362
-if$ -- 78788
+            1417 strings with 17638 characters,
+and the built_in function-call counts, 340475 in all, are:
+= -- 50884
+> -- 1519
+< -- 920
++ -- 22407
+- -- 430
+* -- 18780
+:= -- 64279
+add.period$ -- 65
+call.type$ -- 39
+change.case$ -- 402
+chr.to.int$ -- 2022
+cite$ -- 39
+duplicate$ -- 4015
+empty$ -- 12900
+format.name$ -- 1425
+if$ -- 81001
 int.to.chr$ -- 1
-int.to.str$ -- 106
-missing$ -- 1303
-newline$ -- 1178
-num.names$ -- 185
-pop$ -- 1546
+int.to.str$ -- 111
+missing$ -- 1371
+newline$ -- 1231
+num.names$ -- 195
+pop$ -- 1630
 preamble$ -- 1
-purify$ -- 179
-quote$ -- 74
-skip$ -- 27153
+purify$ -- 188
+quote$ -- 78
+skip$ -- 27706
 stack$ -- 0
-substring$ -- 38484
-swap$ -- 1401
-text.length$ -- 639
+substring$ -- 39764
+swap$ -- 1471
+text.length$ -- 670
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1652
+type$ -- 1741
 warning$ -- 0
-while$ -- 1437
+while$ -- 1506
 width$ -- 0
-write$ -- 1611
+write$ -- 1684
 (There were 4 warnings)
